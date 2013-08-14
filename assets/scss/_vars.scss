@@ -91,13 +91,13 @@ $color--white:           #FFFFFF;
  * Color palette.
  */
 $color--red--cherry:     #9e1b34; // http://web.temple.edu/web-style-guide/color-palette
-$color--red--bright:     #ff2f34;
-$color--red--light:      #fed5d5;
+$color--red--sangria:    #ff2f34;
+$color--peachy-fun:      #fbbfb1;
 $color--yellow:          #fff000;
 
-$color__alpha:           $color--red--bright;
+$color__alpha:           $color--red--sangria;
 $color__beta:            $color--red--cherry;
-$color__gamma:           $color--red--light;
+$color__gamma:           $color--peachy-fun;
 
 $color__attn:            $color--yellow;
 
