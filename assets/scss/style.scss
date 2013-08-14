@@ -5,8 +5,18 @@
 
 /**
  * Setup
+ *
+ * Files must be imported in this order.
+ * 
+ * Exai defaults cannot be imported within
+ * the `exai/exai` partial because its
+ * values must be defined before importing
+ * inuit.css. Such is the nature of building
+ * a framework on top of a framework...
  */
 @import "vars";
+@import "exai/defaults";
+
 @import "inuit.css/inuit";
 @import "gs/csswizardry-grids.scss";
 @import "exai/exai";
