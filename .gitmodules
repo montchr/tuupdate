@@ -4,3 +4,6 @@
 [submodule "assets/fonts/font-awesome"]
 	path = assets/fonts/font-awesome
 	url = https://github.com/FortAwesome/Font-Awesome.git
+[submodule "assets/scss/gs"]
+	path = assets/scss/gs
+	url = https://github.com/csswizardry/csswizardry-grids.git
