@@ -1,1 +1,1 @@
-# Exai Theme
+# Temple Update
