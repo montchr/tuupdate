@@ -19,6 +19,25 @@
 
 
 
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ * 
+ * Exai depends on some of these, so they are turned on here by default.
+ */
+$use-nav:           true !default;
+$use-pagination:    true !default;
+$use-media:         true !default;
+$use-matrix:        true !default;
+$use-beautons:      true !default;
+
+
+
 
 
 /*------------------------------------*\

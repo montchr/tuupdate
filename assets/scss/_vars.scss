@@ -26,28 +26,27 @@
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
+ *
+ * Some options are not listed as Exai depends on them.
+ * See `exai/_defaults.scss` for details.
+ * 
  */
 $use-grids:         false;
 $use-flexbox:       false;
 $use-columns:       false;
-$use-nav:           true;
 $use-options:       false;
-$use-pagination:    true;
 $use-breadcrumb:    false;
-$use-media:         true;
 $use-marginalia:    false;
 $use-island:        false;
 $use-block-list:    false;
-$use-matrix:        true;
 $use-split:         false;
 $use-this-or-this:  false;
 $use-link-complex:  false;
-$use-flyout:        true;
-$use-arrows:        true;
+$use-flyout:        false;
+$use-arrows:        false;
 $use-sprite:        false;
 $use-icon-text:     false;
-$use-beautons:      true;
-$use-lozenges:      true;
+$use-lozenges:      false;
 $use-rules:         false;
 $use-stats:         false;
 $use-greybox:       false;
