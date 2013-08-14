@@ -10,13 +10,6 @@
 	background-color: $header--background-color;
 }
 
-.banner {
-	.brand {
-		@include font-size($h1-size);
-
-		padding-top: $base-spacing-unit;    // full
-		padding-right: $base-spacing-unit;  // full
-		padding-bottom: $base-spacing-unit; // full
-		padding-left: $half-spacing-unit;   // half!
-	}
+.brand {
+	@include font-size($h1-size);
 }
