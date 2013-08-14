@@ -87,20 +87,22 @@ $color--gray--80:        lighten($color--black, 80%);
 $color--gray--90:        lighten($color--black, 90%);
 $color--white:           #FFFFFF;
 
-// Based on the Black Math color theme on Kuler
-// https://kuler.adobe.com/Black-Math-color-theme-183602/
-$color--blackish:        #1C1919;
-$color--pumpkin-fire:    #EB5937;
-$color--gray-purple:     #403D3C;
-$color--tear:            #456F74;
-$color--sand:            #D3CBBD;
+/**
+ * Color palette.
+ */
+$color--red--cherry:     #9e1b34; // http://web.temple.edu/web-style-guide/color-palette
+$color--red--bright:     #ff2f34;
+$color--red--light:      #fed5d5;
+$color--yellow:          #fff000;
 
-$color__alpha:           $color--pumpkin-fire;
-$color__beta:            $color--gray-purple;
-$color__gamma:           $color--tear;
+$color__alpha:           $color--red--bright;
+$color__beta:            $color--red--cherry;
+$color__gamma:           $color--red--light;
 
-$color__dark:            $color--blackish;
-$color__light:           $color--sand;
+$color__attn:            $color--yellow;
+
+$color__dark:            $color--gray--20;
+$color__light:           white;
 
 /**
  * Default colour for objects’ borders etc.
@@ -180,6 +182,7 @@ $micro-size:        10px;
 \*------------------------------------*/
 
 $body--background-color: $color--gray--80;
+$container--background-color: $body--background-color;
 
 $pane--color: white;
 
@@ -190,7 +193,7 @@ $pane--color: white;
     $HEADER
 \*------------------------------------*/
 
-$header--background-color: $color__gamma;
+$header--background-color: $color__beta;
 
 
 
@@ -199,7 +202,7 @@ $header--background-color: $color__gamma;
     $NAV-MAIN
 \*------------------------------------*/
 
-$main-nav--background-color: $color__dark;
+$main-nav--background-color: $color__alpha;
 $main-nav--text-color: white;
 $main-nav--text-size: $milli-size;
 
