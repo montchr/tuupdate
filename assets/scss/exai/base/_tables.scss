@@ -1,0 +1,85 @@
+/*------------------------------------*\
+	$UI-TABLES
+\*------------------------------------*/
+
+/**
+ * Striped tables
+ */
+.table--striped{
+
+	tbody tr:nth-of-type(odd){
+		background-color: $color--gray--70;
+	}
+}
+
+/**
+ * Bordered tables
+ */
+.table--bordered{
+	border:1px solid $base-ui-color;
+
+	thead {
+	    background-color: $color--gray--60;
+	}
+}
+
+/**
+ * A table with borders, but only horizontally.
+ */
+.table--bordered--horizontal {
+
+	td,
+	th {
+	    border-width: 0 0 1px 0;
+	    border-bottom: 1px solid $base-ui-color;
+	}
+
+	thead tr:last-child th{
+	    border-bottom-width:2px;
+	}
+
+	tbody > tr:last-child td {
+	    border-bottom-width: 0;
+	}
+}
+
+/**
+ * A table with borders, but only vertically.
+ *
+ * Works nicely with `.table--striped`
+ */
+.table--bordered--vertical {
+
+	td,
+	th {
+	    border-width: 0 0 0 1px;
+	    border-left: 1px solid $base-ui-color;
+	}
+	
+	tbody > tr td:first-child,
+	thead > tr th:first-child {
+	    border-left-width: 0;
+	}
+}
+
+/**
+ * A combination of the hoz and vert tables.
+ *
+ * Forms a hashed or criss-crossed pattern.
+ *
+ * Must specify both vertical and horizontal border classes.
+ */
+.table--bordered--vertical.table--bordered--horizontal {
+	td,
+	th {
+		border-width: 0 0 1px 1px;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+

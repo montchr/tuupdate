@@ -1,0 +1,60 @@
+/*------------------------------------*\
+	$UI-TYPOGRAPHY
+\*------------------------------------*/
+
+h1,.alpha{
+	
+}
+h2,.beta{
+	
+}
+h3,.gamma{
+	
+}
+h4,.delta{
+	
+}
+h5,.epsilon{
+	
+}
+h6,.zeta{
+	text-transform: uppercase;
+}
+
+/**
+ * Definition lists.
+ */
+dl {
+	dt {
+		font-weight: 700;
+	}
+
+	dd {
+		font-style: italic;
+	}
+}
+
+/**
+ * Preformatted text blocks.
+ */
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+	font-family: $font__stack--mono;
+}
+
+code,
+pre {
+	@include vendor(border-radius, $brand-round);
+	background-color: $color--gray--50;
+	border: 2px solid $color__alpha;
+	padding: $half-spacing-unit / 4;
+}
+
+pre {
+	padding-left: $base-spacing-unit;
+}
+

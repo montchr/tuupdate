@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $UI-HEADER
+\*------------------------------------*/
+/**
+ * When the top navbar is enabled, most of these styles
+ * will be overriden by the settings in the navbar SCSS file.
+ */
+
+.banner__inner {
+	background-color: $header--background-color;
+}
+
+.banner {
+	.brand {
+		@include font-size($h1-size);
+
+		padding-top: $base-spacing-unit;    // full
+		padding-right: $base-spacing-unit;  // full
+		padding-bottom: $base-spacing-unit; // full
+		padding-left: $half-spacing-unit;   // half!
+	}
+}

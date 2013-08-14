@@ -1,0 +1,105 @@
+/*------------------------------------*\
+    $UI-IMAGES
+\*------------------------------------*/
+/**
+ * Not just images, but videos and other embeds too!
+ */
+
+/*
+ * Responsive images
+ *
+ * 1. Fluid images for posts, comments, and widgets
+ * 2. ^^overrides inuit.css rule :(
+ * 3. Make sure images with WordPress-added height and width attributes are scaled correctly.
+ * 4. Make sure videos and embeds fit their containers.
+ * 
+ */
+
+img {
+	&, /* 1 */
+	&.size-full, /* 1 */
+	&.size-large, /* 1 */
+	&.wp-post-image, /* 1 */
+
+	&[width], /* 2 */
+	&[height], /* 2 */
+
+	&[class*="align"], /* 3 */
+	&[class*="wp-image-"], /* 3 */
+	&[class*="attachment-"] /* 3 */
+	{
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.entry-content, /* 3 */
+.entry-summary, /* 3 */
+.comment-content, /* 3 */
+.widget, /* 3 */
+.wp-caption, /* 3 */
+{
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.alignleft { @extend .img--left; }
+.alignright { @extend .img--right; }
+.aligncenter { @extend .img--center; }
+
+.wp-caption {
+	@include vendor(border-radius, $brand-round);
+
+	background-color: $color--gray--90;
+	border: 1px solid $base-ui-color;
+	padding: $quarter-spacing-unit;
+
+	&.alignleft {
+		+ ul,
+		+ ol {
+			list-style-position: inside;
+		}
+	}
+}
+
+.caption,
+.wp-caption .wp-caption__text,
+.wp-caption .wp-caption-text, // include this in the off chance that someone puts a captioned image in a text widget
+.entry-caption,
+.gallery-caption {
+	@include font-size(18px);
+
+	color: #220e10;
+	font-style: italic;
+	font-weight: 300;
+	padding-left: $quarter-spacing-unit;
+	padding-top: $quarter-spacing-unit;
+}
+
+embed, /* 4 */
+iframe, /* 4 */
+object, /* 4 */
+video /* 4 */
+{
+	height: auto;
+	max-width: 100%;
+}
+
+/* Override the Twitter embed fixed width. */
+.entry-content {
+	.twitter-tweet-rendered {
+		max-width: 100% !important;
+	}
+}
+
+img.wp-smiley,
+.rsswidget img {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}

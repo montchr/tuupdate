@@ -1,0 +1,453 @@
+/*------------------------------------*\
+	$UI-FORMS
+\*------------------------------------*/
+/**
+ * There's a few things to note here.
+ *
+ * All text-input boxes should have the class `.text-input`
+ * or else they might break! In general, this makes styling easier.
+ */
+
+form,
+fieldset,
+input,
+select,
+textarea,
+.text-input {
+	margin: 0;
+}
+
+fieldset {
+	border: 0;
+	padding: $half-spacing-unit 0;
+}
+
+legend {
+	border: 0;
+	color: #333;
+	display: block;
+	font-size: $h4-size;
+	*margin-left: -7px;
+	margin-bottom: .3em;
+	padding: .3em 0;
+	white-space: normal;
+	width: 100%;
+}
+
+input,
+select,
+textarea,
+.text-input {
+	//vertical-align: baseline;
+	//*vertical-align: middle;
+
+	&[readonly],
+	&[readonly]:focus {
+		background: #eee;
+		color: #777;
+		border-color: $base-ui-color;
+	}
+
+	&:focus:invalid {
+		color: #b94a48;
+		border: 1px solid #ee5f5b;
+
+		&:focus {
+			border-color: #e9322d
+		}
+	}
+}
+
+select {
+	border: 1px solid $base-ui-color;
+	background-color: #fff;
+
+	&[multiple] {
+		height: auto
+	}
+}
+
+.checkbox,
+.radio {
+	margin: $half-spacing-unit 0;
+	display: block;
+}
+
+label,
+.label {
+	display: inline-block;
+	margin: $half-spacing-unit 0 $quarter-spacing-unit;
+	font-size: 90%;
+	font-weight: 700;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+button,
+input {
+
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	&[disabled] {
+		cursor: default
+	}
+}
+
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+	-webkit-appearance: button;
+	cursor: pointer;
+	*overflow: visible;
+}
+
+input[type=file],
+input[type=radio],
+input[type=checkbox] {
+	padding: 0;
+	*height: $base-spacing-unit;
+	*width: $base-spacing-unit;
+
+	&:focus {
+		outline: thin dotted $base-ui-color;
+		outline: 1px auto #129FEA;
+
+		&:invalid:focus {
+			outline-color: #e9322d
+		}
+	}
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=week],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=color],
+select,
+textarea,
+.text-area {
+	@include vendor(transition, .3s linear border);
+
+	cursor: text;
+	padding: $quarter-spacing-unit;
+	display: inline-block;
+	border: 1px solid $base-ui-color;
+	font-size: .8em;
+	box-shadow: inset 0 0 3px $base-ui-color;
+	border-radius: 4px;
+	-webkit-font-smoothing: antialiased;
+
+	&:focus {
+		outline: 0;
+		outline: thin dotted \9;
+		border-color: #129FEA;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+		background-color: #eaeded;
+		color: #cad2d3;
+	}
+}
+
+input[type=color] {
+	cursor: auto;
+}
+
+
+
+
+
+
+/**
+ * Forms, neatly stacked on top of one another.
+ *
+	<form class="form form--stacked">
+		<fieldset>
+			<legend>A Stacked Form</legend>
+
+			<label for="email">Email</label>
+			<input id="email" type="email" placeholder="Email" class="text-input">
+
+			<label for="password">Password</label>
+			<input id="password" type="password" placeholder="Password" class="text-input">
+
+			<button type="submit" class="btn btn--small btn--positive">Sign in</button>
+		</fieldset>
+	</form>
+ *
+ */
+.form--stacked {
+	input[type=text],
+	input[type=password],
+	input[type=email],
+	input[type=url],
+	input[type=date],
+	input[type=month],
+	input[type=time],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=week],
+	input[type=number],
+	input[type=search],
+	input[type=tel],
+	input[type=color],
+	select,
+	label,
+	textarea {
+		display: block;
+		margin: $quarter-spacing-unit 0;
+	}
+}
+
+
+
+
+
+
+
+
+/**
+ * Stacked form with labels aligned to the left edge.
+ *
+	<form class="form form--aligned">
+		<fieldset>
+			<div class="form__control-group">
+				<label for="name">Username</label>
+				<input id="name" type="text" placeholder="Username" class="text-input">
+			</div>
+
+			<div class="form__control-group">
+				<label for="password">Password</label>
+				<input id="password" type="password" placeholder="Password" class="text-input">
+			</div>
+
+			<div class="form__controls">
+				<label for="cb" class="checkbox">
+					<input id="cb" type="checkbox"> I've read the terms and conditions
+				</label>
+
+				<button type="submit" class="btn btn--small btn--positive">Submit</button>
+			</div>
+		</fieldset>
+	</form>
+ *
+ */
+.form--aligned {
+	input,
+	textarea,
+	select,
+	.text-input {
+		display: inline-block;
+		*display: inline;
+		*zoom: 1;
+		vertical-align: middle;
+	}
+}
+
+	.form__control-group {
+		margin-bottom: $quarter-spacing-unit;
+
+		label {
+			text-align: right;
+			display: inline-block;
+			vertical-align: middle;
+			width: 10em;
+			margin: 0 $half-spacing-unit 0 0;
+		}
+	}
+
+	.form__controls {
+		margin: $base-spacing-unit 0 0 10em;
+	}
+
+
+
+
+
+
+
+
+
+
+/**
+ * Form messages
+ */
+.form-message {
+	display: block;
+	color: #666;
+	font-size: 90%;
+}
+
+/**
+ * Inline help text and form messages
+ */
+.help-inline,
+.form-message--inline {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+
+	color: #666;
+	font-size: $milli-size;
+	padding-left: .3em;
+	vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Text input with fully-rounded edges (e.g. Safari style)
+ *
+	<form class="form">
+		<input type="text" class="text-input  text-input--rounded  text-input">
+		<button type="submit" class="btn btn--small">Search</button>
+	</form>
+ *
+ */
+/*input*/.text-input--rounded {
+	border-radius: 2em;
+	padding: .5em 1em;
+}
+
+
+
+
+
+
+
+
+/**
+ * Grouped form inputs
+ *
+	<form class="form">
+		<fieldset class="form__group">
+			<input type="text" class="one-half  text-input" placeholder="Username">
+			<input type="text" class="one-half  text-input" placeholder="Password">
+			<input type="email" class="one-half  text-input" placeholder="Email">
+		</fieldset>
+
+		<button type="submit" class="btn btn--small one-half btn--positive">Sign in</button>
+	</form>
+ *
+ */
+.form__group {
+	fieldset { margin-bottom: 10px; }
+
+	button {
+		margin: .35em 0;
+	}
+
+	input {
+		display: block;
+		padding: 10px;
+		margin: 0;
+		border-radius: 0;
+		position: relative;
+		top: -1px;
+
+		&:focus {
+			z-index: 2
+		}
+
+		&:first-child {
+			top: 1px;
+			border-radius: $brand-round $brand-round 0 0;
+		}
+
+		&:last-child {
+			top: -2px;
+			border-radius: 0 0 $brand-round $brand-round;
+		}
+	}
+} // end .form__group
+
+
+
+
+
+
+
+
+
+@include media-query(palm) {
+
+	button[type=submit] { margin: .7em 0 0 }
+
+	input[type=text],
+	input[type=password],
+	input[type=email],
+	input[type=url],
+	input[type=date],
+	input[type=month],
+	input[type=time],
+	input[type=datetime],
+	input[type=datetime-local],
+	input[type=week],
+	input[type=number],
+	input[type=search],
+	input[type=tel],
+	input[type=color],
+	label {
+		margin-bottom: .3em;
+		display: block;
+	}
+
+	.form__group input[type=text],
+	.form__group input[type=password],
+	.form__group input[type=email],
+	.form__group input[type=url],
+	.form__group input[type=date],
+	.form__group input[type=month],
+	.form__group input[type=time],
+	.form__group input[type=datetime],
+	.form__group input[type=datetime-local],
+	.form__group input[type=week],
+	.form__group input[type=number],
+	.form__group input[type=search],
+	.form__group input[type=tel],
+	.form__group input[type=color] { margin-bottom: 0 }
+
+	.form__control-group {
+		label {
+			margin-bottom: .3em;
+			text-align: left;
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.form__controls {
+		margin: 1.5em 0 0
+	}
+
+	.help-inline,
+	.form-message--inline,
+	.form-message {
+		display: block;
+		font-size: 80%;
+		padding: .2em 0 .8em;
+	}
+}

@@ -1,0 +1,195 @@
+/*------------------------------------*\
+    $EXAI-DEFAULTS
+\*------------------------------------*/
+/**
+ * exai.css’ default variables.
+ *
+ * These build upon inuit.css' variables and form
+ * the backbone of exai. Override them in _vars.scss.
+ */
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+$color--black:           #000000 !default;
+$color--gray--10:        lighten($color--black, 10%) !default;
+$color--gray--20:        lighten($color--black, 20%) !default;
+$color--gray--25:        lighten($color--black, 25%) !default; // one-quarter
+$color--gray--30:        lighten($color--black, 30%) !default;
+$color--gray--40:        lighten($color--black, 40%) !default;
+$color--gray--50:        lighten($color--black, 50%) !default; // half
+$color--gray--60:        lighten($color--black, 60%) !default;
+$color--gray--70:        lighten($color--black, 70%) !default;
+$color--gray--75:        lighten($color--black, 75%) !default; // three-quarters
+$color--gray--80:        lighten($color--black, 80%) !default;
+$color--gray--90:        lighten($color--black, 90%) !default;
+$color--white:           #FFFFFF !default;
+
+// Based on the Black Math color theme on Kuler
+// https://kuler.adobe.com/Black-Math-color-theme-183602/
+$color--blackish:        #1C1919 !default;
+$color--pumpkin-fire:    #EB5937 !default;
+$color--gray-purple:     #403D3C !default;
+$color--tear:            #456F74 !default;
+$color--sand:            #D3CBBD !default;
+
+$color__alpha:           $color--pumpkin-fire !default;
+$color__beta:            $color--gray-purple !default;
+$color__gamma:           $color--tear !default;
+
+$color__dark:            $color--blackish !default;
+$color__light:           $color--sand !default;
+
+/**
+ * Default colour for objects’ borders etc.
+ *
+ * ^^overrides inuit.css 
+ */
+$base-ui-color:         $color__beta !default;
+
+
+
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Font stacks.
+ */
+$font__stack--sans-serif: "Proxima Nova", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font__stack--serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !default;
+$font__stack--mono: "Ubuntu Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !default;
+
+$font__stack--brand: $font__stack--sans-serif !default;
+
+/**
+ * Base stuff
+ *
+ * ^^overrides inuit.css
+ */
+$base-font-size:    16px!default;
+$base-line-height:  24px!default;
+
+$base-spacing-unit: $base-line-height!default;
+$quarter-spacing-unit: $base-spacing-unit / 4;
+
+/**
+ * Base font-family.
+ *
+ * ^^overrides inuit.css
+ */
+$base-font-family:  $font__stack--sans-serif;
+
+/**
+ * Font-sizes (in pixels).
+ *
+ * Use with font-size() mixin.
+ *
+ * ^^overrides inuit.css
+ */
+$giga-size:         96px!default;
+$mega-size:         72px!default;
+$kilo-size:         48px!default;
+
+$h1-size:           36px!default; // .alpha
+$h2-size:           30px!default; // .beta
+$h3-size:           24px!default; // .gamma
+$h4-size:           20px!default; // .delta
+$h5-size:           16px!default; // .epsilon
+$h6-size:           14px!default; // .zeta
+
+$milli-size:        12px!default;
+$micro-size:        10px!default;
+
+/**
+ * Font Awesome path
+ */
+$FontAwesomePath: "/assets/fonts/font-awesome/font" !default;
+
+
+
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+
+$brand--font-color: $color__alpha !default;
+$brand--font-family: $font__stack--brand !default;
+$brand--font-weight: 700 !default;
+
+/**
+ * How big would you like round corners to be by default?
+ */
+$brand-round:        4px!default;
+
+
+
+
+
+/*------------------------------------*\
+    $GENERAL
+\*------------------------------------*/
+
+$body--background-color: $color--gray--80 !default;
+
+$container--background-color: $color__light !default;
+$container--max-width: 1140px !default;
+
+$link--color: $color__alpha !default;
+$link--color--alt: $color__beta !default;
+
+$pane--color: white !default;
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+$header--background-color: $color__gamma !default;
+
+
+
+
+
+/*------------------------------------*\
+    $NAV-MAIN
+\*------------------------------------*/
+
+$main-nav--background-color: $color__dark !default;
+$main-nav--text-color: white !default;
+$main-nav--text-size: $milli-size !default;
+
+$main-nav__dropdown--background-color: $color__beta !default;
+$main-nav__dropdown--background-color--active: $color__dark !default;
+$main-nav__dropdown--text-color: $main-nav--text-color !default;
+//$main-nav__dropdown--text-color--active: white !default; // not used currently
+$main-nav__dropdown--width: 12em !default;
+
+$main-nav--link--color: $main-nav--text-color !default;
+$main-nav--link--color--alt: $color__alpha !default;
+
+$navbar--background-color: $color__dark !default;
+$navbar--text-color: white !default;
+$navbar--text-size: $main-nav--text-size !default;
+
+$navbar--link--color: $navbar--text-color !default;
+$navbar--link--color--alt: $color__alpha !default;

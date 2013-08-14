@@ -1,0 +1,221 @@
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+
+/**
+ *
+ * ^^overrides Indicates var overriding inuit.css
+ * 
+ * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if inuit.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. inuit.css ignores its own variables in favour of
+ * using your own, so you can completely modify how inuit.css works without ever
+ * having to alter the framework itself.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+$use-grids:         false;
+$use-flexbox:       false;
+$use-columns:       false;
+$use-nav:           true;
+$use-options:       false;
+$use-pagination:    true;
+$use-breadcrumb:    false;
+$use-media:         true;
+$use-marginalia:    false;
+$use-island:        false;
+$use-block-list:    false;
+$use-matrix:        true;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  false;
+$use-flyout:        true;
+$use-arrows:        true;
+$use-sprite:        false;
+$use-icon-text:     false;
+$use-beautons:      true;
+$use-lozenges:      true;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+
+
+
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of exai.css and inuit.css here.
+ */
+
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+
+/**
+ * Color scheme
+ *
+ * ^^overrides exai.css
+ */
+$color--black:           #000000;
+$color--gray--10:        lighten($color--black, 10%);
+$color--gray--20:        lighten($color--black, 20%);
+$color--gray--25:        lighten($color--black, 25%); // one-quarter
+$color--gray--30:        lighten($color--black, 30%);
+$color--gray--40:        lighten($color--black, 40%);
+$color--gray--50:        lighten($color--black, 50%); // half
+$color--gray--60:        lighten($color--black, 60%);
+$color--gray--70:        lighten($color--black, 70%);
+$color--gray--75:        lighten($color--black, 75%); // three-quarters
+$color--gray--80:        lighten($color--black, 80%);
+$color--gray--90:        lighten($color--black, 90%);
+$color--white:           #FFFFFF;
+
+// Based on the Black Math color theme on Kuler
+// https://kuler.adobe.com/Black-Math-color-theme-183602/
+$color--blackish:        #1C1919;
+$color--pumpkin-fire:    #EB5937;
+$color--gray-purple:     #403D3C;
+$color--tear:            #456F74;
+$color--sand:            #D3CBBD;
+
+$color__alpha:           $color--pumpkin-fire;
+$color__beta:            $color--gray-purple;
+$color__gamma:           $color--tear;
+
+$color__dark:            $color--blackish;
+$color__light:           $color--sand;
+
+/**
+ * Default colour for objects’ borders etc.
+ *
+ * ^^overrides exai.css
+ * ^^overrides inuit.css
+ */
+$base-ui-color:         $color__beta;
+
+
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+
+/**
+ * Font stacks.
+ */
+$font__stack--sans-serif: "Proxima Nova", Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font__stack--serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+$font__stack--mono: "Ubuntu Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+$font__stack--brand: $font__stack--sans-serif;
+
+/**
+ * Base stuff
+ *
+ * ^^overrides inuit.css
+ */
+$base-font-size:    16px;
+$base-line-height:  24px;
+
+$base-spacing-unit: $base-line-height;
+$quarter-spacing-unit: $base-spacing-unit / 4;
+
+/**
+ * Base font-family.
+ *
+ * ^^overrides inuit.css
+ */
+$base-font-family:  $font__stack--sans-serif;
+
+/**
+ * Font-sizes (in pixels).
+ *
+ * Use with font-size() mixin.
+ *
+ * ^^overrides inuit.css
+ */
+$giga-size:         96px;
+$mega-size:         72px;
+$kilo-size:         48px;
+
+$h1-size:           36px; // .alpha
+$h2-size:           30px; // .beta
+$h3-size:           24px; // .gamma
+$h4-size:           20px; // .delta
+$h5-size:           16px; // .epsilon
+$h6-size:           14px; // .zeta
+
+$milli-size:        12px;
+$micro-size:        10px;
+
+
+
+
+/*------------------------------------*\
+    $BRAND
+\*------------------------------------*/
+
+
+
+
+/*------------------------------------*\
+    $GENERAL
+\*------------------------------------*/
+
+$body--background-color: $color--gray--80;
+
+$pane--color: white;
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+$header--background-color: $color__gamma;
+
+
+
+
+/*------------------------------------*\
+    $NAV-MAIN
+\*------------------------------------*/
+
+$main-nav--background-color: $color__dark;
+$main-nav--text-color: white;
+$main-nav--text-size: $milli-size;
+
+$main-nav__dropdown--background-color: $color__beta;
+$main-nav__dropdown--background-color--active: $color__dark;
+$main-nav__dropdown--text-color: $main-nav--text-color;
+
+$main-nav--link--color: $main-nav--text-color;
+$main-nav--link--color--alt: $color__alpha;
+
+$navbar--background-color: $color__dark;
+$navbar--text-color: white;
+$navbar--text-size: $main-nav--text-size;
+
+$navbar--link--color: $navbar--text-color;
+$navbar--link--color--alt: $color__alpha;

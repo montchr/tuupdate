@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $UI-WIDGETS
+\*------------------------------------*/
+
+.widget {
+	margin-bottom: $base-spacing-unit * 2;
+
+	ul {
+		list-style: none;
+		margin-left: $base-spacing-unit;
+	}
+
+	select {
+		width: 100%;
+	}
+}

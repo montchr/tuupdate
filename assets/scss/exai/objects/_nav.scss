@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    $UI-OBJECT-NAV
+\*------------------------------------*/
+
+/**
+ * Add vertical dividers to list elements.
+ *
+ * For use with the nav object. Include on a `.nav` element.
+ */
+@mixin nav-dividers($width: 1px, $type: solid, $color: $base-ui-color, $stacked: false) {
+
+	@if $stacked == false {
+
+		> li {
+			border-left: $width $type $color;
+
+			&:last-child {
+				border-right: $width $type $color;
+			}
+		}
+
+	} @else {
+
+		> li {
+			border-top: $width $type $color;
+
+			&:last-child {
+				border-bottom: $width $type $color;
+			}
+		}
+
+	} 
+
+}

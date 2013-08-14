@@ -1,0 +1,270 @@
+/*------------------------------------*\
+    $UI-MAIN-NAV
+\*------------------------------------*/
+/**
+ * This is the main navigation bar.
+ * It is very complex.
+ * 
+ * It is mainly used near the top of a page,
+ * but it can appear in the footer for no-js situations.
+ *
+ * E.G.
+	<header>
+		<div class="container">
+			<a class="brand" href="#"></a>
+			<a class="btn btn--navbar menu-link" data-toggle="collapse" data-target=".nav-collapse">
+				<i class="icon-reorder"></i>
+				<span class="accessibility">Menu</span>
+			</a>
+			<nav class="main-nav" role="navigation">
+				<ul class="nav">
+					...
+				</ul>
+			</nav>
+		</div>
+	</header>
+ *
+ */
+
+/**
+ * Menu toggle for smaller screens.
+ */
+.menu-link {
+	float: right;
+}
+
+.main-nav {
+	@extend .cf;
+	background-color: $main-nav--background-color;
+	color: $main-nav--text-color;
+
+	-webkit-transition: all 0.3s ease-out;
+	   -moz-transition: all 0.3s ease-out;
+	    -ms-transition: all 0.3s ease-out;
+	     -o-transition: all 0.3s ease-out;
+	        transition: all 0.3s ease-out;
+
+	&.active {
+		max-height: 55em;
+	}
+
+	> .nav {
+		@extend .nav--stacked;
+		border-top: 1px solid #808080;
+	}
+
+	a {
+		color: $main-nav--text-color;
+		display: block;
+		@include font-size($main-nav--text-size);
+		padding: $half-spacing-unit;
+		position: relative;
+
+		&:hover,
+		&:active {
+			background-color: $main-nav__dropdown--background-color--active;
+			color: $main-nav--link--color--alt;
+		}
+	}
+}
+
+	.dropdown,
+	.dropdown--submenu {
+		@extend .cf;
+
+		> a {
+			&:after {
+				@include icon($expand-alt);
+
+				display: block;
+				font-size: 1.5em;
+				padding: 0.25em 0.5em;
+				text-decoration: none;
+
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			&.active:after {
+				@include icon($collapse-alt);
+				text-decoration: none;
+			}
+		} // end > a
+	} // end .dropdown
+
+		.dropdown__menu {
+			@extend .cf;
+			> li {
+				a {
+					background-color: $main-nav__dropdown--background-color;
+				}
+			}
+		}
+
+.js {
+	.main-nav,
+	.dropdown__menu {
+		overflow: hidden;
+		max-height: 0;
+
+		&.active {
+			max-height: 55em;
+		}
+	}
+} // end .js
+
+
+
+@include media-query(portable) {
+	.main-nav {
+		clear: both;
+		background-color: $main-nav__dropdown--background-color;
+
+		ul {
+			@include nav-dividers($stacked: true);
+		}
+
+			.nav.level-2,
+			.nav.level-3,
+			.nav.level-4 {
+				> li {
+					a {
+						&:hover,
+						&:active {
+							background-color: $main-nav__dropdown--background-color--active;
+
+						}
+					}
+				}
+			}
+
+			.nav.level-2 {
+				> li {
+					a {
+						padding-left: $base-spacing-unit;
+
+						&,
+						&:visited {
+							background-color: transparentize($main-nav__dropdown--background-color--active, 0.7);
+						}
+					}
+				}
+			} // end .nav.level-2
+
+				.nav.level-3 {
+					> li {
+						a {
+							padding-left: $base-spacing-unit * 2;
+							&,
+							&:visited {
+								background-color: transparentize($main-nav__dropdown--background-color--active, 0.5);
+							}
+						}
+					}
+				}
+
+					.nav.level-4 {
+						> li {
+							a {
+								padding-left: $base-spacing-unit * 3;
+								&,
+								&:visited {
+									background-color: transparentize($main-nav__dropdown--background-color--active, 0.3);
+								}
+							}
+						}
+					}
+	} // end .main-nav
+}
+
+
+
+@include media-query(desk) {
+
+	.dropdown__toggle,
+	.menu-link {
+		display: none;
+	}
+
+	.js {
+		.main-nav,
+		.dropdown__menu {
+			max-height: none;
+			overflow: visible;
+		}
+
+		.dropdown__menu {
+			display: none;
+		}
+
+		.nav {
+			li {
+				&:hover {
+					// this selector is very messy
+					> .dropdown__menu {
+						display: block;
+					}
+				}
+			}
+		}
+	} // end .js
+
+	.main-nav {
+		a {
+			border: 0;
+		}
+
+		> .nav {
+			margin: 0;
+			border: 0;
+
+			> li {
+				position: relative;
+
+				&,
+				> a {
+					display: inline-block; // overrides nav--stacked for first level
+				}
+			}
+		}
+	} // end .main-nav
+
+
+
+		.dropdown {
+			> a {
+				padding-right: 2em;
+
+				&:after,
+				&.active:after {
+					@include icon($caret-down);
+					@include font-size(16px);
+					text-decoration: none;
+					padding-top: $half-spacing-unit;
+				}
+			}
+
+			li {
+				position: relative;
+			}
+		} // end .dropdown
+
+			.dropdown__menu {
+				position: absolute;
+				width: $main-nav__dropdown--width;
+
+				a {
+					color: $main-nav__dropdown--text-color;
+				}
+			}
+
+			.dropdown--submenu {
+				.dropdown__menu {
+					top: 0;
+					left: $main-nav__dropdown--width;
+				}
+			}
+
+} // end media query desk
+

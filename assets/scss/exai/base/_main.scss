@@ -1,0 +1,36 @@
+/*------------------------------------*\
+    $UI-MAIN
+\*------------------------------------*/
+
+body {
+	background-color: $body--background-color;
+}
+
+.container {
+	background-color: $container--background-color;
+	margin: 0 auto;
+	max-width: $container--max-width;
+}
+
+.brand {
+	color: $brand--font-color !important;
+	font-family: $font__stack--brand !important;
+	font-weight: $brand--font-weight !important;
+}
+
+a {
+	@include vendor(transition, all 300ms ease);
+
+	text-decoration: none;
+
+	&,
+	&:visited {
+		color: $link--color;
+	}
+
+	&:hover,
+	&:active {
+		color: $link--color--alt;
+	}
+}
+

@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    $UI-OBJECT-PANE
+\*------------------------------------*/
+/**
+ * Provides default styles for panes on a page.
+ *
+ * For example, a pane provides basic padding around 
+ * the .main and .sidebar sections. It can also provide
+ * a background or borders for more specific sections on a page.
+ */
+
+.pane {
+	margin-bottom: $base-spacing-unit;
+	padding: $base-spacing-unit;
+}
