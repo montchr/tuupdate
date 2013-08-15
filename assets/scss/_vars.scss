@@ -126,7 +126,11 @@ $font__stack--sans-serif: "Proxima Nova", Frutiger, "Frutiger Linotype", Univers
 $font__stack--serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $font__stack--mono: "Ubuntu Mono", Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 
+$font__stack--condensed--bold: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+$font__stack--condensed--light: "Proxima Nova Condensed", "Lato", "Open Sans Condensed", "Source Sans Pro", "Helvetica Neue Condensed", "Arial Narrow", sans-serif;
+
 $font__stack--brand: $font__stack--sans-serif;
+
 
 /**
  * Base stuff

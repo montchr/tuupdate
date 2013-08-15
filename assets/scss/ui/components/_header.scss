@@ -1,0 +1,122 @@
+/*------------------------------------*\
+    $UI-HEADER
+\*------------------------------------*/
+
+.branding {
+	@extend .cf;
+}
+
+/*a*/.brand {
+	display: block;
+	float: left;
+	padding: 0;
+	position: relative;
+}
+
+	.brand__logo {
+		background-color: $header--background-color;
+		display: inline-block;
+		padding: $quarter-spacing-unit;
+
+		position: absolute;
+		z-index: 99999;
+
+		.icon-logo {
+			width: $base-spacing-unit * 2;
+			height: $base-spacing-unit * 2;
+			background-size: 100%;
+			display: block;
+		}
+	}
+
+	.brand__about {
+		margin: 0;
+		padding-left: $base-spacing-unit * 2.5;
+		padding-top: $quarter-spacing-unit;
+		padding-bottom: $quarter-spacing-unit;
+		vertical-align: top;
+	}
+
+		.brand__about__site-title,
+		.brand__about__site-tagline {
+			margin: 0;
+
+			&,
+			&:visited {
+				color: white;
+			}
+			
+			&:active,
+			&:hover {
+				color: black;
+			}
+		} // end .brand__about__site-title, __site-tagline
+
+		.brand__about__site-title {
+			text-transform: uppercase;
+			padding-right: $quarter-spacing-unit;
+		}
+
+		.brand__about__site-tagline {
+			font-family: $font__stack--condensed--light;
+			font-weight: 100;
+		}
+
+
+
+
+
+
+
+
+@include media-query(portable) {
+	.brand__about__site-title {
+		@include font-size($h3-size);
+	}
+
+	.brand__about__site-tagline {
+		@include font-size($h5-size);
+	}
+}
+
+
+
+
+
+@include media-query(lap-and-up) {
+
+	/*a*/.brand {
+		//float: none;
+		white-space: nowrap;
+	}
+
+	.brand__about__site-title,
+	.brand__about__site-tagline {
+		display: inline-block;
+	}
+
+	.brand__about__site-title {
+		@include font-size($h2-size);
+	}
+
+	.brand__about__site-tagline {
+		@include font-size($h4-size);
+	}
+}
+
+
+
+
+
+@include media-query(desk) {
+	.brand__logo {
+		.icon-logo {
+			width: $base-spacing-unit * 4;
+			height: $base-spacing-unit * 4;
+		}
+	}
+
+	.brand__about {
+		padding-left: $base-spacing-unit * 4.5;
+	}
+}

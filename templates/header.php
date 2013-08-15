@@ -3,9 +3,14 @@
 		<div class="branding">
 			<div class="branding__inner">
 
-				<a class="branding__brand  brand" href="<?php echo home_url(); ?>/">
-					<h1 class="branding__site-title"><?php bloginfo('name'); ?></h1>
-					<h2 class="branding__site-tagline"></h2>
+				<a class="brand" href="<?php echo home_url(); ?>/">
+					<div class="brand__logo  logo">
+						<i class="icon-logo  icon"></i>
+					</div>
+					<div class="brand__about">
+						<h1 class="brand__about__site-title  site-title"><?php bloginfo('name'); ?></h1><!--
+						--><p class="brand__about__site-tagline  site-tagline"><?php bloginfo('description'); ?></p>
+					</div>
 				</a>
 
 				<a class="btn  btn--navbar  menu-link" data-toggle="collapse" data-target=".nav-collapse">
@@ -30,17 +35,17 @@
 				?>
 				
 				<ul class="main-nav__social-menu  nav">
-					<li class="main-nav__social-menu__item  social-icon--facebook  social-icon">
-						<a href=""></a>
-					</li>
-					<li class="main-nav__social-menu__item  social-icon--twitter  social-icon">
-						<a href=""></a>
-					</li>
-					<li class="main-nav__social-menu__item  social-icon--vimeo  social-icon">
-						<a href=""></a>
-					</li>
-					<li class="main-nav__social-menu__item  social-icon--feed  social-icon">
-						<a href=""></a>
+					<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
+						<a href=""><i class="icon-facebook"></i></a>
+					</li><!--
+					--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
+						<a href=""><i class="icon-twitter"></i></a>
+					</li><!--
+					--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
+						<a href=""><i class="icon-vimeo"></i></a>
+					</li><!--
+					--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
+						<a href=""><i class="icon-rss"></i></a>
 					</li>
 				</ul>
 
