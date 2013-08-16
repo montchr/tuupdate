@@ -24,6 +24,8 @@
 		</div>
 	</header>
  *
+ * Heavily based upon Brad Frost's multi-toggle navigation pattern.
+ * http://codepen.io/bradfrost/full/qwJvF
  */
 
 /**
@@ -74,7 +76,7 @@
 
 		> a {
 			&:after {
-				@include icon($expand-alt);
+				content: "\FF0B";
 
 				display: block;
 				font-size: 1.5em;
@@ -87,7 +89,7 @@
 			}
 
 			&.active:after {
-				@include icon($collapse-alt);
+				content: "\FE63";
 				text-decoration: none;
 			}
 		} // end > a
@@ -238,8 +240,8 @@
 
 				&:after,
 				&.active:after {
-					@include icon($caret-down);
 					@include font-size(16px);
+					content: "\25BC";
 					text-decoration: none;
 					padding-top: $half-spacing-unit;
 				}
