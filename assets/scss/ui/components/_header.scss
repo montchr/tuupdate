@@ -129,9 +129,15 @@
 	}
 
 		.brand__logo {
+			@include corner-cut($header--background-color, 20px, bottom-both, 0, false);
+			height: $base-spacing-unit * 4.6666666666666; // the height must be less than the height of the logo so that the corner cut aligns with the bottom edge
+
 			.icon-logo {
-				width: $base-spacing-unit * 5;
+				position: relative;
+				z-index: 999;
+
 				height: $base-spacing-unit * 5;
+				width: $base-spacing-unit * 5;
 			}
 		}
 

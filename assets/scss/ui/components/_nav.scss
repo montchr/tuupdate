@@ -64,6 +64,12 @@
 
 @include media-query(desk) {
 
+	/**
+	 * Must be a higher z-index to counteract the strange effects of the corner cut.
+	 */
+	.dropdown__menu {
+		z-index: 99;
+	}
 
 
 	/**

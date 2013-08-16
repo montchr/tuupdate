@@ -1,0 +1,8 @@
+/*------------------------------------*\
+    TEMPLE UPDATE -- OBJECT -- PANE
+\*------------------------------------*/
+
+.pane {
+	@extend .cf;
+	@include corner-cut();
+}

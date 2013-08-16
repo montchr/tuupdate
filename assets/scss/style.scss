@@ -29,6 +29,10 @@
  * UI
  */
 @import "ui/base/icons";
+@import "ui/base/mixins";
+
+@import "ui/objects/cut";
+@import "ui/objects/pane";
 
 
 @import "ui/components/header";
