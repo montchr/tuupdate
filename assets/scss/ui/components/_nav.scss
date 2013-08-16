@@ -63,6 +63,9 @@
 
 
 @include media-query(desk) {
+
+
+
 	/**
 	 * 1. Float menus to the right
 	 * 2. Show social menu
@@ -77,6 +80,8 @@
 			margin-bottom: 0;
 			vertical-align: middle;
 		}
+
+
 
 	/**
 	 * Change top-level dropdown icon to caret
@@ -93,6 +98,8 @@
 		}
 	} // end .dropdown
 
+
+
 	/**
 	 * Height contraints.
 	 */
@@ -104,9 +111,23 @@
 		}
 	} // end .level-1
 
+	.main-nav__social-menu {
+		
+	}
+
 	.main-nav__social-menu__item {
-		height: 48px;
+		box-sizing: border-box;
+		border-left: 1px solid white;
 		vertical-align: middle;
+
+		&:last-child {
+			border-right: 1px solid white;
+		}
+
+		a {
+			background-color: black;
+			padding: $half-spacing-unit $base-spacing-unit * 0.75;
+		}
 
 		i {
 			display: inline-block;
