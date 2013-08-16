@@ -26,7 +26,6 @@
 		</div>
 
 		<nav class="main-nav" role="navigation">
-			<div class="main-nav__inner">
 
 				<?php
 					if (has_nav_menu('primary_navigation')) :
@@ -49,7 +48,6 @@
 					</li>
 				</ul>
 
-			</div>
 		</nav>
 	</div>
 </header>
