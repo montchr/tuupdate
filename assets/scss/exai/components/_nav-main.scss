@@ -48,7 +48,7 @@
 		max-height: 55em;
 	}
 
-	> .nav {
+	/*ul*/.level-1 {
 		@extend .nav--stacked;
 		border-top: 1px solid #808080;
 	}
@@ -125,9 +125,9 @@
 			@include nav-dividers($stacked: true);
 		}
 
-			.nav.level-2,
-			.nav.level-3,
-			.nav.level-4 {
+			/*ul*/.level-2,
+			/*ul*/.level-3,
+			/*ul*/.level-4 {
 				> li {
 					a {
 						&:hover,
@@ -139,7 +139,7 @@
 				}
 			}
 
-			.nav.level-2 {
+			/*ul*/.level-2 {
 				> li {
 					a {
 						padding-left: $base-spacing-unit;
@@ -150,9 +150,9 @@
 						}
 					}
 				}
-			} // end .nav.level-2
+			} // end /*ul*/.level-2
 
-				.nav.level-3 {
+				/*ul*/.level-3 {
 					> li {
 						a {
 							padding-left: $base-spacing-unit * 2;
@@ -164,7 +164,7 @@
 					}
 				}
 
-					.nav.level-4 {
+					/*ul*/.level-4 {
 						> li {
 							a {
 								padding-left: $base-spacing-unit * 3;
@@ -215,7 +215,7 @@
 			border: 0;
 		}
 
-		> .nav {
+		/*ul*/.level-1 {
 			margin: 0;
 			border: 0;
 
