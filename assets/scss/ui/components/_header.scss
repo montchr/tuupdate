@@ -66,6 +66,19 @@
 
 
 
+/**
+ * Nav context.
+ *
+ * Determines the nav's context, not its internal styling.
+ */
+.menu-link {
+	margin: $quarter-spacing-unit*3 $half-spacing-unit;
+	padding: $quarter-spacing-unit $half-spacing-unit;
+}
+
+
+
+
 
 
 

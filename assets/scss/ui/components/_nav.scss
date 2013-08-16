@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    $UI-NAV
+\*------------------------------------*/
+/**
+ * Contains styles that override the navigation
+ * component and its internal workings.
+ */
+
+/**
+ * Customize the look of the menu link for small screens.
+ */
+.menu-link {
+	@include font-size(18px);
+	background-color: black;
+	line-height: 1;
+
+	&:hover,
+	&:active {
+		color: white;
+	}
+}
