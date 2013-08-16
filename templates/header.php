@@ -1,7 +1,7 @@
 <header class="banner" role="banner">
-	<div class="banner__inner  container">
+	<div class="banner__inner">
 		<div class="branding">
-			<div class="branding__inner">
+			<div class="branding__inner  container">
 
 				<a class="brand" href="<?php echo home_url(); ?>/">
 					<div class="brand__logo  logo">
@@ -19,37 +19,40 @@
 				</a>
 				
 			</div>
-		</div>
+		</div><!-- end .branding -->
 
 		<div class="banner__drawer  drawer">
 			<div class="banner__drawer__slider  slider"></div>
 		</div>
 
 		<nav class="main-nav" role="navigation">
-			<div class="main-nav__inner">
+			<div class="main-nav__inner  container">
+				<div class="main-nav__menus">
 
-				<?php
-					if (has_nav_menu('primary_navigation')) :
-						wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'main-nav__primary-navigation  level-1  nav'));
-					endif;
-				?>
-				
-				<ul class="main-nav__social-menu  nav">
-					<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
-						<a href=""><i class="icon-facebook"></i></a>
-					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
-						<a href=""><i class="icon-twitter"></i></a>
-					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
-						<a href=""><i class="icon-vimeo"></i></a>
-					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
-						<a href=""><i class="icon-feed"></i></a>
-					</li>
-				</ul>
+					<?php
+						if (has_nav_menu('primary_navigation')) :
+							wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'main-nav__primary-navigation  level-1  nav'));
+						endif;
+					?>
+					
+					<ul class="main-nav__social-menu  nav">
+						<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
+							<a href=""><i class="icon-facebook"></i></a>
+						</li><!--
+						--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
+							<a href=""><i class="icon-twitter"></i></a>
+						</li><!--
+						--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
+							<a href=""><i class="icon-vimeo"></i></a>
+						</li><!--
+						--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
+							<a href=""><i class="icon-feed"></i></a>
+						</li>
+					</ul>
 
-			</div>
-		</nav>
-	</div>
+				</div><!-- end .main-nav__menus -->
+			</div><!-- end .main-nav__inner -->
+		</nav><!-- end .main-nav -->
+
+	</div><!-- end .banner__inner -->
 </header>
