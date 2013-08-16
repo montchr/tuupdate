@@ -21,7 +21,7 @@
 		position: absolute;
 		z-index: 99999;
 
-		.grunticon-logo {
+		.icon-logo {
 			width: $base-spacing-unit * 2;
 			height: $base-spacing-unit * 2;
 			background-size: 100%;
@@ -124,7 +124,7 @@
 
 @include media-query(desk) {
 	.brand__logo {
-		.grunticon-logo {
+		.icon-logo {
 			width: $base-spacing-unit * 4;
 			height: $base-spacing-unit * 4;
 		}

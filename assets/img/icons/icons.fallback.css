@@ -1,20 +1,4 @@
-.grunticon-facebook {
-	background-image: url('png/facebook.png');
-	background-repeat: no-repeat;
-}
-.grunticon-feed {
-	background-image: url('png/feed.png');
-	background-repeat: no-repeat;
-}
-.grunticon-logo {
+.icon-logo {
 	background-image: url('png/logo.png');
-	background-repeat: no-repeat;
-}
-.grunticon-twitter {
-	background-image: url('png/twitter.png');
-	background-repeat: no-repeat;
-}
-.grunticon-vimeo {
-	background-image: url('png/vimeo.png');
 	background-repeat: no-repeat;
 }

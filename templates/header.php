@@ -5,7 +5,7 @@
 
 				<a class="brand" href="<?php echo home_url(); ?>/">
 					<div class="brand__logo  logo">
-						<i class="grunticon-logo  icon"></i>
+						<i class="icon-logo  icon"></i>
 					</div>
 					<div class="brand__about">
 						<h1 class="brand__about__site-title  site-title"><?php bloginfo('name'); ?></h1><!--
@@ -14,7 +14,7 @@
 				</a>
 
 				<a class="btn  btn--navbar  menu-link" data-toggle="collapse" data-target=".nav-collapse">
-					<i class="icon-reorder"></i>
+					<i class="icon-menu"></i>
 					<span class="accessibility">Menu</span>
 				</a>
 				
@@ -35,17 +35,17 @@
 				?>
 				
 				<ul class="main-nav__social-menu  nav">
-					<li class="main-nav__social-menu__item  social-icon--facebook  social-icon">
-						<a href=""><i class="grunticon-facebook  icon"></i></a>
+					<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
+						<a href=""><i class="icon-facebook"></i></a>
 					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon">
-						<a href=""><i class="grunticon-twitter  icon"></i></a>
+					--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
+						<a href=""><i class="icon-twitter"></i></a>
 					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon">
-						<a href=""><i class="grunticon-vimeo  icon"></i></a>
+					--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
+						<a href=""><i class="icon-vimeo"></i></a>
 					</li><!--
-					--><li class="main-nav__social-menu__item  social-icon--feed  social-icon">
-						<a href=""><i class="grunticon-feed  icon"></i></a>
+					--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
+						<a href=""><i class="icon-feed"></i></a>
 					</li>
 				</ul>
 
