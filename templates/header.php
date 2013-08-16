@@ -30,7 +30,7 @@
 
 				<?php
 					if (has_nav_menu('primary_navigation')) :
-						wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'level-1 nav'));
+						wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'main-nav__primary-navigation  level-1  nav'));
 					endif;
 				?>
 				
