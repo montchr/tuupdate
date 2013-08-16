@@ -123,23 +123,28 @@
 
 
 @include media-query(desk) {
-	.brand__logo {
-		.icon-logo {
-			width: $base-spacing-unit * 4;
-			height: $base-spacing-unit * 4;
+
+	.brand {
+		padding-left: $base-spacing-unit * 4;
+	}
+
+		.brand__logo {
+			.icon-logo {
+				width: $base-spacing-unit * 5;
+				height: $base-spacing-unit * 5;
+			}
 		}
-	}
 
-	.brand__about {
-		padding-left: $base-spacing-unit * 4.5;
-	}
+		.brand__about {
+			padding-left: $base-spacing-unit * 6.5;
+		}
 
-	.brand__about__site-title {
-		@include font-size($kilo-size, false);
-		line-height: $base-spacing-unit*3;
-	}
+			.brand__about__site-title {
+				@include font-size($kilo-size, false);
+				line-height: $base-spacing-unit*3;
+			}
 
-	.brand__about__site-tagline {
-		@include font-size($h4-size, false);
-	}
+			.brand__about__site-tagline {
+				@include font-size($h4-size, false);
+			}
 }
