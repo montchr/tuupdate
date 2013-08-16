@@ -53,6 +53,7 @@
 		} // end .brand__about__site-title, __site-tagline
 
 		.brand__about__site-title {
+			line-height: 2;
 			text-transform: uppercase;
 			padding-right: $quarter-spacing-unit;
 		}
@@ -84,11 +85,11 @@
 
 @include media-query(portable) {
 	.brand__about__site-title {
-		@include font-size($h3-size);
+		@include font-size($h3-size, false);
 	}
 
 	.brand__about__site-tagline {
-		@include font-size($h5-size);
+		@include font-size($h5-size, false);
 	}
 }
 
@@ -109,11 +110,11 @@
 	}
 
 	.brand__about__site-title {
-		@include font-size($h2-size);
+		@include font-size($h2-size, false);
 	}
 
 	.brand__about__site-tagline {
-		@include font-size($h4-size);
+		@include font-size($h4-size, false);
 	}
 }
 
@@ -131,5 +132,14 @@
 
 	.brand__about {
 		padding-left: $base-spacing-unit * 4.5;
+	}
+
+	.brand__about__site-title {
+		@include font-size($kilo-size, false);
+		line-height: $base-spacing-unit*3;
+	}
+
+	.brand__about__site-tagline {
+		@include font-size($h4-size, false);
 	}
 }

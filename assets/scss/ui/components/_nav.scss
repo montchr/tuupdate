@@ -19,3 +19,42 @@
 		color: white;
 	}
 }
+
+/**
+ * Float menus to the right
+ */
+.main-nav__inner {
+	float: right;
+}
+
+	.main-nav__primary-navigation,
+	.main-nav__social-menu {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+/**
+ * Height contraints.
+ */
+/*ul*/.level-1 {
+	> li {
+		a {
+			line-height: 2;
+		}
+	}
+}
+
+.main-nav__social-menu__item {
+	height: 48px;
+	vertical-align: middle;
+
+	i {
+		display: inline-block;
+		vertical-align: middle;
+
+		background-size: 16px;
+		height: 16px;
+		width: 16px;
+	}
+}
