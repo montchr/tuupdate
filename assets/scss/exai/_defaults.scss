@@ -27,7 +27,7 @@
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
- * 
+ *
  * Exai depends on some of these, so they are turned on here by default.
  */
 $use-nav:           true !default;
@@ -76,7 +76,7 @@ $color__light:           $color--sand !default;
 /**
  * Default colour for objects’ borders etc.
  *
- * ^^overrides inuit.css 
+ * ^^overrides inuit.css
  */
 $base-ui-color:         $color__beta !default;
 
@@ -167,7 +167,8 @@ $brand-round:        4px!default;
 
 $body--background-color: $color--gray--80 !default;
 
-$container--background-color: $color__light !default;
+$root--background-color: $color__light !default;
+
 $container--max-width: 1140px !default;
 
 $link--color: $color__alpha !default;
