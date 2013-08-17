@@ -1,5 +1,3 @@
-<?php // dynamic_sidebar('sidebar-primary'); ?>
-
 <?php
 
 if (function_exists('tuu_sidebar_pane')) {

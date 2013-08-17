@@ -7,8 +7,26 @@ function exai_widgets_init() {
 	register_sidebar(array(
 		'name'          => __('Primary', 'exai'),
 		'id'            => 'sidebar-primary',
-		'before_widget' => '<section class="widget %1$s %2$s"><div class="widget__inner">',
-		'after_widget'  => '</div></section>',
+		'before_widget' => '<div class="widgets--primary  widgets %1$s %2$s"><div class="widgets__inner">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	));
+
+	register_sidebar(array(
+		'name'          => __('WeatherWatch', 'exai'),
+		'id'            => 'sidebar-weather',
+		'before_widget' => '<div class="widgets--weather  widgets %1$s %2$s"><div class="widgets__inner">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	));
+
+	register_sidebar(array(
+		'name'          => __('Follow Us', 'exai'),
+		'id'            => 'sidebar-social',
+		'before_widget' => '<div class="widgets--social  widgets %1$s %2$s"><div class="widgets__inner">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 	));
@@ -16,8 +34,8 @@ function exai_widgets_init() {
 	register_sidebar(array(
 		'name'          => __('Footer', 'exai'),
 		'id'            => 'sidebar-footer',
-		'before_widget' => '<section class="widget %1$s %2$s"><div class="widget__inner">',
-		'after_widget'  => '</div></section>',
+		'before_widget' => '<div class="widgets--footer  widgets %1$s %2$s"><div class="widgets__inner">',
+		'after_widget'  => '</div></div>',
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 	));
