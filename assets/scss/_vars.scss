@@ -5,7 +5,7 @@
 /**
  *
  * ^^overrides Indicates var overriding exai.css or inuit.css
- * 
+ *
  * Any variables you find set in exai.css' `_defaults.scss` or inuit.css’ `_vars.scss`
  * that you do not wish to keep, simply redefine here. This means that if inuit.css,
  * for example, sets your `$base-font-size` at 16px and you wish it to be 14px,
@@ -28,7 +28,7 @@
  *
  * Some options are not listed as Exai depends on them.
  * See `exai/_defaults.scss` for details.
- * 
+ *
  */
 $use-flexbox:       false;
 $use-columns:       false;
@@ -186,7 +186,7 @@ $micro-size:        10px;
 \*------------------------------------*/
 
 $body--background-color: $color--gray--80;
-$container--background-color: $body--background-color;
+$root--background-color: $body--background-color;
 
 $pane--color: white;
 

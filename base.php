@@ -13,7 +13,7 @@
 		}
 	?>
 
-	<div id="root" class="wrap  container" role="document">
+	<div id="root" class="root  wrap  container" role="document">
 		<div class="content  grid">
 			<div class="main  grid__item  <?php echo exai_main_class(); ?>" role="main">
 				<div class="main__inner  pane">
