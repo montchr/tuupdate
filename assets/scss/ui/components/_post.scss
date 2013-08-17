@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $UI-POST
+\*------------------------------------*/
+
+/*article*/.post {}
+
+	/*header*/.post__header {}
+
+		/*h1*/.post__header__title {}
+
+		.post__header__info {}
+
+			.post__header__info__datetime {}
+
+			.post__header__info__byline {}
+
+			.post__header__info__categories {}
+
+			.post__header__info__discussion {}
+
+	/*section*/.post__content {}
+

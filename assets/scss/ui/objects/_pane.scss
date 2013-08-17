@@ -4,5 +4,19 @@
 
 .pane {
 	@extend .cf;
+}
+
+	.pane__header {}
+
+		.pane__header--alpha {}
+
+		.pane__header--beta {}
+
+/**
+ * A pane with a cut-out bottom right corner.
+ *
+ * Extends `.pane`
+ */
+.pane--cut {
 	@include corner-cut();
 }
