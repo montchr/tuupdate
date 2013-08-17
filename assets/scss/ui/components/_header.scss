@@ -2,6 +2,10 @@
     $UI-HEADER
 \*------------------------------------*/
 
+/*header*/.banner {
+	margin-bottom: $base-spacing-unit * 2;
+}
+
 .branding {
 	@extend .cf;
 }
