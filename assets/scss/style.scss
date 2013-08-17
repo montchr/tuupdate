@@ -7,7 +7,7 @@
  * Setup
  *
  * Files must be imported in this order.
- * 
+ *
  * Exai defaults cannot be imported within
  * the `exai/exai` partial because its
  * values must be defined before importing
@@ -37,4 +37,5 @@
 
 @import "ui/components/header";
 @import "ui/components/nav";
+@import "ui/components/forms";
 @import "ui/components/footer";

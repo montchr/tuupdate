@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $UI-FORMS
+\*------------------------------------*/
+
+.form--search {}
+
+	.form--search__label {
+		@include font-size($h4-size);
+		font-weight: 700;
+		font-style: italic;
+	}
+
+	// Because of exai's specificity in styling text inputs,
+	// this requires the chained input element selector.
+	input.form--search__input {
+		@include border-radius(0);
+		@include box-shadow(none);
+		@include font-size($base-font-size);
+		margin-left: $half-spacing-unit;
+	}
+
+	.form--search__submit {}

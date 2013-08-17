@@ -268,11 +268,11 @@ function exai_request_filter($query_vars) {
 add_filter('request', 'exai_request_filter');
 
 /**
- * Tell WordPress to use searchform.php from the templates/ directory
+ * Tell WordPress to use searchform.php from the templates/ directory. Requires WordPress 3.6+
  */
-function exai_get_search_form($argument) {
-	if ($argument === '') {
-		locate_template('/templates/searchform.php', true, false);
-	}
+function exai_get_search_form($form) {
+	$form = '';
+	locate_template('/templates/searchform.php', true, false);
+	return $form;
 }
-add_filter('get_search_form', 'exai_get_search_form');
+add_filter('get_search_form', 'roots_get_search_form');
