@@ -1,0 +1,83 @@
+/*------------------------------------*\
+    $UI-WIDGETS
+\*------------------------------------*/
+
+
+
+
+
+.widget {}
+
+	.widget__header {}
+
+		.widget__header__title {}
+
+	.widget__content {
+		@include font-size($h6-size);
+	}
+
+
+
+
+
+/**
+ * Denotes widgets that are written into theme template
+ */
+.widget--static {}
+
+
+
+
+
+/**
+ * Widget: "Watch"
+ */
+.widget--watch {}
+
+	.widget--watch__header {}
+
+		.widget--watch__header__title {}
+
+	.widget--watch__content {
+		@include font-size(20px, false);
+		background-color: $color__dark;
+		color: white;
+		font-style: italic;
+		line-height: 1.5;
+		text-align: center;
+	}
+
+
+
+
+
+/**
+ * Widget: "WeatherWatch"
+ */
+.widget--weather {}
+
+	.widget--weather__header {}
+
+		.widget--weather__header__title {}
+
+	.widget--weather__content {
+		background-color: white;
+	}
+
+
+
+
+
+/**
+ * Widget: "Social"
+ */
+.widget--social {}
+
+	.widget--social__header {}
+
+		.widget--social__header__title {}
+
+	.widget--social__content {
+		background-color: $color__alpha;
+		color: white;
+	}
