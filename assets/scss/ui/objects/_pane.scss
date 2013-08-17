@@ -3,20 +3,72 @@
 \*------------------------------------*/
 
 .pane {
-	@extend .cf;
+
 }
 
+
+
+
+	/**
+	 * A pane header.
+	 *
+	 * May also be applied to page titles.
+	 */
 	.pane__header {}
 
-		.pane__header--alpha {}
+		/*h1*/.pane__header__title {
+			font-weight: 400;
+			margin-bottom: 0;
+			text-transform: uppercase;
+		}
 
-		.pane__header--beta {}
+
+
+
+
+	/**
+	 * A header with a solid background and large text.
+	 *
+	 * Extends `.pane__header`
+	 */
+	.pane__header--alpha {
+		background-color: $color__alpha;
+		padding-left: $base-spacing-unit;
+	}
+
+		.pane__header--alpha__title {
+			letter-spacing: 0.08em;
+		}
+
+
+
+
+
+	/**
+	 * A header with no background and slightly smaller text.
+	 *
+	 * Extends `.pane__header`
+	 */
+	.pane__header--beta {
+		padding-bottom: $half-spacing-unit;
+		padding-top: $half-spacing-unit;
+	}
+
+		.pane__header--beta__title {
+			text-align: right;
+		}
+
+
+
+
 
 /**
  * A pane with a cut-out bottom right corner.
  *
  * Extends `.pane`
  */
-.pane--cut {
-	@include corner-cut();
-}
+.pane--cut {}
+
+	.pane--cut__content {
+		@include corner-cut();
+	}
