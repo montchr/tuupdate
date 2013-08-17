@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $UI-MAIN
+\*------------------------------------*/
+
+a {
+	@include transition(all 300ms ease);
+
+	font-weight: 700;
+
+	&,
+	&:visited {
+		color: $color__alpha;
+	}
+
+	&:hover,
+	&:active {
+		color: black;
+	}
+}
