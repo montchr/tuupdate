@@ -9,6 +9,7 @@ function exai_setup() {
 	// Register wp_nav_menu() menus (http://codex.wordpress.org/Function_Reference/register_nav_menus)
 	register_nav_menus(array(
 		'primary_navigation' => __('Primary Navigation', 'exai'),
+		'footer_links'       => __( 'Footer Links', 'exai' ),
 	));
 
 	// Add post thumbnails (http://codex.wordpress.org/Post_Thumbnails)
