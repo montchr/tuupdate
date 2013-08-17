@@ -12,6 +12,10 @@
 
 	<link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo home_url(); ?>/feed/">
 
+	<!-- Typekit -->
+	<script type="text/javascript" src="//use.typekit.net/zij5zda.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 	<!-- Unicode CSS Loader: place this in the head of your page -->
 	<script>
 	/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */

@@ -7,6 +7,13 @@
  */
 
 /**
+ * Uppercase the nav items.
+ */
+.main-nav__primary-navigation li {
+	text-transform: uppercase;
+}
+
+/**
  * Customize the look of the menu link for small screens.
  */
 .menu-link {
