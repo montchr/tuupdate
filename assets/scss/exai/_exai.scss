@@ -15,7 +15,7 @@
  * IMPORTS.............Begin importing the sections below
  *
  * MIXINS..............
- * 
+ *
  * COMPASS.............Compass helps keep things simple
  * STICKY FOOTER.......Compass' sticky footer mixin
  *
@@ -25,18 +25,18 @@
  * MAIN................
  * IMAGES..............
  * TABLES..............Adapted from Pure.css
- * FORMS...............Adapted from Pure.css
  *
  * MEDIA...............Expanding on the media object
  * PANE................A pane is a section of content
  * NAV.................Expanding on the nav object
  *
- * COMMENTS............WP comments, using a Roots-based comment walker
- * GALLERY.............WP gallery, based on the matrix object
- * FOOTER..............Calls sticky footer
  * HEADER..............
  * NAV-MAIN............Main responsive navigation. Very complex.
  * NAVBAR..............Expands on NAV-MAIN, a Bootstrap/Foundation-style top bar
+ * FORMS...............Adapted from Pure.css
+ * COMMENTS............WP comments, using a Roots-based comment walker
+ * GALLERY.............WP gallery, based on the matrix object
+ * FOOTER..............Calls sticky footer
  *
  * WIDGETS.............WP widgets
  */
@@ -103,7 +103,6 @@
 
 @import "base/images";
 @import "base/tables";
-@import "base/forms";
 
 
 
@@ -123,12 +122,13 @@
 /**
  * Components, complex structures
  */
-@import "components/comments";
-@import "components/gallery";
-@import "components/footer";
 @import "components/header";
 @import "components/nav-main";
 @import "components/navbar";
+@import "components/forms";
+@import "components/comments";
+@import "components/gallery";
+@import "components/footer";
 
 
 

@@ -4,7 +4,7 @@
 /**
  * This is the main navigation bar.
  * It is very complex.
- * 
+ *
  * It is mainly used near the top of a page,
  * but it can appear in the footer for no-js situations.
  *
@@ -56,11 +56,15 @@
 	}
 
 	a {
-		color: $main-nav--text-color;
 		display: block;
 		@include font-size($main-nav--text-size);
 		padding: $half-spacing-unit;
 		position: relative;
+
+		&,
+		&:visited {
+			color: $main-nav--text-color;
+		}
 
 		&:hover,
 		&:active {
