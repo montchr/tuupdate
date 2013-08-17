@@ -18,7 +18,7 @@ class Roots_Walker_Comment extends Walker_Comment {
 		echo '</ul>';
 	}
 
-	function start_el(&$output, $comment, $depth, $args, $id = 0) {
+	function start_el(&$output, $comment, $depth = 0, $args = array(), $id = 0) {
 		$depth++;
 		$GLOBALS['comment_depth'] = $depth;
 		$GLOBALS['comment'] = $comment;
@@ -29,8 +29,7 @@ class Roots_Walker_Comment extends Walker_Comment {
 		}
 
 		extract($args, EXTR_SKIP); ?>
-
-	<li id="comment-<?php comment_ID(); ?>" <?php comment_class('media comment-' . get_comment_ID()); ?>>
+		<li id="comment-<?php comment_ID(); ?>" <?php comment_class('media comment-' . get_comment_ID()); ?>>
 		<?php include(locate_template('templates/comment.php')); ?>
 	<?php
 	}
