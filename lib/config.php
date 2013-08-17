@@ -20,8 +20,13 @@ define('POST_EXCERPT_LENGTH', 40);
  */
 function exai_main_class() {
 	if (exai_display_sidebar()) {
-		// Classes on pages with the sidebar
-		$class = 'desk--two-thirds';
+		if (is_front_page()) {
+			$class = 'desk--two-thirds';
+		} else {
+			// Classes on pages with the sidebar
+			$class = 'desk--three-quarters';
+		}
+
 	} else {
 		// Classes on full width pages
 		$class = '';
@@ -34,7 +39,11 @@ function exai_main_class() {
  * .sidebar classes
  */
 function exai_sidebar_class() {
-	return 'desk--one-third';
+	if (is_front_page()) {
+		return 'desk--one-third';
+	} else {
+		return 'desk--one-quarter';
+	}
 }
 
 /**
