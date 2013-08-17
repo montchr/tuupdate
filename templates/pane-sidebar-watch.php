@@ -1,2 +1,2 @@
-<p>Watch Temple Update on TUTV: Comcast channel 50 and Verizon channel 45 within Philadelphia city limits, or online anywhere.</p>
+<p>Watch Temple Update on <a href="http://templetv.net">TUTV</a>: Comcast channel 50 and Verizon channel 45 within Philadelphia city limits, or <a href="http://www.templetv.net/watch-live/">online anywhere</a>.</p>
 <p>New episodes air live at 11:30 a.m. and re-air at 7:30 p.m. every Thursday. Catch past episodes every day at 10 a.m. and 6 p.m.</p>
