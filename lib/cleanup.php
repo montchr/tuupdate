@@ -275,4 +275,4 @@ function exai_get_search_form($form) {
 	locate_template('/templates/searchform.php', true, false);
 	return $form;
 }
-add_filter('get_search_form', 'roots_get_search_form');
+add_filter('get_search_form', 'exai_get_search_form');

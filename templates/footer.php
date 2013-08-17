@@ -1,7 +1,7 @@
 <footer id="footer" class="content-info" role="contentinfo">
 	<div class="footer__inner  wrap  container  grid">
 		<div class="footer__search  grid__item  desk--one-third">
-			<?php exai_get_search_form(); ?>
+			<?php get_search_form(); ?>
 		</div><!--
 		--><div class="footer__widgets  grid__item  desk--one-third">
 			<?php dynamic_sidebar('sidebar-footer'); ?>
