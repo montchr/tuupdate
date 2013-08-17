@@ -1,3 +1,8 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, quae, obcaecati a incidunt assumenda sapiente quidem iusto ex reprehenderit accusamus molestias nihil est sit unde eum fuga iure labore placeat!</p>
+<div class="sidebar-pane--weather__content--twitter  widgets--weather  widgets">
+	<?php dynamic_sidebar('sidebar-weather'); ?>
 
-<?php dynamic_sidebar('sidebar-weather'); ?>
+	<a href="//twitter.com/tu_weatherwatch" class="btn  btn--small  btn--soft  btn--dark  icon-text">
+		<i class="icon-twitter  icon-text__icon"></i>Follow @TU_WeatherWatch
+	</a>
+</div>
+

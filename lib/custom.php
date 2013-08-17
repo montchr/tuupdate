@@ -19,7 +19,7 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 	$namespace = "sidebar-pane--" . $slug;
 
 	?>
-	<div class="<?php echo $namespace; ?>  sidebar-pane--static  sidebar-pane  pane">
+	<div class="<?php echo $namespace; ?>  sidebar-pane  pane">
 		<div class="<?php echo $namespace; ?>__header  sidebar-pane__header  pane__header  pane__header--beta">
 			<h3 class="<?php echo $namespace; ?>__header__title  sidebar-pane__header__title  pane__header--beta__title  pane__header__title"><?php echo $name; ?></h3>
 		</div>
@@ -36,3 +36,41 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 		</div>
 	</div><!-- end <?php echo "." . $namespace; ?> -->
 <?php }
+
+/**
+ * Tames the output of the Custom Facebook Feed plugin.
+ *
+ * @param string $shortcode Use custom shortcode attributes.
+ * @param bool   $lowercase Convert all to lowercase. Default is true.
+ * @param bool   $flat      Remove linebreaks. Default is true.
+ *
+ * @return string Echo the filtered feed
+ */
+function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
+
+	if (!$shortcode) {
+
+		$feed = do_shortcode( '[custom-facebook-feed
+		                       textlength=140
+		]');
+
+	} else {
+		$feed = $shortcode;
+	}
+
+	/**
+	 * All to lowercase
+	 */
+	if ($lowercase) {
+		$feed = strtolower($feed);
+	}
+
+	/**
+	 * Remove linebreaks from status, replace with spaces.
+	 */
+	if ($flat) {
+		$feed = preg_replace( "/\r|\n/", " ", $feed );
+	}
+
+	echo $feed;
+}

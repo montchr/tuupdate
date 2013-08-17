@@ -1,3 +1,21 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, veritatis, laborum perspiciatis rem saepe eius ea fugit commodi rerum consequuntur pariatur distinctio adipisci ex corporis porro dolores nisi repellat asperiores.</p>
+<div class="sidebar-pane--social__content--facebook  widgets--social  widgets">
+	<div class="widget--facebook  widget--social  widget">
+		<div class="widget__inner">
 
-<?php dynamic_sidebar('sidebar-social'); ?>
+			<?php tuu_facebook_feed(false, false, true); ?>
+
+			<a href="//www.facebook.com/templeupdate" class="btn  btn--small  btn--soft  btn--dark  icon-text">
+				<i class="icon-thumbs-up  icon-text__icon"></i>Like us on Facebook
+			</a>
+
+		</div>
+	</div>
+</div>
+
+<div class="sidebar-pane--social__content--twitter  widgets--social  widgets">
+	<?php dynamic_sidebar('sidebar-social'); ?>
+
+	<a href="//twitter.com/templeupdate" class="btn  btn--small  btn--soft  btn--dark  icon-text">
+		<i class="icon-twitter  icon-text__icon"></i>Follow @TempleUpdate
+	</a>
+</div>
