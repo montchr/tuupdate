@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 /**
- * ^^Override sticky footer height.
+ * ^^Override sticky footer height on small screens.
  */
 #footer {
-	height: 10em;
+	height: $base-spacing-unit * 10;
 }
 
 /*#footer*/.content-info {
@@ -37,7 +37,7 @@
 			 */
 			.footer__about__logo {
 				float: right;
-				margin-left: $base-spacing-unit;
+				margin: 0 $base-spacing-unit;
 
 				background-size: 100px;
 				height: 100px;
@@ -62,3 +62,16 @@
 					}
 				}
 			}
+
+
+
+
+
+@include media-query(desk) {
+	/**
+	 * ^^Override sticky footer height on larger screens.
+	 */
+	#footer {
+		height: $base-spacing-unit * 8;
+	}
+}
