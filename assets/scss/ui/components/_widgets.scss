@@ -6,13 +6,13 @@
 
 
 
-.widget {}
+.sidebar-pane {}
 
-	.widget__header {}
+	.sidebar-pane__header {}
 
-		.widget__header__title {}
+		.sidebar-pane__header__title {}
 
-	.widget__content {
+	.sidebar-pane__content {
 		@include font-size($h6-size);
 	}
 
@@ -21,24 +21,15 @@
 
 
 /**
- * Denotes widgets that are written into theme template
+ * sidebar-pane: "Watch"
  */
-.widget--static {}
+.sidebar-pane--watch {}
 
+	.sidebar-pane--watch__header {}
 
+		.sidebar-pane--watch__header__title {}
 
-
-
-/**
- * Widget: "Watch"
- */
-.widget--watch {}
-
-	.widget--watch__header {}
-
-		.widget--watch__header__title {}
-
-	.widget--watch__content {
+	.sidebar-pane--watch__content {
 		@include font-size(20px, false);
 		background-color: $color__dark;
 		color: white;
@@ -52,15 +43,15 @@
 
 
 /**
- * Widget: "WeatherWatch"
+ * sidebar-pane: "WeatherWatch"
  */
-.widget--weather {}
+.sidebar-pane--weather {}
 
-	.widget--weather__header {}
+	.sidebar-pane--weather__header {}
 
-		.widget--weather__header__title {}
+		.sidebar-pane--weather__header__title {}
 
-	.widget--weather__content {
+	.sidebar-pane--weather__content {
 		background-color: white;
 	}
 
@@ -69,15 +60,15 @@
 
 
 /**
- * Widget: "Social"
+ * sidebar-pane: "Social"
  */
-.widget--social {}
+.sidebar-pane--social {}
 
-	.widget--social__header {}
+	.sidebar-pane--social__header {}
 
-		.widget--social__header__title {}
+		.sidebar-pane--social__header__title {}
 
-	.widget--social__content {
+	.sidebar-pane--social__content {
 		background-color: $color__alpha;
 		color: white;
 	}
