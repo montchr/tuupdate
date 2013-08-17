@@ -45,7 +45,7 @@
 			&:visited {
 				color: white;
 			}
-			
+
 			&:active,
 			&:hover {
 				color: black;
@@ -125,7 +125,7 @@
 @include media-query(desk) {
 
 	.brand {
-		padding-left: $base-spacing-unit * 4;
+		padding-left: $base-spacing-unit * 2;
 	}
 
 		.brand__logo {
