@@ -35,8 +35,8 @@
 
 	@include media-query(portable) {
 		.page-header__title {
-			@include font-size($h3-size, false);
-			line-height: 1.8;
+			@include font-size($h5-size, false);
+			line-height: 2.333333333;
 		}
 	}
 

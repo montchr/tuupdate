@@ -67,15 +67,56 @@
 
 
 
-/**
- * Nav context.
- *
- * Determines the nav's context, not its internal styling.
- */
-.menu-link {
-	margin: $quarter-spacing-unit*3 $half-spacing-unit;
-	padding: $quarter-spacing-unit $half-spacing-unit;
-}
+
+
+
+
+
+
+@include media-query(palm) {
+	.brand__logo {
+		.icon-logo {
+			width: $base-spacing-unit * 1.25;
+			height: $base-spacing-unit * 1.25;
+		}
+	}
+
+	.brand__about {
+		padding-left: $base-spacing-unit * 1.75;
+	}
+
+		.brand__about__site-title {
+			line-height: 1.333333333333;
+		}
+
+	/**
+	 * Nav context.
+	 *
+	 * Determines the nav's context, not its internal styling.
+	 */
+	.menu-link {
+		margin: 0;
+		padding: $base-spacing-unit $half-spacing-unit;
+	}
+} // end palm
+
+
+
+
+
+
+
+@include media-query(lap) {
+	/**
+	 * Nav context.
+	 *
+	 * Determines the nav's context, not its internal styling.
+	 */
+	.menu-link {
+		margin: $quarter-spacing-unit*3 $half-spacing-unit;
+		padding: $quarter-spacing-unit $half-spacing-unit;
+	}
+} // end lap
 
 
 
@@ -84,6 +125,7 @@
 
 
 @include media-query(portable) {
+
 	.brand__about__site-title {
 		@include font-size($h3-size, false);
 	}
@@ -91,7 +133,9 @@
 	.brand__about__site-tagline {
 		@include font-size($h5-size, false);
 	}
-}
+} // end portable
+
+
 
 
 
@@ -116,7 +160,9 @@
 	.brand__about__site-tagline {
 		@include font-size($h4-size, false);
 	}
-}
+} // end lap and up
+
+
 
 
 
