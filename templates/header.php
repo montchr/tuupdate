@@ -17,7 +17,7 @@
 					<i class="icon-menu"></i>
 					<span class="accessibility">Menu</span>
 				</a>
-				
+
 			</div>
 		</div><!-- end .branding -->
 
@@ -34,19 +34,19 @@
 							wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'main-nav__primary-navigation  level-1  nav'));
 						endif;
 					?>
-					
+
 					<ul class="main-nav__social-menu  nav">
 						<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
-							<a href=""><i class="icon-facebook"></i></a>
+							<a href="//www.facebook.com/templeupdate"><i class="icon-facebook"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
-							<a href=""><i class="icon-twitter"></i></a>
+							<a href="//twitter.com/TempleUpdate"><i class="icon-twitter"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
-							<a href=""><i class="icon-vimeo"></i></a>
+							<a href="//vimeo.com/album/1521800"><i class="icon-vimeo"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
-							<a href=""><i class="icon-feed"></i></a>
+							<a href="<?php bloginfo('atom_url'); ?>"><i class="icon-feed"></i></a>
 						</li>
 					</ul>
 
