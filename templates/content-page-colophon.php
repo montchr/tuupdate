@@ -1,30 +1,26 @@
-# Temple Update
-
-## Colophon
-
-### Frameworks
+# Frameworks
 
 WordPress
 Roots
 Exai
 inuit.css
 
-### Typography
+# Typography
 
 Proxima Nova
 
 Typekit
 
-### Icons
+# Icons
 
 IcoMoon
 Icon Minia
 Iconic
 
-### Design
+# Design
 
 Bella Pezzati
 
-### Development
+# Development
 
 Chris Montgomery
