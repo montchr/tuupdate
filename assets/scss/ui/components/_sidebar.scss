@@ -21,6 +21,10 @@
 
 	.sidebar-pane__content {
 		@include font-size($milli-size);
+
+		.btn {
+			@include font-size(14px);
+		}
 	}
 
 
