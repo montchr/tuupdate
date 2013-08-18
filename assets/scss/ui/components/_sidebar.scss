@@ -23,11 +23,33 @@
 		@include font-size($milli-size);
 
 		.btn {
-			@include font-size(14px);
+			@include font-size(14px, false);
+			font-weight: 400;
+			text-align: center;
+			max-width: 100%;
 		}
 	}
 
 
+
+@include media-query(palm) {
+	.sidebar-pane__content {
+		.btn {
+			width: 100%;
+		}
+	}
+}
+
+
+
+
+@include media-query(desk) {
+	.sidebar-pane__content {
+		.btn {
+			width: 100%;
+		}
+	}
+}
 
 
 
