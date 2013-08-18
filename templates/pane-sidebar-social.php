@@ -4,7 +4,7 @@
 
 			<?php tuu_facebook_feed(false, false, true); ?>
 
-			<a href="//www.facebook.com/templeupdate" class="btn  btn--small  btn--soft  btn--dark  icon-text">
+			<a href="//www.facebook.com/templeupdate" class="btn  btn--small  btn--gamma  btn--soft  btn--dark  icon-text">
 				<i class="icon-thumbs-up  icon-text__icon"></i>Like us on Facebook
 			</a>
 
@@ -15,7 +15,7 @@
 <div class="sidebar-pane--social__content--twitter  widgets--social  widgets">
 	<?php dynamic_sidebar('sidebar-social'); ?>
 
-	<a href="//twitter.com/templeupdate" class="btn  btn--small  btn--soft  btn--dark  icon-text">
+	<a href="//twitter.com/templeupdate" class="btn  btn--small  btn--gamma  btn--soft  btn--dark  icon-text">
 		<i class="icon-twitter  icon-text__icon"></i>Follow @TempleUpdate
 	</a>
 </div>

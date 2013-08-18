@@ -1,0 +1,99 @@
+/*------------------------------------*\
+    $UI-SIDEBAR
+\*------------------------------------*/
+
+
+.sidebar {
+	a {
+		font-weight: 700;
+	}
+}
+
+
+
+
+
+.sidebar-pane {}
+
+	.sidebar-pane__header {}
+
+		.sidebar-pane__header__title {}
+
+	.sidebar-pane__content {
+		@include font-size($milli-size);
+	}
+
+
+
+
+
+/**
+ * sidebar-pane: "Watch"
+ */
+.sidebar-pane--watch {}
+
+	.sidebar-pane--watch__header {}
+
+		.sidebar-pane--watch__header__title {}
+
+	.sidebar-pane--watch__content {
+		@include font-size(20px, false);
+		background-color: $color__dark;
+		color: white;
+		font-style: italic;
+		line-height: 1.5;
+		text-align: center;
+
+		a {
+			font-weight: 700;
+		}
+	}
+
+
+
+
+
+/**
+ * sidebar-pane: "WeatherWatch"
+ */
+.sidebar-pane--weather {}
+
+	.sidebar-pane--weather__header {}
+
+		.sidebar-pane--weather__header__title {}
+
+	.sidebar-pane--weather__content {
+		background-color: white;
+	}
+
+
+
+
+
+/**
+ * sidebar-pane: "Social"
+ */
+.sidebar-pane--social {}
+
+	.sidebar-pane--social__header {}
+
+		.sidebar-pane--social__header__title {}
+
+	.sidebar-pane--social__content {
+		background-color: $color__alpha;
+		color: white;
+
+		a {
+			&,
+			&:visited {
+				color: black;
+			}
+
+			&.btn,
+			&:hover,
+			&:active {
+				color: white;
+			}
+		}
+
+	}

@@ -2,77 +2,26 @@
     $UI-WIDGETS
 \*------------------------------------*/
 
+/**
+ * TWITTER WIDGET PRO
+ */
+.widget_twitter {
+	margin-bottom: 0;
 
-
-
-
-.sidebar-pane {}
-
-	.sidebar-pane__header {}
-
-		.sidebar-pane__header__title {}
-
-	.sidebar-pane__content {
-		@include font-size($h6-size);
+	ul {
+		margin-left: 0; // ^^overrides exai
 	}
 
-
-
-
-
-/**
- * sidebar-pane: "Watch"
- */
-.sidebar-pane--watch {}
-
-	.sidebar-pane--watch__header {}
-
-		.sidebar-pane--watch__header__title {}
-
-	.sidebar-pane--watch__content {
-		@include font-size(20px, false);
-		background-color: $color__dark;
-		color: white;
-		font-style: italic;
-		line-height: 1.5;
-		text-align: center;
+	.time-meta {
+		text-transform: uppercase;
 
 		a {
-			font-weight: 700;
+			font-weight: 400;
 		}
 	}
 
-
-
-
-
-/**
- * sidebar-pane: "WeatherWatch"
- */
-.sidebar-pane--weather {}
-
-	.sidebar-pane--weather__header {}
-
-		.sidebar-pane--weather__header__title {}
-
-	.sidebar-pane--weather__content {
-		background-color: white;
+	// This should disappear via widget settings, but it doesn't.
+	.in-reply-to-meta {
+		display: none;
 	}
-
-
-
-
-
-/**
- * sidebar-pane: "Social"
- */
-.sidebar-pane--social {}
-
-	.sidebar-pane--social__header {}
-
-		.sidebar-pane--social__header__title {}
-
-	.sidebar-pane--social__content {
-		background-color: $color__alpha;
-		color: white;
-	}
+}
