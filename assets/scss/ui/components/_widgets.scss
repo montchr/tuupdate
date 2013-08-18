@@ -92,7 +92,7 @@
 	 * While frighteningly specific, this forces gallery cells
 	 * to 100% of their parent on small screens. :)
 	 */
-	@include media-query(palm) {
+	@include media-query(portable) {
 		.ytcplayer-wrapper {
 			margin-bottom: $base-spacing-unit * 5 !important;
 		}
