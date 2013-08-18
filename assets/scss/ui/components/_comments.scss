@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    $UI-COMMENTS
+\*------------------------------------*/
+
+.comment {
+	background-color: rgba($color__beta, 0.5);
+
+	a {
+		&,
+		&:visited {
+			color: white;
+		}
+
+		&:hover,
+		&:active {
+			color: black;
+		}
+	}
+}
