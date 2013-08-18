@@ -52,6 +52,9 @@ function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
 
 		$feed = do_shortcode( '[custom-facebook-feed
 		                       textlength=140
+		                       type=links,status
+		                       layout=half
+		                       include=text,link,sharedlinks,date
 		]');
 
 	} else {

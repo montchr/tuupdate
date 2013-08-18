@@ -3,10 +3,28 @@
 \*------------------------------------*/
 
 /**
+ * Bottom margin on widget group, not single widgets.
+ *
+ * ^^overrides exai
+ */
+.widget {
+	margin-bottom: 0; // ^^overrides exai
+}
+
+.widgets {
+	padding-bottom: $base-spacing-unit;
+	padding-top: $base-spacing-unit;
+}
+
+
+/**
  * TWITTER WIDGET PRO
  */
 .widget_twitter {
-	margin-bottom: 0;
+
+	h3 {
+		display: none; // there's no way to override this in widget settings! see below for another
+	}
 
 	ul {
 		margin-left: 0; // ^^overrides exai
@@ -24,4 +42,29 @@
 	.in-reply-to-meta {
 		display: none;
 	}
+}
+
+
+
+
+
+/**
+ * CUSTOM FACEBOOK FEED
+ *
+ * Deals with the devil.
+ */
+#cff { // :(
+	p {
+		@include font-size(12px);
+	}
+}
+
+.cff-item {
+	border-bottom: 0 !important; // motherfucker.
+}
+
+.cff-date {
+	color: black;
+	text-align: right;
+	text-transform: uppercase;
 }
