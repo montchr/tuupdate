@@ -7,11 +7,6 @@ a {
 
 	font-weight: 700;
 
-	&,
-	&:visited {
-		color: $color__alpha;
-	}
-
 	&:hover,
 	&:active {
 		color: black;
