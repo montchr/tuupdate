@@ -16,15 +16,25 @@
  * ^TODO Gradient method has not been defined yet
  * ^TODO What's the effect of using ceil() or not?
  * ^TODO Options for top cuts
- * 
- * $color       | mixed  | The color to be used. This is also applied to the parent element.
- * $size        | px/em  | Size of the cut corner
- * $corner      | string | The corner(s) to cut
- * $margin      | mixed  | The amount of margin for the bottom of the element. This value is added on to the $size.
- * $positioning | bool   | Does the element already have relative or absolute positioning? If so, set this to false.
- * $type        | string | Use the pseudo-element or the gradient method
+ *
+ * $color          | mixed  | The color to be used. This is also applied to the parent element.
+ * $size           | px/em  | Size of the cut corner
+ * $corner         | string | The corner(s) to cut
+ * $margin         | mixed  | The amount of margin for the bottom of the element. This value is added on to the $size.
+ * $positioning    | bool   | Does the element already have relative or absolute positioning? If so, set this to false.
+ * $color-override | bool   | Set to true to only change color, nothing else
+ * $type           | string | Use the pseudo-element or the gradient method
  */
-@mixin corner-cut($color: white, $size: 40px, $corner: "bottom-right", $margin: $base-spacing-unit * 2, $positioning: true, $type: "pseudo") {
+@mixin corner-cut(
+                  $color: white,
+                  $size: 40px,
+                  $corner: "bottom-right",
+                  $margin: $base-spacing-unit * 2,
+                  $positioning: true,
+                  $color-override: false,
+                  $type: "pseudo"
+                  ) {
+
 	$trigsize: sqrt(pow($size,2)/2);
 	$size: sqrt(2*pow($trigsize,2));
 
@@ -33,48 +43,61 @@
 	@if $positioning {
 		position: relative;
 	}
-	
+
 	@if $type == pseudo {
 
-		@if $corner == bottom-left or bottom-right or bottom-both {
-			margin-bottom: $size + $margin;
-		} @elseif $corner == top-left or top-right or top-both {
-			margin-top: $size + $margin;
-		}
+		@if $color-override {
 
-		&::before, &::after {
-			content: '';
-			position: absolute;
-			left: 0;
-			z-index: 1;
-		}
-			
-		&::before {
-			width: 100%;
-			height: $size;
-			//border-width: 0 $size ceil($size) 0;
-			border-color: $color transparent;
-			border-style: solid;
+			&::before {
+				border-color: $color transparent;
+			}
+
+			&::after {
+				background-color: $color;
+			}
+
+		} @elseif $color-override == false {
 
 			@if $corner == bottom-left or bottom-right or bottom-both {
+				margin-bottom: $size + $margin;
+			} @elseif $corner == top-left or top-right or top-both {
+				margin-top: $size + $margin;
+			}
+
+			&::before, &::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				z-index: 1;
+			}
+
+			&::before {
+				width: 100%;
+				height: $size;
+				border-color: $color transparent;
+				border-style: solid;
+
+				@if $corner == bottom-left or bottom-right or bottom-both {
+					bottom: -$size;
+
+					@if $corner == bottom-left {
+						border-width: $size 0 0 ceil($size);
+					} @elseif $corner == bottom-right {
+						border-width: $size ceil($size) 0 0;
+					} @elseif $corner == bottom-both {
+						border-width: $size ceil($size) 0 $size;
+					}
+				} // endif bottom
+
+				@if $corner == top-right or top-left {} // endif top
+			} // endif before
+
+			&::after {
 				bottom: -$size;
+				width: 100%;
+				background-color: $color;
+			}
 
-				@if $corner == bottom-left {
-					border-width: $size 0 0 ceil($size);
-				} @elseif $corner == bottom-right {
-					border-width: $size ceil($size) 0 0;
-				} @elseif $corner == bottom-both {
-					border-width: $size ceil($size) 0 $size;
-				}
-			} // endif bottom
-
-			@if $corner == top-right or top-left {} // endif top
-		} // endif before
-
-		&::after {
-			bottom: -$size;
-			width: 100%;
-			background-color: $color;
-		}
+		} // endif color-override
 	} // endif pseudo
 } // end mixin corner-cut()

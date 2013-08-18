@@ -77,3 +77,23 @@ function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
 
 	echo $feed;
 }
+
+/**
+ * Get the current page's slug.
+ *
+ * Does not work for posts.
+ *
+ * @link http://stackoverflow.com/questions/4837006/how-to-get-the-current-page-name-in-wordpress
+ *
+ * @return string The page slug
+ */
+function tuu_get_page_slug() {
+	$pagename = get_query_var('pagename');
+	if ( !$pagename && $id > 0 ) {
+		// If a static page is set as the front page,
+		// $pagename will not be set. Retrieve it from the queried object
+		$post = $wp_query->get_queried_object();
+		$pagename = $post->post_name;
+	}
+	return $pagename;
+}

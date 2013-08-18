@@ -1,7 +1,60 @@
 /*------------------------------------*\
     $UI-PAGE-HEADER
 \*------------------------------------*/
+/**
+ * The modifier classes should correspond directly
+ * with the page slug they are modifying.
+ * See `templates/page.php` for more info.
+ */
 
-.page-header {}
+/**
+ * A cut-pane page header with heavy text and solid background.
+ */
+.page-header {
+	@include corner-cut($color__alpha, 20px);
+	padding-left: $base-spacing-unit;
+}
 
-	.page-header__page-title {}
+	/**
+	 * Position the header content somewhere
+	 * near the center of the pane.
+	 */
+	.page-header__inner {
+		position: relative;
+		top: $half-spacing-unit;
+	}
+
+		/**
+		 * Line-height has to be this specific
+		 * to accomodate for that 900 weight!
+		 */
+		.page-header__title {
+			font-weight: 900;
+			line-height: 1.33333333333;
+		}
+
+
+
+
+
+.page-header--news {}
+
+
+
+
+
+.page-header--entertainment {
+	@include corner-cut($color: $color__cat--entertainment, $color-override: true);
+}
+
+
+
+
+
+.page-header--sportsdesk {
+	@include corner-cut($color: $color__cat--sportsdesk, $color-override: true);
+}
+
+	.page-header--sportsdesk__title {
+		color: white;
+	}
