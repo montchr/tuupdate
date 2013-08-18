@@ -68,3 +68,53 @@
 	text-align: right;
 	text-transform: uppercase;
 }
+
+
+
+
+
+/**
+ * YOUTUBE CHANNEL GALLERY
+ *
+ * For the Update Now and Update Ahora pages.
+ */
+
+.ytchagallery {}
+
+	.ytctitle {
+		@include font-size($h1-size);
+		font-family: $font__stack--condensed--light;
+	}
+
+	.ytctdescription {}
+
+	/**
+	 * While frighteningly specific, this forces gallery cells
+	 * to 100% of their parent on small screens. :)
+	 */
+	@include media-query(palm) {
+		.ytcplayer-wrapper {
+			margin-bottom: $base-spacing-unit * 5 !important;
+		}
+
+		.ytccf .ytc-columns3 li {
+			width: 100% !important;
+			padding-bottom: $base-spacing-unit * 4 !important;
+		}
+
+			.ytctdescription {
+				@include font-size($h4-size);
+			}
+	}
+
+	@include media-query(desk) {
+		.ytc-row {
+			margin-bottom: $base-spacing-unit * 2;
+		}
+
+			.ytctitle {}
+
+			.ytctdescription {
+				@include font-size(14px);
+			}
+	} // end media query desk

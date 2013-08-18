@@ -2,6 +2,12 @@
     $UI-POST
 \*------------------------------------*/
 
+.page-content__dek {
+	@include font-size($h3-size);
+	font-family: $font__stack--condensed--light;
+	font-style: italic;
+}
+
 /*article*/.post {}
 
 	/*header*/.post__header {}
