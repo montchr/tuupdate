@@ -13,6 +13,28 @@ function exai_widgets_init() {
 		'after_title'   => '</h3>',
 	));
 
+	// Update Now Playlist Widget
+	register_sidebar( array(
+		'name'			=> 'Update Now',
+		'id'			=> 'sidebar-update-now',
+		'before_widget'	=> '<div class="widget %1$s %2$s"><div class="widget__inner">',
+		'after_widget'	=> '</div></div>',
+		'before_title'	=> '',
+		'after_title'	=> ''
+		)
+	);
+
+	// Update Ahora Playlist Widget
+	register_sidebar( array(
+		'name'			=> 'Update Ahora',
+		'id'			=> 'sidebar-update-ahora',
+		'before_widget'	=> '<div class="widget %1$s %2$s"><div class="widget__inner">',
+		'after_widget'	=> '</div></div>',
+		'before_title'	=> '',
+		'after_title'	=> ''
+		)
+	);
+
 	// Weather Widget
 	register_sidebar(array(
 		'name'          => __('WeatherWatch', 'exai'),
