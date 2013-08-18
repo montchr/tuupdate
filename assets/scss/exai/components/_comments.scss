@@ -7,7 +7,8 @@
 
 	background-color: white;
 	border: 1px solid $base-ui-color;
-	margin-left: 0;
+	border-right-width: 0;
+	margin-left: $half-spacing-unit;
 
 }
 
@@ -18,3 +19,8 @@
 	/* ul */.comment-thread {
 		margin-left: 0;
 	}
+
+
+.comment.depth-1 {
+	border-right-width: 1px;
+}
