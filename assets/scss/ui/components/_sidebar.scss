@@ -15,7 +15,9 @@
 
 .sidebar-pane {}
 
-	.sidebar-pane__header {}
+	.sidebar-pane__header {
+		padding-right: $half-spacing-unit;
+	}
 
 		.sidebar-pane__header__title {}
 
