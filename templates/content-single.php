@@ -3,7 +3,9 @@
 
 		<header>
 			<h1 class="post__title"><?php the_title(); ?></h1>
-			<?php get_template_part('templates/entry-meta'); ?>
+			<div class="post__meta">
+				<?php get_template_part('templates/entry-meta'); ?>
+			</div>
 		</header>
 
 		<div class="post__content">

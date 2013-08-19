@@ -189,3 +189,47 @@ function tuu_alert($force = false, $template = 'templates/alert') {
 
 	wp_reset_query();
 }
+
+
+
+
+/**
+ * Lists post categories.
+ */
+function tuu_post_categories() {
+	$args = array(
+		'hierarchical'       => 0,
+		'title_li'           => '',
+		'show_option_none'   => '',
+	);
+
+	wp_list_categories( $args );
+}
+
+
+
+
+/**
+ * Display number of comments.
+ *
+ * Must be used within The Loop.
+ *
+ * @link http://codex.wordpress.org/Template_Tags/get_comments_number#Examples
+ * @return [type] [description]
+ */
+function tuu_comments_number() {
+	$num_comments = get_comments_number(); // get_comments_number returns only a numeric value
+
+	if ( comments_open() ) {
+		if ( $num_comments == 0 ) {
+			$comments = __('No Comments', 'exai');
+		} elseif ( $num_comments > 1 ) {
+			$comments = $num_comments . __(' Comments', 'exai');
+		} else {
+			$comments = __('1 Comment', 'exai');
+		}
+		$write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+	}
+
+	echo $write_comments;
+}
