@@ -1,0 +1,97 @@
+/*------------------------------------*\
+    $UI-PAGE-HOME
+\*------------------------------------*/
+
+.home__recent-posts {}
+
+	.home__recent-posts__header {}
+
+		.home__recent-posts__header__title {}
+
+	.home__recent-posts__content {
+		@include font-size($page--home__recent-posts--font-size);
+	}
+
+
+
+		.home__recent-post {}
+
+			.home__recent-post__header {
+
+				time {
+					text-transform: uppercase;
+				}
+
+				.byline {
+					@extend .accessibility;
+				}
+
+			} // end .home__recent-post__header
+
+				.home__recent-post__header__title {
+					@include font-size($page--home__recent-posts--font-size);
+					margin-bottom: 0;
+				}
+
+			.home__recent-post__content {}
+
+
+
+
+
+
+
+.home__recent-posts--news {}
+
+	.home__recent-posts--news__header {
+		background-color: $color__cat--news;
+	}
+
+		.home__recent-posts--news__header__title {
+			a {
+				@include a-color($unhovered: black, $hovered: white);
+			}
+		}
+
+	.home__recent-posts--news__content {}
+
+
+
+
+
+.home__recent-posts--entertainment {}
+
+	.home__recent-posts--entertainment__header {
+		background-color: $color__cat--entertainment;
+	}
+
+		.home__recent-posts--entertainment__header__title {}
+
+	.home__recent-posts--entertainment__content {}
+
+
+
+
+
+.home__recent-posts--sportsdesk {}
+
+	.home__recent-posts--sportsdesk__header {
+		background-color: $color__cat--sportsdesk;
+	}
+
+		.home__recent-posts--sportsdesk__header__title {
+
+			a {
+				&,
+				&:visited {
+					color: white;
+				}
+
+				&:hover,
+				&:active {
+					color: black;
+				}
+			}
+		} // end .home__recent-posts--sportsdesk__header__title
+
+	.home__recent-posts--sportsdesk__content {}

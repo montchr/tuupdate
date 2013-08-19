@@ -30,7 +30,17 @@
 	.pane__header {}
 
 		.pane__header__title {
-			font-weight: 400;
+
+			&,
+			a {
+				font-weight: 400;
+			}
+
+			a {
+				@include a-color(black, $color__alpha);
+			}
+
+
 		}
 
 

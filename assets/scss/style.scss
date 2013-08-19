@@ -44,7 +44,10 @@
 @import "ui/components/alerts";
 @import "ui/components/page-header";
 @import "ui/components/forms";
-@import "ui/components/post";
+
+@import "ui/pages/post";
+@import "ui/pages/page--home";
+
 @import "ui/components/comments";
 @import "ui/components/sidebar";
 @import "ui/components/widgets";

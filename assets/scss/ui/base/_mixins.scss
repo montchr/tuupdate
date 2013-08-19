@@ -101,3 +101,24 @@
 		} // endif color-override
 	} // endif pseudo
 } // end mixin corner-cut()
+
+
+
+
+/**
+ * Set unhovered and hovered link colors easily.
+ *
+ * Unvisited/visited will be the same color,
+ * hover/active will be the same color.
+ */
+@mixin a-color($unhovered: $color__alpha, $hovered: black) {
+	&,
+	&:visited {
+		color: $unhovered;
+	}
+
+	&:hover,
+	&:active {
+		color: $hovered;
+	}
+}
