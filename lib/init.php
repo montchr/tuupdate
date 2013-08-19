@@ -36,7 +36,7 @@ function tuu_post_type_alert() {
 	$labels = array(
 		'name'                => _x( 'Alerts', 'Post Type General Name', 'exai' ),
 		'singular_name'       => _x( 'Alert', 'Post Type Singular Name', 'exai' ),
-		'menu_name'           => __( 'Alert', 'exai' ),
+		'menu_name'           => __( 'Alerts', 'exai' ),
 		'parent_item_colon'   => __( 'Parent Alert:', 'exai' ),
 		'all_items'           => __( 'All Alerts', 'exai' ),
 		'view_item'           => __( 'View Alert', 'exai' ),
@@ -52,7 +52,7 @@ function tuu_post_type_alert() {
 		'label'               => __( 'alert', 'exai' ),
 		'description'         => __( 'A message box, usually appearing at the top of a page.', 'exai' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'excerpt', 'thumbnail', 'custom-fields', ),
+		'supports'            => array( 'title', 'editor', 'thumbnail', 'custom-fields', ),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
