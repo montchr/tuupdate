@@ -3,6 +3,10 @@
  * Custom functions
  */
 
+
+
+
+
 /**
  * Returns content for sidebar panes.
  *
@@ -36,6 +40,10 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 		</div>
 	</section><!-- end <?php echo "." . $namespace; ?> -->
 <?php }
+
+
+
+
 
 /**
  * Tames the output of the Custom Facebook Feed plugin.
@@ -77,6 +85,10 @@ function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
 
 	echo $feed;
 }
+
+
+
+
 
 /**
  * Get the current page's slug.
