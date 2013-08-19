@@ -109,3 +109,47 @@ function tuu_get_page_slug() {
 	}
 	return $pagename;
 }
+
+
+
+
+
+/**
+ * Adds filter to a query getting posts.
+ *
+ * 1. Posts from past n days
+ *
+ * Usage:
+ *  add_filter( 'posts_where', 'tuu_filter_where' );
+ *  	$query = new WP_Query( $query_string );
+ *  remove_filter( 'posts_where', 'tuu_filter_where' );
+ *
+ * @link http://codex.wordpress.org/Class_Reference/WP_Query#Time_Parameters
+ *
+ * @param  integer $days  Number of days in the past
+ * @param  string  $where Additional query
+ * @return [type]         [description]
+ */
+function tuu_filter_where( $days = '', $where = '' ) {
+	if ($days) {
+		$where .= " AND post_date > '" . date('Y-m-d', strtotime( '-' . $days . ' days' )) . "'";
+	}
+
+	return $where;
+}
+
+
+
+
+
+
+
+function tuu_alert() {
+	$global post;
+
+	$args = array(
+	              'post_type' => 'alert',
+	              'posts_per_page' => '1',
+
+	);
+}
