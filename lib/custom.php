@@ -203,7 +203,8 @@ function tuu_post_categories() {
 		'show_option_none'   => '',
 	);
 
-	wp_list_categories( $args );
+	//wp_list_categories( $args );
+	echo get_the_category_list();
 }
 
 

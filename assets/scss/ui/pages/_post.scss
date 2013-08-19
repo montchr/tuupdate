@@ -2,27 +2,62 @@
     $UI-POST
 \*------------------------------------*/
 
-.page-content__dek {
+.dek {
 	@include font-size($h3-size);
 	font-family: $font__stack--condensed--light;
 	font-style: italic;
 }
 
-/*article*/.post {}
+.post {}
 
-	/*header*/.post__header {}
+	.post__header {}
 
 		/*h1*/.post__header__title {}
 
-		.post__header__info {}
+		.post__header__meta {
+			@include font-size(14px);
+			border-top: 1px solid $color--gray--80;
+			border-bottom: 1px solid $color--gray--80;
+			margin-bottom: $base-spacing-unit * 2;
+			padding-top: $half-spacing-unit;
+			padding-bottom: $half-spacing-unit;
+		}
 
-			.post__header__info__datetime {}
+			.post__header__meta__updated,
+			.post__header__meta__byline,
+			.post__header__meta__categories,
+			.post__header__meta__comments-number {
+				display: inline-block;
+				padding-left: $quarter-spacing-unit;
+				padding-right: $quarter-spacing-unit;
+				vertical-align: middle;
+			}
 
-			.post__header__info__byline {}
+			.post__header__meta__byline {}
 
-			.post__header__info__categories {}
+			.post__header__meta__categories {
 
-			.post__header__info__discussion {}
+				ul {
+					margin-bottom: 0;
 
-	/*section*/.post__content {}
+					@include media-query(palm) {
+						@include nav($nav: false, $stacked: true);
+					}
+
+					@include media-query(lap-and-up) {
+						@include nav($nav: true, $stacked: false );
+					}
+
+					> li {
+
+						> a {
+							font-weight: 400;
+						}
+					}
+				}
+			}
+
+			.post__header__meta__comments-number {}
+
+	.post__content {}
 
