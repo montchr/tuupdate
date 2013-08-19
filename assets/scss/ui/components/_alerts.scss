@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $UI-ALERTS
+\*------------------------------------*/
+
+.alert {}
+
+	.alert__inner {}
+
+	.alert__content {}
+
+
+
+
+
+
+/**
+ * The primary type of alert.
+ */
+.alert--alpha {}
+
+	.alert--alpha__inner {
+		@include corner-cut($color: $color__attn, $margin: $base-spacing-unit, $color-override: true);
+	}
+
+	.alert--alpha__content {
+		a {
+			&,
+			&:visited {
+				color: black;
+			}
+
+			&:hover,
+			&:active {
+				color: $color__alpha;
+			}
+		}
+	}

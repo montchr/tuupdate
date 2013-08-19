@@ -114,8 +114,16 @@
 	/**
 	 * Position the content somewhere
 	 * near the center of the short pane.
+	 *
+	 * 1. Content must be on top of the corner cut pseudo-element.
 	 */
 	.pane--short__inner {
+		overflow: hidden;
 		position: relative;
 		top: $half-spacing-unit;
+		z-index: 99; /* [1] */
+
+		p {
+			margin-bottom: 0;
+		}
 	}

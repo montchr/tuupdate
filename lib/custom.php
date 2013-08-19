@@ -115,14 +115,12 @@ function tuu_get_page_slug() {
 
 
 /**
- * Adds filter to a query getting posts.
- *
- * 1. Posts from past n days
+ * Adds filter to a query getting posts for the past 2 days.
  *
  * Usage:
- *  add_filter( 'posts_where', 'tuu_filter_where' );
+ *  add_filter( 'posts_where', 'tuu_filter_where_two_days' );
  *  	$query = new WP_Query( $query_string );
- *  remove_filter( 'posts_where', 'tuu_filter_where' );
+ *  remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
  *
  * @link http://codex.wordpress.org/Class_Reference/WP_Query#Time_Parameters
  *
@@ -130,11 +128,8 @@ function tuu_get_page_slug() {
  * @param  string  $where Additional query
  * @return [type]         [description]
  */
-function tuu_filter_where( $days = '', $where = '' ) {
-	if ($days) {
-		$where .= " AND post_date > '" . date('Y-m-d', strtotime( '-' . $days . ' days' )) . "'";
-	}
-
+function tuu_filter_where_two_days( $where = '' ) {
+	$where .= " AND post_date > '" . date('Y-m-d', strtotime( '-2 days' )) . "'";
 	return $where;
 }
 
@@ -143,13 +138,54 @@ function tuu_filter_where( $days = '', $where = '' ) {
 
 
 
+/**
+ * Display the most recent alert.
+ *
+ * Only echoes the content of alerts
+ * from the past two days on the pages
+ * selected in the alert edit screen.
+ *
+ * @param  boolean $force    Force the display
+ * @param  string  $template The path to the alert template
+ */
+function tuu_alert($force = false, $template = 'templates/alert') {
+	global $post;
 
-function tuu_alert() {
-	$global post;
-
-	$args = array(
-	              'post_type' => 'alert',
-	              'posts_per_page' => '1',
-
+	$query_string = array(
+	                     'post_type' => 'alert',
+	                     'posts_per_page' => '1',
 	);
+
+	add_filter( 'posts_where', 'tuu_filter_where_two_days' );
+		$query = new WP_Query($query_string);
+	remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
+
+	if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+
+		$visibility = get_field('alert_visibility', $post->ID);
+
+		$on_all = in_array('all', $visibility);
+		$on_home = (in_array('home', $visibility) && is_front_page());
+
+		if ($on_all) {
+			$display = true;
+		}
+
+		if ($on_home) {
+			$display = true;
+		}
+
+		if ($display || $force) { ?>
+			<div class="alert--alpha  alert  grid__item  one-whole">
+				<div class="alert--alpha__inner  alert__inner  pane--short">
+					<div class="alert--alpha__content  alert__content  pane--short__inner">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			</div>
+		<?php }
+
+	endwhile; endif;
+
+	wp_reset_query();
 }

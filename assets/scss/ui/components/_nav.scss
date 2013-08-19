@@ -6,12 +6,17 @@
  * component and its internal workings.
  */
 
-/**
- * Nav links are not bold.
- */
-a {
-	font-weight: 400;
+
+ /**
+  * Nav links are not bold.
+  */
+.main-nav {
+	a {
+		font-weight: 400;
+	}
 }
+
+
 
 /**
  * Uppercase the nav items.
@@ -82,7 +87,7 @@ a {
 	 * Must be a higher z-index to counteract the strange effects of the corner cut.
 	 */
 	.dropdown__menu {
-		z-index: 99;
+		z-index: 9999999;
 	}
 
 

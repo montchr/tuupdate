@@ -15,6 +15,7 @@
 
 	<div id="root" class="root  wrap  container" role="document">
 		<div class="content  grid">
+				<?php tuu_alert(); ?>
 			<div class="main  grid__item  <?php echo exai_main_class(); ?>" role="main">
 				<div class="main__inner">
 					<?php include exai_template_path(); ?>
@@ -28,6 +29,8 @@
 			</aside><!-- /.sidebar -->
 			<?php endif; ?>
 		</div><!-- /.content -->
+
+
 		<div id="sticky-push"><!-- This is an empty div for our sticky footer. --></div>
 	</div><!-- /.wrap -->
 
