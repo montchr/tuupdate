@@ -1,7 +1,18 @@
 /*------------------------------------*\
     TEMPLE UPDATE -- OBJECT -- PANE
 \*------------------------------------*/
-
+/**
+ *
+ 	<section class="pane  pane--cut">
+ 		<header class="pane__header--alpha  pane__header">
+ 			<h1 class="pane__header--alpha__title  pane__header__title  h--main">Title</h1>
+ 		</header>
+ 		<div class="pane__content  pane--cut__content">
+ 			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+ 		</div>
+ 	</section>
+ *
+ */
 .pane {
 
 }
@@ -10,7 +21,9 @@
 
 
 	/**
-	 * A pane header.
+	 * A header for a pane.
+	 *
+	 * Appears directly above a pane.
 	 *
 	 * May also be applied to page titles.
 	 */
@@ -67,6 +80,42 @@
  */
 .pane--cut {}
 
+	.pane--cut__header {}
+
 	.pane--cut__content {
 		@include corner-cut();
+	}
+
+
+
+
+/**
+ * Panes with very short content (or headers).
+ *
+ * Must have an inner element for vertically positioning content.
+ *
+ 	<header class="page-header  pane--short">
+ 		<div class="page-header__inner  pane--short__inner">
+ 			<h1 class="page-header__title  page-title  h--main">Yo!</h1>
+ 		</div>
+ 	</header>
+ *
+ */
+.pane--short {
+
+	/**
+	 * Override this default color by calling:
+			@include corner-cut($color, $color-override: true);
+	 */
+	@include corner-cut($color__alpha, 20px);
+	padding-left: $base-spacing-unit;
+}
+
+	/**
+	 * Position the content somewhere
+	 * near the center of the short pane.
+	 */
+	.pane--short__inner {
+		position: relative;
+		top: $half-spacing-unit;
 	}

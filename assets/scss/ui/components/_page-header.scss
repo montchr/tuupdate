@@ -11,27 +11,16 @@
  * A cut-pane page header with heavy text and solid background.
  */
 .page-header {
-	@include corner-cut($color__alpha, 20px);
-	padding-left: $base-spacing-unit;
+
 }
-
 	/**
-	 * Position the header content somewhere
-	 * near the center of the pane.
+	 * Line-height has to be this specific
+	 * to accomodate for that 900 weight!
 	 */
-	.page-header__inner {
-		position: relative;
-		top: $half-spacing-unit;
+	.page-header__title {
+		font-weight: 900;
+		line-height: 1.33333333333;
 	}
-
-		/**
-		 * Line-height has to be this specific
-		 * to accomodate for that 900 weight!
-		 */
-		.page-header__title {
-			font-weight: 900;
-			line-height: 1.33333333333;
-		}
 
 	@include media-query(portable) {
 		.page-header__title {
@@ -39,6 +28,7 @@
 			line-height: 2.333333333;
 		}
 	}
+
 
 
 
