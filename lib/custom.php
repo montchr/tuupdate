@@ -19,10 +19,10 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 	$namespace = "sidebar-pane--" . $slug;
 
 	?>
-	<div class="<?php echo $namespace; ?>  sidebar-pane  pane">
-		<div class="<?php echo $namespace; ?>__header  sidebar-pane__header  pane__header  pane__header--beta">
+	<section class="<?php echo $namespace; ?>  sidebar-pane  pane">
+		<header class="<?php echo $namespace; ?>__header  sidebar-pane__header  pane__header  pane__header--beta">
 			<h3 class="<?php echo $namespace; ?>__header__title  sidebar-pane__header__title  pane__header--beta__title  pane__header__title  h--main"><?php echo $name; ?></h3>
-		</div>
+		</header>
 		<div class="<?php echo $namespace; ?>__content  sidebar-pane__content  pane__content">
 			<?php
 
@@ -34,7 +34,7 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 
 			?>
 		</div>
-	</div><!-- end <?php echo "." . $namespace; ?> -->
+	</section><!-- end <?php echo "." . $namespace; ?> -->
 <?php }
 
 /**
