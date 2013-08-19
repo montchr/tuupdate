@@ -119,6 +119,7 @@
 	 */
 	@include corner-cut($color__alpha, 20px);
 	padding-left: $base-spacing-unit;
+	padding-right: $base-spacing-unit;
 }
 
 	/**
