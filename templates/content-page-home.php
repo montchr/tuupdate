@@ -39,7 +39,7 @@ foreach ($categories as $category) :
 				<article class="home__recent-post">
 
 					<header class="home__recent-post__header">
-						<?php get_template_part( 'templates/entry-meta' ); ?>
+						<time class="home__recent-post__header__post-updated  post__updated  icon-text" datetime="<?php echo get_the_time('c'); ?>" pubdate><i class="icon-clock-dark  icon-text__icon"></i><?php echo get_the_date(); ?></time>
 						<h1 class="home__recent-post__header__title"><?php the_title(); ?></h1>
 					</header>
 
