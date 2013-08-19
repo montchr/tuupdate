@@ -59,6 +59,11 @@
 
 		.pane__header--alpha__title {
 			letter-spacing: 0.08em;
+
+			@include media-query(portable) {
+				@include font-size($h3-size, false);
+				line-height: 2;
+			}
 		}
 
 

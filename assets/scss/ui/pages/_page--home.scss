@@ -9,7 +9,7 @@
 		.home__recent-posts__header__title {}
 
 	.home__recent-posts__content {
-		@include font-size($page--home__recent-posts--font-size);
+		@include font-size($page--home__recent-posts--font-size--portable);
 	}
 
 
@@ -29,11 +29,19 @@
 			} // end .home__recent-post__header
 
 				.home__recent-post__header__title {
-					@include font-size($page--home__recent-posts--font-size);
+					@include font-size($page--home__recent-posts--font-size--portable);
 					margin-bottom: 0;
 				}
 
 			.home__recent-post__content {}
+
+
+@include media-query(desk) {
+	.home__recent-posts__content,
+	.home__recent-post__header__title {
+		@include font-size($page--home__recent-posts--font-size--desk);
+	}
+}
 
 
 
