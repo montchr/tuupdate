@@ -21,8 +21,10 @@
 			</div>
 		</div><!-- end .branding -->
 
-		<div class="banner__drawer  drawer">
-			<div class="banner__drawer__slider  slider"></div>
+		<div class="drawer">
+			<div class="drawer__inner  container">
+				<?php get_template_part( 'templates/slider' ); ?>
+			</div>
 		</div>
 
 		<nav class="main-nav" role="navigation">

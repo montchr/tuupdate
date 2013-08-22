@@ -24,6 +24,13 @@
 	<meta name="msapplication-TileColor" content="#9e1b34">
 	<meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
 
+	<!-- Flexslider -->
+	<script type="text/javascript" charset="utf-8">
+	  jQuery(window).load(function() {
+	    $('.flexslider').flexslider();
+	  });
+	</script>
+
 	<!-- Unicode CSS Loader: place this in the head of your page -->
 	<script>
 	/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
