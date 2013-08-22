@@ -10,7 +10,9 @@
 		@extend .cf;
 	}
 
-		.slide {}
+		.slide {
+			@extend .grid;
+		}
 
 			.slide__img,
 			.slide__info {
