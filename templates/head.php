@@ -16,6 +16,14 @@
 	<script type="text/javascript" src="//use.typekit.net/zij5zda.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
+	<!-- Icons -->
+	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+	<link rel="icon" href="/favicon.png">
+	<!--[if IE]><link rel="shortcut icon" href="/favicon.ico"><![endif]-->
+	<!-- or, set /favicon.ico for IE10 win -->
+	<meta name="msapplication-TileColor" content="#9e1b34">
+	<meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+
 	<!-- Unicode CSS Loader: place this in the head of your page -->
 	<script>
 	/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
