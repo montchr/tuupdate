@@ -28,6 +28,7 @@
 			</li>
 
 		<?php endwhile; endif; ?>
+		<?php wp_reset_query(); ?>
 
 	</ul>
 </div>
