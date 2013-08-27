@@ -16,7 +16,7 @@
 			<li class="slide">
 
 				<div class="slide__img">
-					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(''); ?></a>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('slider-img'); ?></a>
 				</div><!--
 				--><div class="slide__info">
 					<h1 class="slide__info__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
