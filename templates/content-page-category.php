@@ -38,4 +38,4 @@ $query           = new WP_Query($query_string);
 	</article>
 
 <?php endwhile; endif; ?>
-<?php wp_reset_query(); ?>
+<?php wp_reset_postdata(); ?>
