@@ -5,8 +5,13 @@
 
 		$args = array(
 		              'posts_per_page' => 4,
-		              //'meta_key' => 'featured',
-		              //'meta_value' => true
+		              'meta_query' => array(
+		              		array(
+		              			'key' => 'featured',
+		              			'value' => '1',
+		              			'compare' => '='
+		              		)
+		              	)
 		              );
 
 		$query = new WP_Query($args);
@@ -19,7 +24,9 @@
 					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('slider-img'); ?></a>
 				</div><!--
 				--><div class="slide__info">
-					<h1 class="slide__info__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h1 class="slide__info__title">
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</h1>
 					<div class="slide__info__dek">
 						<?php the_excerpt(); ?>
 					</div>
@@ -27,8 +34,7 @@
 
 			</li>
 
-		<?php endwhile; endif; ?>
-		<?php wp_reset_postdata(); ?>
+		<?php endwhile; endif; wp_reset_postdata(); ?>
 
 	</ul>
 </div>
