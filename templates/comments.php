@@ -55,7 +55,7 @@
 							<a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php __('Log out of this account', 'exai'); ?>"><?php _e('Log out &raquo;', 'exai'); ?></a>
 						</p>
 					<?php else : ?>
-						
+
 							<div class="form__control-group">
 								<label for="author"><?php _e('Name', 'exai'); ?></label>
 								<input type="text" class="text-input  palm-one-whole  lap-one-half  desk-one-third" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" <?php if ($req) echo 'aria-required="true"'; ?>>
@@ -70,14 +70,14 @@
 								<label for="url"><?php _e('Website', 'exai'); ?></label>
 								<input type="url" class="text-input  palm-one-whole  lap-one-half  desk-one-third" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" size="22">
 							</div>
-						
+
 					<?php endif; ?>
 					<div class="form__control-group">
 						<label for="comment"><?php _e('Comment', 'exai'); ?></label>
 						<textarea name="comment" id="comment" class="palm-one-whole  lap-one-half  desk-one-half" rows="5" aria-required="true"></textarea>
 					</div>
 					<div class="form__controls">
-						<input name="submit" class="btn btn--positive" type="submit" id="submit" value="<?php _e('Submit Comment', 'exai'); ?>">
+						<input name="submit" class="btn btn--dark" type="submit" id="submit" value="<?php _e('Submit Comment', 'exai'); ?>">
 					</div>
 					<?php comment_id_fields(); ?>
 					<?php do_action('comment_form', $post->ID); ?>
