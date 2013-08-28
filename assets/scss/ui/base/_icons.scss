@@ -28,6 +28,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-menu, .icon-arrow-down, .icon-plus-alt, .icon-minus-alt, .icon-facebook, .icon-twitter, .icon-vimeo, .icon-feed, .icon-thumbs-up, .icon-clock-dark, .icon-comment-dark {
+	@include font-size($base-font-size);
 	font-family: 'TUUpdate';
 	speak: none;
 	font-style: normal;
