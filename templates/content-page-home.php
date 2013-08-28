@@ -50,7 +50,7 @@ foreach ($categories as $category) :
 				</article>
 
 			<?php endwhile; endif; ?>
-			<?php wp_reset_postdata(); ?>
+
 
 		</div>
 
@@ -58,4 +58,5 @@ foreach ($categories as $category) :
 
 <?php
 endforeach;
+wp_reset_postdata();
 ?>
