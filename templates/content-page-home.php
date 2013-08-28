@@ -40,7 +40,7 @@ foreach ($categories as $category) :
 
 					<header class="home__recent-post__header">
 						<time class="home__recent-post__header__post-updated  post__updated  icon-text" datetime="<?php echo get_the_time('c'); ?>" pubdate><i class="icon-clock-dark  icon-text__icon"></i><?php echo get_the_date(); ?></time>
-						<h1 class="home__recent-post__header__title"><?php the_title(); ?></h1>
+						<h1 class="home__recent-post__header__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					</header>
 
 					<div class="home__recent-post__content">

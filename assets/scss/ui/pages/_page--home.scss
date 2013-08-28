@@ -31,6 +31,10 @@
 				.home__recent-post__header__title {
 					@include font-size($page--home__recent-posts--font-size--portable);
 					margin-bottom: 0;
+
+					a {
+						@include a-color(black, $color__alpha)
+					}
 				}
 
 			.home__recent-post__content {}
