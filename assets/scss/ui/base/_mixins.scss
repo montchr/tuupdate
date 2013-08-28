@@ -126,7 +126,11 @@
 
 
 
-
+/**
+ * Nav object mixin
+ *
+ * Useful for overriding nav object in different media queries.
+ */
 @mixin nav($nav: true,
            $stacked: false,
            $banner: false,
