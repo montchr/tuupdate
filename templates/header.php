@@ -39,16 +39,16 @@
 
 					<ul class="main-nav__social-menu  nav">
 						<li class="main-nav__social-menu__item  social-icon--facebook  social-icon  icon">
-							<a href="//www.facebook.com/templeupdate"><i class="icon-facebook"></i></a>
+							<a href="//www.facebook.com/templeupdate" target="_blank"><i class="icon-facebook"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--twitter  social-icon  icon">
-							<a href="//twitter.com/TempleUpdate"><i class="icon-twitter"></i></a>
+							<a href="//twitter.com/TempleUpdate" target="_blank"><i class="icon-twitter"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--vimeo  social-icon  icon">
-							<a href="//vimeo.com/album/1521800"><i class="icon-vimeo"></i></a>
+							<a href="//vimeo.com/album/1521800" target="_blank"><i class="icon-vimeo"></i></a>
 						</li><!--
 						--><li class="main-nav__social-menu__item  social-icon--feed  social-icon  icon">
-							<a href="<?php bloginfo('atom_url'); ?>"><i class="icon-feed"></i></a>
+							<a href="<?php bloginfo('atom_url'); ?>" target="_blank"><i class="icon-feed"></i></a>
 						</li>
 					</ul>
 
