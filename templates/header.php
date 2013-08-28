@@ -23,7 +23,7 @@
 
 		<div class="drawer">
 			<div class="drawer__inner  container">
-				<?php get_template_part( 'templates/slider' ); ?>
+				<?php if (is_front_page()) { get_template_part( 'templates/slider' ); } ?>
 			</div>
 		</div>
 
