@@ -99,6 +99,22 @@
 
 
 /**
+ * sidebar-pane: "SportsDesk"
+ */
+.sidebar-pane--sportsdesk {}
+
+	.sidebar-pane--sportsdesk__header {}
+
+		.sidebar-pane--sportsdesk__header__title {}
+
+	.sidebar-pane--sportsdesk__content {
+		background-color: white;
+	}
+
+
+
+
+/**
  * sidebar-pane: "Social"
  */
 .sidebar-pane--social {}

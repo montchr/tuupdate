@@ -35,6 +35,16 @@ function exai_widgets_init() {
 		)
 	);
 
+	// SportsDesk Widget
+	register_sidebar(array(
+		'name'          => __('SportsDesk', 'exai'),
+		'id'            => 'sidebar-sportsdesk',
+		'before_widget' => '<div class="widget--sportsdesk  widget  %1$s  %2$s"><div class="widget__inner">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	));
+
 	// Weather Widget
 	register_sidebar(array(
 		'name'          => __('WeatherWatch', 'exai'),
