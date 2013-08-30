@@ -2,13 +2,6 @@
     $UI-FOOTER
 \*------------------------------------*/
 
-/**
- * ^^Override sticky footer height on small screens.
- */
-#footer {
-	height: $base-spacing-unit * 10;
-}
-
 /*#footer*/.content-info {
 	background-color: $color__dark;
 	padding-top: $base-spacing-unit;
