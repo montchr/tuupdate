@@ -70,7 +70,7 @@
 
 		}
 
-		@if $color-override == false or $margin-override == false {
+		@if $color-override == false and $margin-override == false {
 
 			@if $corner == bottom-left or bottom-right or bottom-both {
 				margin-bottom: $size + $margin;

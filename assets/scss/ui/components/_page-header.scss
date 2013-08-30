@@ -11,7 +11,7 @@
  * A cut-pane page header with heavy text and solid background.
  */
 .page-header {
-
+	@include corner-cut($size: $base-spacing-unit, $margin-override: true, $margin: $base-spacing-unit);
 }
 	/**
 	 * Line-height has to be this specific
