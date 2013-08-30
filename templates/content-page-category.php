@@ -23,7 +23,7 @@ $query           = new WP_Query($query_string);
 		<div class="pane__content  pane--cut__content">
 
 			<header class="post__header">
-				<h1 class="post__header__title"><?php the_title(); ?></h1>
+				<h1 class="post__header__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<div class="post__header__meta">
 					<?php get_template_part('templates/entry-meta'); ?>
 				</div>
