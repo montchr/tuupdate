@@ -9,6 +9,7 @@
 		.home__recent-posts__header__title {}
 
 	.home__recent-posts__content {
+		@include corner-cut();
 		@include font-size($page--home__recent-posts--font-size--portable);
 	}
 

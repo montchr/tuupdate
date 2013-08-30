@@ -17,21 +17,23 @@
  * ^TODO What's the effect of using ceil() or not?
  * ^TODO Options for top cuts
  *
- * $color          | mixed  | The color to be used. This is also applied to the parent element.
- * $size           | px/em  | Size of the cut corner
- * $corner         | string | The corner(s) to cut
- * $margin         | mixed  | The amount of margin for the bottom of the element. This value is added on to the $size.
- * $positioning    | bool   | Does the element already have relative or absolute positioning? If so, set this to false.
- * $color-override | bool   | Set to true to only change color, nothing else
- * $type           | string | Use the pseudo-element or the gradient method
+ * $color           | mixed  | The color to be used. This is also applied to the parent element.
+ * $size            | px/em  | Size of the cut corner
+ * $corner          | string | The corner(s) to cut. E.G. 'bottom-left', 'top-both'
+ * $margin          | mixed  | The amount of margin for the bottom of the element. This value is added on to the $size.
+ * $positioning     | bool   | Does the element already have relative or absolute positioning? If so, set this to false.
+ * $color-override  | bool   | Set to true to only change color, nothing else
+ * $margin-override | bool   | Set to true to only change margin, nothing else. If using a top cut, $corner must be set to top-*
+ * $type            | string | Use the pseudo-element or the gradient method
  */
 @mixin corner-cut(
                   $color: white,
-                  $size: 40px,
+                  $size: $base-spacing-unit * 2,
                   $corner: "bottom-right",
-                  $margin: $base-spacing-unit * 2,
+                  $margin: 0,
                   $positioning: true,
                   $color-override: false,
+                  $margin-override: false,
                   $type: "pseudo"
                   ) {
 
@@ -56,7 +58,19 @@
 				background-color: $color;
 			}
 
-		} @elseif $color-override == false {
+		}
+
+		@if $margin-override {
+
+			@if $corner == bottom-left or bottom-right or bottom-both {
+				margin-bottom: $size + $margin;
+			} @elseif $corner == top-left or top-right or top-both {
+				margin-top: $size + $margin;
+			}
+
+		}
+
+		@if $color-override == false or $margin-override == false {
 
 			@if $corner == bottom-left or bottom-right or bottom-both {
 				margin-bottom: $size + $margin;
