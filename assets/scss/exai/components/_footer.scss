@@ -2,8 +2,6 @@
     $UI-FOOTER
 \*------------------------------------*/
 
-@include sticky-footer(5em, "#root", "#sticky-push", "#footer");
-
 .footer__inner {
 	background-color: $color__gamma;
 	color: white;
