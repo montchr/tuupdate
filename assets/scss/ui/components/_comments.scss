@@ -3,17 +3,14 @@
 \*------------------------------------*/
 
 .comment {
-	background-color: rgba($color__beta, 0.5);
+	background-color: rgba(black, 0.25);
+	padding: $half-spacing-unit;
 
 	a {
-		&,
-		&:visited {
-			color: white;
-		}
-
-		&:hover,
-		&:active {
-			color: black;
-		}
+		@include a-color(black, white);
 	}
 }
+
+	.comment__heading {
+		margin-bottom: $quarter-spacing-unit;
+	}
