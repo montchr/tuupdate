@@ -5,6 +5,8 @@
 /*#footer*/.content-info {
 	background-color: $color__dark;
 	padding-top: $base-spacing-unit;
+	padding-bottom: $base-spacing-unit;
+	padding-right: $base-spacing-unit;
 }
 
 	/**
@@ -55,16 +57,3 @@
 					}
 				}
 			}
-
-
-
-
-
-@include media-query(desk) {
-	/**
-	 * ^^Override sticky footer height on larger screens.
-	 */
-	#footer {
-		height: $base-spacing-unit * 8;
-	}
-}
