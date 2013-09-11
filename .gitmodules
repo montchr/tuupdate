@@ -1,6 +1,3 @@
-[submodule "assets/scss/inuit.css"]
-	path = assets/scss/inuit.css
-	url = git@github.com:csswizardry/inuit.css.git
 [submodule "assets/scss/gs"]
 	path = assets/scss/gs
 	url = https://github.com/csswizardry/csswizardry-grids.git
