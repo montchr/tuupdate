@@ -122,7 +122,7 @@
 	 * Override this default color by calling:
 			@include corner-cut($color, $color-override: true);
 	 */
-	@include corner-cut($color__alpha, $margin: $base-spacing-unit, $size: $base-spacing-unit);
+	@include corner-cut($margin: $base-spacing-unit, $size: $base-spacing-unit);
 	padding-left: $base-spacing-unit;
 	padding-right: $base-spacing-unit;
 }

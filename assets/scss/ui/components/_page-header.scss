@@ -33,7 +33,9 @@
 
 
 
-.page-header--news {}
+.page-header--news {
+	@include corner-cut($color: $color__alpha, $color-override: true);
+}
 
 
 
