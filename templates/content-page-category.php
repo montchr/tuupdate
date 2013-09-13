@@ -1,6 +1,6 @@
 <?php
 
-$slug            = tuu_get_page_slug();
+$slug            = tuu_get_the_slug();
 
 $category_id     = get_cat_ID( $slug );
 $category_object = get_category_by_slug( $slug );
