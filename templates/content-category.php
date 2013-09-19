@@ -2,7 +2,7 @@
 
 $slug            = tuu_get_the_slug();
 
-$category_id     = get_cat_ID( $slug );
+/*$category_id     = get_cat_ID( $slug );
 $category_object = get_category_by_slug( $slug );
 $category_title  = $category_object->name;
 $category_link   = get_category_link( $category_id );
@@ -12,11 +12,11 @@ $query_string    = array(
 						'posts_per_page' => 10
                       );
 
-$query           = new WP_Query($query_string);
+$query           = new WP_Query($query_string);*/
 ?>
 
 
-<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<article <?php post_class('pane  pane--cut'); ?>>
 
@@ -38,4 +38,12 @@ $query           = new WP_Query($query_string);
 	</article>
 
 <?php endwhile; endif; ?>
-<?php wp_reset_postdata(); ?>
+
+<?php if ($wp_query->max_num_pages > 1) : ?>
+	<nav class="post-nav">
+		<ul class="nav  pagination">
+			<li class="previous"><?php next_posts_link(__('&larr; Older posts', 'exai')); ?></li>
+			<li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'exai')); ?></li>
+		</ul>
+	</nav>
+<?php endif; ?>
