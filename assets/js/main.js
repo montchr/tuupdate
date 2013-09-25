@@ -8,13 +8,12 @@
 /* Main Menu */
 jQuery(document).ready(function($) {
 	$('body').addClass('js');
-		var $menu = $('.main-nav'),
+		var $menu = $('#main-nav'),
 			$menulink = $('.menu-link'),
 			//$menuItem = $('.main-nav ul li a'),
 			$menuTrigger = $('.dropdown__toggle');
 
 	$menulink.click(function(e) {
-		e.preventDefault();
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
 	});
