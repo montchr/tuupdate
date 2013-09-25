@@ -65,7 +65,7 @@
 		.sidebar-pane--watch__header__title {}
 
 	.sidebar-pane--watch__content {
-		@include font-size(20px, false);
+		@include font-size($base-font-size, false);
 		background-color: $color__dark;
 		color: white;
 		font-style: italic;
