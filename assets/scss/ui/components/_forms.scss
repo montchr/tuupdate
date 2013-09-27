@@ -4,6 +4,11 @@
 
 .form--search {}
 
+	.form--search__label,
+	input.form--search__input {
+		display: inline-block;
+	}
+
 	.form--search__label {
 		@include font-size($h4-size);
 		font-weight: 700;
@@ -17,6 +22,7 @@
 		@include box-shadow(none);
 		@include font-size($base-font-size);
 		margin-left: $half-spacing-unit;
+		width: 75%;
 	}
 
 	.form--search__submit {}
