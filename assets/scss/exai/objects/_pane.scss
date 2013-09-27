@@ -11,7 +11,11 @@
 
 .pane {
 	@extend .cf;
-	margin-bottom: $base-spacing-unit;
+	margin-bottom: $base-spacing-unit * 2;
+
+	@include media-query(desk) {
+		margin-bottom: $base-spacing-unit;
+	}
 }
 
 	.pane__content {
