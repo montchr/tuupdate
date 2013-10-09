@@ -30,3 +30,8 @@ jQuery(document).ready(function($) {
 		//$(this).toggleClass('active');
 	});*/
 });
+
+jQuery(document).ready(function($) {
+    /* FitVids */
+    $(".entry-content-asset").fitVids();
+});
