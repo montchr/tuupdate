@@ -15,11 +15,11 @@
  * a framework on top of a framework...
  */
 @import "vars";
-@import "exai/defaults";
+@import "vendor/exai.css/defaults";
 
-@import "inuit.css/inuit";
-@import "gs/csswizardry-grids.scss";
-@import "exai/exai";
+@import "vendor/inuit.css/inuit";
+@import "vendor/csswizardry-grids/csswizardry-grids.scss";
+@import "vendor/exai.css/exai";
 
 
 
