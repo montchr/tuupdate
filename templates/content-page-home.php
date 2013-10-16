@@ -44,7 +44,7 @@ foreach ($categories as $category) :
 					</header>
 
 					<div class="home__recent-post__content">
-						<?php the_excerpt(); // the_content( 'Continue reading &#187;' ); ?>
+						<?php the_excerpt(); echo exai_excerpt_more(); ?>
 					</div>
 
 				</article>
