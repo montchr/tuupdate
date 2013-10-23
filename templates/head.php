@@ -21,7 +21,7 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<!-- Flexslider -->
-	<script type="text/javascript" charset="utf-8">
+	<script type="text/javascript">
 	  jQuery(window).load(function() {
 	    $('.flexslider').flexslider();
 	  });

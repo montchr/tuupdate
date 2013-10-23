@@ -13,7 +13,7 @@
 			if (has_nav_menu('footer_links')) :
 				wp_nav_menu(array(
 					'theme_location' => 'footer_links',
-					'after'          => '<span class="divider">&#9679</span>',
+					'after'          => '<span class="divider">&#9679;</span>',
 					'menu_class'     => 'footer__about__links  level-1  nav'
 				));
 			endif;

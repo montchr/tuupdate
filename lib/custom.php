@@ -38,7 +38,7 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
 
 			?>
 		</div>
-	</section><!-- end <?php echo "." . $namespace; ?> -->
+	</section>
 <?php }
 
 
