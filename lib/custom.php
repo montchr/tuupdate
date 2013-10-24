@@ -265,3 +265,21 @@ function tuu_comments_number() {
 
 	echo $write_comments;
 }
+
+
+/**
+ * Coauthors with the_author fallback.
+ *
+ * @param string $between Delimiter that should appear between the co-authors
+ * @param string $between Last Delimiter that should appear between the last two co-authors
+ * @param string $before What should appear before the presentation of co-authors
+ * @param string $after What should appear after the presentation of co-authors
+ * @param bool $echo Whether the co-authors should be echoed or returned. Defaults to true.
+ */
+function tuu_authors_posts_links($between = null, $betweenLast = null, $before = null, $after = null, $echo = true) {
+    if ( function_exists( 'coauthors' ) ) {
+        coauthors_posts_links($between, $betweenLast, $before, $after, $echo);
+    } else {
+        the_author_posts_link();
+    }
+}
