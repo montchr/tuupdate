@@ -1,9 +1,9 @@
 [submodule "assets/scss/vendor/csswizardry-grids"]
 	path = assets/scss/vendor/csswizardry-grids
 	url = https://github.com/csswizardry/csswizardry-grids.git
-[submodule "assets/scss/vendor/inuit.css"]
-	path = assets/scss/vendor/inuit.css
-	url = https://github.com/csswizardry/inuit.css.git
 [submodule "assets/scss/vendor/exai.css"]
 	path = assets/scss/vendor/exai.css
 	url = git@github.com:montchr/exai.css.git
+[submodule "assets/scss/vendor/inuit.css"]
+	path = assets/scss/vendor/inuit.css
+	url = https://github.com/csswizardry/inuit.css.git
