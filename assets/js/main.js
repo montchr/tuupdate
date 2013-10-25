@@ -33,5 +33,5 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($) {
     /* FitVids */
-    $(".entry-content-asset").fitVids();
+    $(document).fitVids();
 });
