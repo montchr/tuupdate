@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 		var $menu = $('#main-nav'),
 			$menulink = $('.menu-link'),
 			//$menuItem = $('.main-nav ul li a'),
-			$menuTrigger = $('.dropdown__toggle');
+			$menuTrigger = $('.touch .dropdown__toggle');
 
 	$menulink.click(function(e) {
 		$menulink.toggleClass('active');
