@@ -1,28 +1,22 @@
 <h3 id="frameworks">Frameworks</h3>
 
 	<ul>
-		<li>WordPress</li>
-		<li>Roots</li>
-		<li>Exai</li>
-		<li>inuit.css</li>
+		<li><a href="http://wordpress.org/">WordPress</a></li>
+		<li><a href="http://roots.io/">Roots</a></li>
+		<li><a href="https://github.com/montchr/exai">Exai</a></li>
+		<li><a href="http://inuitcss.com/">Inuit.css</a></li>
 	</ul>
 
 <h3 id="typography">Typography</h3>
 
-	<h4>Font</h4>
-
-		<p>Proxima Nova</p>
-
-	<h4>Provider</h4>
-
-		<p>Typekit</p>
+	<p><a href="http://www.marksimonson.com/fonts/view/proxima-nova">Proxima Nova</a>, provided by <a href="https://typekit.com/">Typekit</a>.</p>
 
 <h3 id="icons">Icons</h3>
 
 	<ul>
-		<li>IcoMoon</li>
-		<li>Icon Minia</li>
-		<li>Iconic</li>
+		<li><a href="http://icomoon.io/">IcoMoon</a></li>
+		<li><a href="http://egemem.deviantart.com/art/Icon-Minia-139-Vector-Icons-307529703">Icon Minia</a></li>
+		<li><a href="http://somerandomdude.com/work/open-iconic/">Iconic</a></li>
 	</ul>
 
 <h3 id="design">Design</h3>
