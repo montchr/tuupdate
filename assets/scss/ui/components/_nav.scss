@@ -94,9 +94,11 @@
 	/**
 	 * 1. Float menus to the right
 	 * 2. Show social menu
+	 * 3. Prevent inline-block whitespace
 	 */
 	.main-nav__menus {
-		float: right;
+		float: right; /* [1] */
+		font-size: 0; /* [3] */
 	}
 
 		.main-nav__primary-navigation,
@@ -104,6 +106,7 @@
 			display: inline-block; /* [2] */
 			margin-bottom: 0;
 			vertical-align: middle;
+			font-size: $base-font-size; /* [3] */
 		}
 
 
@@ -126,7 +129,7 @@
 
 
 	/**
-	 * Height contraints.
+	 * Height constraints.
 	 */
 	/*ul*/.level-1 {
 		> li {
@@ -136,10 +139,9 @@
 		}
 	} // end .level-1
 
-	.main-nav__social-menu {
-
-	}
-
+	/**
+	 * Social menu formatting.
+	 */
 	.main-nav__social-menu__item {
 
 		border-left: 1px solid white;

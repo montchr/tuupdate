@@ -8,13 +8,12 @@
 /* Main Menu */
 jQuery(document).ready(function($) {
 	$('body').addClass('js');
-		var $menu = $('.main-nav'),
+		var $menu = $('#main-nav'),
 			$menulink = $('.menu-link'),
 			//$menuItem = $('.main-nav ul li a'),
 			$menuTrigger = $('.dropdown__toggle');
 
 	$menulink.click(function(e) {
-		e.preventDefault();
 		$menulink.toggleClass('active');
 		$menu.toggleClass('active');
 	});
@@ -30,4 +29,9 @@ jQuery(document).ready(function($) {
 		//$(this).parents('li').parents('ul').andSelf().toggleClass('active');
 		//$(this).toggleClass('active');
 	});*/
+});
+
+jQuery(document).ready(function($) {
+    /* FitVids */
+    $(".entry-content-asset").fitVids();
 });

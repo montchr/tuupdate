@@ -29,9 +29,6 @@
 			</aside><!-- /.sidebar -->
 			<?php endif; ?>
 		</div><!-- /.content -->
-
-
-		<div id="sticky-push"><!-- This is an empty div for our sticky footer. --></div>
 	</div><!-- /.wrap -->
 
 	<?php get_template_part('templates/footer'); ?>

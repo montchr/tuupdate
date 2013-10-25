@@ -13,7 +13,7 @@
 					</div>
 				</a>
 
-				<a class="btn  btn--navbar  menu-link" data-toggle="collapse" data-target=".nav-collapse">
+				<a href="#main-nav" class="btn  btn--navbar  menu-link" data-toggle="collapse" data-target=".nav-collapse">
 					<i class="icon-menu"></i>
 					<span class="accessibility">Menu</span>
 				</a>
@@ -27,7 +27,7 @@
 			</div>
 		</div>
 
-		<nav class="main-nav" role="navigation">
+		<nav id="main-nav" class="main-nav" role="navigation">
 			<div class="main-nav__inner  container">
 				<div class="main-nav__menus">
 

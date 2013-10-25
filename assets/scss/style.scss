@@ -15,11 +15,11 @@
  * a framework on top of a framework...
  */
 @import "vars";
-@import "exai/defaults";
+@import "vendor/exai.css/defaults";
 
-@import "inuit.css/inuit";
-@import "gs/csswizardry-grids.scss";
-@import "exai/exai";
+@import "vendor/inuit.css/inuit";
+@import "vendor/csswizardry-grids/csswizardry-grids.scss";
+@import "vendor/exai.css/exai";
 
 
 
@@ -36,6 +36,7 @@
 
 @import "ui/objects/buttons";
 @import "ui/objects/cut";
+@import "ui/objects/link";
 @import "ui/objects/pane";
 
 
@@ -45,6 +46,7 @@
 @import "ui/components/alerts";
 @import "ui/components/page-header";
 @import "ui/components/forms";
+@import "ui/components/excerpt";
 
 @import "ui/pages/post";
 @import "ui/pages/page--home";

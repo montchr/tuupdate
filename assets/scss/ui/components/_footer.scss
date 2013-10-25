@@ -7,6 +7,10 @@
 	padding-top: $base-spacing-unit;
 	padding-bottom: $base-spacing-unit;
 	padding-right: $base-spacing-unit;
+
+	a {
+		@extend .link--light;
+	}
 }
 
 	/**

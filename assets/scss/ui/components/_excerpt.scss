@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    $UI-EXCERPT
+\*------------------------------------*/
+
+/**
+ * Force "read more" link to display inline with the preceding `<p>` (the excerpt).
+ */
+.slide__info__dek,
+.home__recent-post__content {
+    p {
+        display: inline;
+    }
+}
+
+.home__recent-post__content {
+    margin-bottom:$base-spacing-unit;
+    margin-bottom:($base-spacing-unit / $base-font-size)*1rem;
+}

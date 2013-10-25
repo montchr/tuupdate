@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $UI-LINK
+\*------------------------------------*/
+
+/**
+ * Light links for dark backgrounds.
+ */
+.link--light {
+	@include a-color($color__alpha, white);
+}
