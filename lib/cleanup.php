@@ -207,7 +207,7 @@ function exai_excerpt_length($length) {
 }
 
 function exai_excerpt_more($more) {
-	return ' <a href="' . get_permalink() . '">' . __('Read More &raquo;', 'exai') . '</a>';
+	return ' <a href="' . get_permalink() . '">' . __('View More &raquo;', 'exai') . '</a>';
 }
 add_filter('excerpt_length', 'exai_excerpt_length');
 add_filter('excerpt_more', 'exai_excerpt_more');
