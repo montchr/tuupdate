@@ -1,0 +1,10 @@
+# Block access to files matching the pattern below
+# https://github.com/roots/bedrock
+<FilesMatch "(Capfile|Gemfile(\.lock)?|composer(\.lock|\.json)|\.env)">
+    # Apache < 2.3
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </IfModule>
+</FilesMatch>

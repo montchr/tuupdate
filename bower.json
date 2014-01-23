@@ -10,6 +10,6 @@
 
   },
   "devDependencies": {
-
+    "forecast.io-php-api": "git@github.com:tobias-redmann/forecast.io-php-api.git"
   }
 }

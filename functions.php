@@ -1,5 +1,29 @@
 <?php
 /**
+ * Load Composer.
+ */
+require_once locate_template('vendor/autoload.php');
+
+
+/**
+ * Load PHP-Dotenv.
+ *
+ * Throw an exception if required variables
+ * are not defined.
+ */
+Dotenv::load(__DIR__);
+Dotenv::required('FORECAST_API_KEY');
+
+
+/**
+ * Load Forecast.io PHP wrapper library.
+ *
+ * @link https://github.com/tobias-redmann/forecast.io-php-api
+ */
+require_once locate_template('/vendor/forecast.io-php-api/lib/forecast.io.php');
+
+
+/**
  * Roots includes
  */
 require_once locate_template('/lib/utils.php');           // Utility functions
@@ -17,4 +41,7 @@ require_once locate_template('/lib/rewrites.php');        // URL rewriting for a
 require_once locate_template('/lib/relative-urls.php');   // Root relative URLs
 require_once locate_template('/lib/widgets.php');         // Sidebars and widgets
 require_once locate_template('/lib/scripts.php');         // Scripts and stylesheets
+
+
+require_once locate_template('/lib/forecast.php');        // Weather widget and Forecast.io API calls
 require_once locate_template('/lib/custom.php');          // Custom functions
