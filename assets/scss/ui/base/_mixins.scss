@@ -296,3 +296,20 @@
 	    }
 	} // end keywords
 }
+
+
+
+
+
+/**
+ * Hide text only, not other content.
+ *
+ * Taken from Twitter Bootstrap v3.0.1
+ */
+@mixin text-hide() {
+  font: #{0/0} a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}

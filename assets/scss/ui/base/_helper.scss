@@ -1,0 +1,10 @@
+/*------------------------------------*\
+    $HELPER
+\*------------------------------------*/
+
+/**
+ * Hide text only, not other content.
+ */
+.text-hide {
+    @include text-hide();
+}
