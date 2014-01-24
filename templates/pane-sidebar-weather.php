@@ -1,4 +1,7 @@
-<div class="sidebar-pane--weather__content--twitter  widgets--weather  widgets">
+<div class="widgets--weather  widgets">
+
+    <?php echo tuupdate_weather_widget(); ?>
+
 	<?php dynamic_sidebar('sidebar-weather'); ?>
 
 	<a href="//twitter.com/tu_weatherwatch" class="btn  btn--soft  btn--dark  icon-text" target="_blank">
