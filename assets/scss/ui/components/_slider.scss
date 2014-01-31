@@ -28,11 +28,12 @@
 		}
 	}
 
-		.slide {}
+		.slide {
+        }
 
 			.slide__img,
 			.slide__info {
-				@extend .portable--one-whole;
+				@extend .lap--one-half;
 				@extend .desk--one-half;
 
 				display: inline-block;
@@ -47,13 +48,37 @@
 			}
 
 				.slide__info__title {
-					@include media-query(portable) {
-						margin-top: $base-spacing-unit;
-					}
+                    margin-top: $base-spacing-unit;
+
+                    @include media-query(lap) {
+                        @include font-size($h4-size);
+                    }
+                    @media only screen and (min-width: 720px) and (max-width: 1023px) {
+                        @include font-size($h2-size, false);
+                    }
+                    @include media-query(desk) {
+                        margin-top: 0;
+                    }
 				}
 
 				.slide__info__dek {
 					color: white;
+                    margin-top: $base-spacing-unit;
+                    margin-bottom: $base-spacing-unit;
+
+                    @include media-query(lap) {
+                        display: none;
+                    }
+                    @media only screen and (min-width: 720px) {
+                        display: block;
+                    }
+                    @media only screen and (min-width: 720px) and (max-width: 829px) {
+                        @include font-size($milli-size, false);
+                    }
+                    @include media-query(desk) {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
 				}
 
 
@@ -108,6 +133,9 @@
 	padding: $half-spacing-unit;
 	position: absolute;
 	z-index: 999;
+    top: 0;
+    width: 100%;
+    text-align: center;
 
 	li {
 		display: inline-block;
@@ -135,18 +163,11 @@
 	}
 }
 
-@include media-query(portable) {
+@include media-query(lap-and-up) {
 	.flex-control-nav,
 	.flex-control-paging {
-		top: 0;
-		width: 100%;
-		text-align: center;
-	}
-}
-
-@include media-query(desk) {
-	.flex-control-nav,
-	.flex-control-paging {
+        top: auto;
 		bottom: 0;
-	}
+        text-align: left;
+    }
 }
