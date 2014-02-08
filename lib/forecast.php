@@ -117,10 +117,10 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
 <div class="' . $container_class .'  widget--weather  widget">
     <div class="forecast">
         <div class="forecast__currently">
-            <div class="conditions">
-                <i class="conditions__icon--currently  conditions__icon  informative  text-hide  icon  icon--weather  icon-' . $current_icon . '" title="' . $current_summary . '">' . $current_summary . '</i>
+            <div class="top">
+                <i class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative  text-hide" title="' . $current_summary . '">' . $current_summary . '</i>
+                <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
             </div>
-            <div class="temp"><span class="temp__str' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
             <div class="summary">' . $current_summary . '</div>
             <div class="wind">Wind: ' . $current_wind_speed . ' mph (' . $current_wind_dir . ')</div>
         </div>
@@ -159,9 +159,9 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
             $temp_top             = $max_temp_height * ($high_temp - $day_high) / $temp_span;
 
             $output .= '
-            <div class="forecast__daily__day" style="position: relative;">
+            <div class="forecast__daily__day">
                 <div class="day-name">' . $day_name . '</div>
-                <div class="conditions"><i class="conditions__icon--day  conditions__icon  informative  text-hide  icon  icon--weather  icon-' . $day_icon . '" title="' . $day_summary . '">' . $day_summary . '</i></div>
+                <i class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative  text-hide" title="' . $day_summary . '">' . $day_summary . '</i>
                 <div class="temp-bar" style="height: ' . $temp_height . 'px; top: ' . $temp_top . ';">
                     <span class="temp-bar__hi">' . $day_high_round . 'º</span>
                     <span class="temp-bar__lo">' . $day_low_round . 'º</span>
