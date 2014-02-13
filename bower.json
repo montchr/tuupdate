@@ -7,9 +7,12 @@
     "**/*.txt"
   ],
   "dependencies": {
-
-  },
-  "devDependencies": {
+    "csswizardry-grids": "2.2.0",
+    "exai.css": "git@github.com:montchr/exai.css.git",
+    "fitvids": "~1.0.3",
+    "flexslider": "*",
     "forecast.io-php-api": "git@github.com:tobias-redmann/forecast.io-php-api.git"
-  }
+    "inuit.css": "5.0.0"
+  },
+  "devDependencies": {}
 }

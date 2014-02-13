@@ -33,6 +33,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     // montchr 2013-07-25
     if ($item->is_dropdown) {
       $item_html = str_replace('<a', '<a class="dropdown__toggle" data-toggle="dropdown" data-target="#"', $item_html);
+      $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
     }
     elseif (stristr($item_html, 'li class="divider')) {
       $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);

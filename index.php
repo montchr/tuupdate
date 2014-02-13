@@ -3,7 +3,7 @@
 <div class="pane pane--cut">
     <div class="pane--cut__content  pane__content">
         <?php if (!have_posts()) : ?>
-          <div class="alert">
+          <div class="alert  alert--warning">
             <?php _e('Sorry, no results were found.', 'exai'); ?>
           </div>
           <?php get_search_form(); ?>

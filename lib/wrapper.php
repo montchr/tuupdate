@@ -2,6 +2,7 @@
 /**
  * Theme wrapper
  *
+ * @link http://roots.io/an-introduction-to-the-roots-theme-wrapper/
  * @link http://scribu.net/wordpress/theme-wrappers.html
  */
 function exai_template_path() {
@@ -19,10 +20,24 @@ class Roots_Wrapping {
   // Stores the base name of the template file; e.g. 'page' for 'page.php' etc.
   static $base;
 
-  static function wrap($template) {
-    self::$main_template = $template;
+  public function __construct($template = 'base.php') {
+    $this->slug = basename($template, '.php');
+    $this->templates = array($template);
 
-    self::$base = substr(basename(self::$main_template), 0, -4);
+    if (self::$base) {
+      $str = substr($template, 0, -4);
+      array_unshift($this->templates, sprintf($str . '-%s.php', self::$base));
+    }
+  }
+
+  public function __toString() {
+    $this->templates = apply_filters('roots_wrap_' . $this->slug, $this->templates);
+    return locate_template($this->templates);
+  }
+
+  static function wrap($main) {
+    self::$main_template = $main;
+    self::$base = basename(self::$main_template, '.php');
 
     if (self::$base === 'index') {
       self::$base = false;
@@ -35,7 +50,7 @@ class Roots_Wrapping {
     }
 
     $templates = apply_filters('exai_wrap_base', $templates);
-    return locate_template($templates);
+    return new Roots_Wrapping();
   }
 
   static function sidebar() {

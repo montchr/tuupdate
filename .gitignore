@@ -1,4 +1,6 @@
+# Include your project-specific ignores in this file
 /assets/css/style.css
+node_modules
 .sass-cache
 .DS_Store
 sftp-config.json
