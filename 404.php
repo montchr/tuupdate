@@ -17,10 +17,10 @@
     </div>
 </div>
 
-<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
+<p><?php _e('It looks like this was the result of either:', 'exai'); ?></p>
 <ul>
-  <li><?php _e('a mistyped address', 'roots'); ?></li>
-  <li><?php _e('an out-of-date link', 'roots'); ?></li>
+  <li><?php _e('a mistyped address', 'exai'); ?></li>
+  <li><?php _e('an out-of-date link', 'exai'); ?></li>
 </ul>
 
 <?php get_search_form(); ?>

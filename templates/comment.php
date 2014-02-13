@@ -6,7 +6,7 @@
 
   <?php if ($comment->comment_approved == '0') : ?>
     <div class="alert alert-info">
-      <?php _e('Your comment is awaiting moderation.', 'roots'); ?>
+      <?php _e('Your comment is awaiting moderation.', 'exai'); ?>
     </div>
   <?php endif; ?>
 
