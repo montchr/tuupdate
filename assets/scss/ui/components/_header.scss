@@ -3,65 +3,65 @@
 \*------------------------------------*/
 
 .branding {
-	@extend .cf;
+  @extend .cf;
 }
 
 /*a*/.brand {
-	display: block;
-	float: left;
-	padding: 0;
-	position: relative;
+  display: block;
+  float: left;
+  padding: 0;
+  position: relative;
 }
 
-	.brand__logo {
-		background-color: $header--background-color;
-		display: inline-block;
-		padding: $quarter-spacing-unit;
+  .brand__logo {
+    background-color: $header--background-color;
+    display: inline-block;
+    padding: $quarter-spacing-unit;
 
-		position: absolute;
-		z-index: 99999;
+    position: absolute;
+    z-index: 99999;
 
-		.icon-logo {
-			width: $base-spacing-unit * 2;
-			height: $base-spacing-unit * 2;
-			background-size: 100%;
-			display: block;
-		}
-	}
+    .icon-logo {
+      width: $base-spacing-unit * 2;
+      height: $base-spacing-unit * 2;
+      background-size: 100%;
+      display: block;
+    }
+  }
 
-	.brand__about {
-		margin: 0;
-		padding-left: $base-spacing-unit * 2.5;
-		padding-top: $quarter-spacing-unit;
-		padding-bottom: $quarter-spacing-unit;
-		vertical-align: top;
-	}
+  .brand__about {
+    margin: 0;
+    padding-left: $base-spacing-unit * 2.5;
+    padding-top: $quarter-spacing-unit;
+    padding-bottom: $quarter-spacing-unit;
+    vertical-align: top;
+  }
 
-		.brand__about__site-title,
-		.brand__about__site-tagline {
-			margin: 0;
+    .brand__about__site-title,
+    .brand__about__site-tagline {
+      margin: 0;
 
-			&,
-			&:visited {
-				color: white;
-			}
+      &,
+      &:visited {
+        color: white;
+      }
 
-			&:active,
-			&:hover {
-				color: black;
-			}
-		} // end .brand__about__site-title, __site-tagline
+      &:active,
+      &:hover {
+        color: black;
+      }
+    } // end .brand__about__site-title, __site-tagline
 
-		.brand__about__site-title {
-			line-height: 2;
-			text-transform: uppercase;
-			padding-right: $quarter-spacing-unit;
-		}
+    .brand__about__site-title {
+      line-height: 2;
+      text-transform: uppercase;
+      padding-right: $quarter-spacing-unit;
+    }
 
-		.brand__about__site-tagline {
-			font-family: $font__stack--condensed--light;
-			font-weight: 100;
-		}
+    .brand__about__site-tagline {
+      font-family: $font__stack--condensed--light;
+      font-weight: 100;
+    }
 
 
 
@@ -70,7 +70,7 @@
 
 
 .drawer {
-	background-color: black;
+  background-color: black;
 }
 
 
@@ -83,30 +83,30 @@
 
 
 @include media-query(palm) {
-	.brand__logo {
-		.icon-logo {
-			width: $base-spacing-unit * 1.25;
-			height: $base-spacing-unit * 1.25;
-		}
-	}
+  .brand__logo {
+    .icon-logo {
+      width: $base-spacing-unit * 1.25;
+      height: $base-spacing-unit * 1.25;
+    }
+  }
 
-	.brand__about {
-		padding-left: $base-spacing-unit * 1.75;
-	}
+  .brand__about {
+    padding-left: $base-spacing-unit * 1.75;
+  }
 
-		.brand__about__site-title {
-			line-height: 1.333333333333;
-		}
+    .brand__about__site-title {
+      line-height: 1.333333333333;
+    }
 
-	/**
-	 * Nav context.
-	 *
-	 * Determines the nav's context, not its internal styling.
-	 */
-	.menu-link {
-		margin: 0;
-		padding: $base-spacing-unit $half-spacing-unit;
-	}
+  /**
+   * Nav context.
+   *
+   * Determines the nav's context, not its internal styling.
+   */
+  .menu-link {
+    margin: 0;
+    padding: $base-spacing-unit $half-spacing-unit;
+  }
 } // end palm
 
 
@@ -116,15 +116,15 @@
 
 
 @include media-query(lap) {
-	/**
-	 * Nav context.
-	 *
-	 * Determines the nav's context, not its internal styling.
-	 */
-	.menu-link {
-		margin: $quarter-spacing-unit*3 $half-spacing-unit;
-		padding: $quarter-spacing-unit $half-spacing-unit;
-	}
+  /**
+   * Nav context.
+   *
+   * Determines the nav's context, not its internal styling.
+   */
+  .menu-link {
+    margin: $quarter-spacing-unit*3 $half-spacing-unit;
+    padding: $quarter-spacing-unit $half-spacing-unit;
+  }
 } // end lap
 
 
@@ -135,13 +135,13 @@
 
 @include media-query(portable) {
 
-	.brand__about__site-title {
-		@include font-size($h3-size, false);
-	}
+  .brand__about__site-title {
+    @include font-size($h3-size, false);
+  }
 
-	.brand__about__site-tagline {
-		@include font-size($h5-size, false);
-	}
+  .brand__about__site-tagline {
+    @include font-size($h5-size, false);
+  }
 } // end portable
 
 
@@ -152,23 +152,23 @@
 
 @include media-query(lap-and-up) {
 
-	/*a*/.brand {
-		//float: none;
-		white-space: nowrap;
-	}
+  /*a*/.brand {
+    //float: none;
+    white-space: nowrap;
+  }
 
-	.brand__about__site-title,
-	.brand__about__site-tagline {
-		display: inline-block;
-	}
+  .brand__about__site-title,
+  .brand__about__site-tagline {
+    display: inline-block;
+  }
 
-	.brand__about__site-title {
-		@include font-size($h2-size, false);
-	}
+  .brand__about__site-title {
+    @include font-size($h2-size, false);
+  }
 
-	.brand__about__site-tagline {
-		@include font-size($h4-size, false);
-	}
+  .brand__about__site-tagline {
+    @include font-size($h4-size, false);
+  }
 } // end lap and up
 
 
@@ -179,37 +179,37 @@
 
 @include media-query(desk) {
 
-	/*header*/.banner {
-		margin-bottom: $base-spacing-unit * 2;
-	}
+  /*header*/.banner {
+    margin-bottom: $base-spacing-unit * 2;
+  }
 
-	.brand {
-		padding-left: $base-spacing-unit * 2;
-	}
+  .brand {
+    padding-left: $base-spacing-unit * 2;
+  }
 
-		.brand__logo {
-			@include corner-cut($header--background-color, 20px, bottom-both, 0, false);
-			height: $base-spacing-unit * 4.6666666666666; // the height must be less than the height of the logo so that the corner cut aligns with the bottom edge
+    .brand__logo {
+      @include corner-cut($header--background-color, 20px, bottom-both, 0, false);
+      height: $base-spacing-unit * 4.6666666666666; // the height must be less than the height of the logo so that the corner cut aligns with the bottom edge
 
-			.icon-logo {
-				position: relative;
-				z-index: 999;
+      .icon-logo {
+        position: relative;
+        z-index: 999;
 
-				height: $base-spacing-unit * 5;
-				width: $base-spacing-unit * 5;
-			}
-		}
+        height: $base-spacing-unit * 5;
+        width: $base-spacing-unit * 5;
+      }
+    }
 
-		.brand__about {
-			padding-left: $base-spacing-unit * 6.5;
-		}
+    .brand__about {
+      padding-left: $base-spacing-unit * 6.5;
+    }
 
-			.brand__about__site-title {
-				@include font-size($kilo-size, false);
-				line-height: $base-spacing-unit*3;
-			}
+      .brand__about__site-title {
+        @include font-size($kilo-size, false);
+        line-height: $base-spacing-unit*3;
+      }
 
-			.brand__about__site-tagline {
-				@include font-size($h4-size, false);
-			}
+      .brand__about__site-tagline {
+        @include font-size($h4-size, false);
+      }
 } // end media query desk

@@ -20,25 +20,25 @@
  * @author Chris Montgomery
  */
 function tuu_sidebar_pane($name, $slug, $content = '') {
-	$namespace = "sidebar-pane--" . $slug;
+  $namespace = "sidebar-pane--" . $slug;
 
-	?>
-	<section class="<?php echo $namespace; ?>  sidebar-pane  pane">
-		<header class="<?php echo $namespace; ?>__header  sidebar-pane__header  pane__header  pane__header--beta">
-			<h3 class="<?php echo $namespace; ?>__header__title  sidebar-pane__header__title  pane__header--beta__title  pane__header__title  h--main"><?php echo $name; ?></h3>
-		</header>
-		<div class="<?php echo $namespace; ?>__content  sidebar-pane__content  pane__content">
-			<?php
+  ?>
+  <section class="<?php echo $namespace; ?>  sidebar-pane  pane">
+    <header class="<?php echo $namespace; ?>__header  sidebar-pane__header  pane__header  pane__header--beta">
+      <h3 class="<?php echo $namespace; ?>__header__title  sidebar-pane__header__title  pane__header--beta__title  pane__header__title  h--main"><?php echo $name; ?></h3>
+    </header>
+    <div class="<?php echo $namespace; ?>__content  sidebar-pane__content  pane__content">
+      <?php
 
-			if ($content) {
-				echo $content;
-			} else {
-				get_template_part( 'templates/pane-sidebar', $slug );
-			}
+      if ($content) {
+        echo $content;
+      } else {
+        get_template_part( 'templates/pane-sidebar', $slug );
+      }
 
-			?>
-		</div>
-	</section>
+      ?>
+    </div>
+  </section>
 <?php }
 
 
@@ -56,34 +56,34 @@ function tuu_sidebar_pane($name, $slug, $content = '') {
  */
 function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
 
-	if (!$shortcode) {
+  if (!$shortcode) {
 
-		$feed = do_shortcode( '[custom-facebook-feed
-		                       textlength=140
-		                       type=links,status
-		                       layout=half
-		                       include=text,link,sharedlinks,date
-		]');
+    $feed = do_shortcode( '[custom-facebook-feed
+                           textlength=140
+                           type=links,status
+                           layout=half
+                           include=text,link,sharedlinks,date
+    ]');
 
-	} else {
-		$feed = $shortcode;
-	}
+  } else {
+    $feed = $shortcode;
+  }
 
-	/**
-	 * All to lowercase
-	 */
-	if ($lowercase) {
-		$feed = strtolower($feed);
-	}
+  /**
+   * All to lowercase
+   */
+  if ($lowercase) {
+    $feed = strtolower($feed);
+  }
 
-	/**
-	 * Remove linebreaks from status, replace with spaces.
-	 */
-	if ($flat) {
-		$feed = preg_replace( "/\r|\n/", " ", $feed );
-	}
+  /**
+   * Remove linebreaks from status, replace with spaces.
+   */
+  if ($flat) {
+    $feed = preg_replace( "/\r|\n/", " ", $feed );
+  }
 
-	echo $feed;
+  echo $feed;
 }
 
 
@@ -101,33 +101,33 @@ function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
  */
 function tuu_get_the_slug() {
 
-	if (is_single()) {
+  if (is_single()) {
 
-		$slug = basename(get_permalink());
-		do_action('before_slug', $slug);
-		$slug = apply_filters('slug_filter', $slug);
-		if( $echo ) echo $slug;
-		do_action('after_slug', $slug);
+    $slug = basename(get_permalink());
+    do_action('before_slug', $slug);
+    $slug = apply_filters('slug_filter', $slug);
+    if( $echo ) echo $slug;
+    do_action('after_slug', $slug);
 
-	} elseif (is_page()) {
+  } elseif (is_page()) {
 
-		$slug = get_query_var('pagename');
-		if ( !$pagename && $id > 0 ) {
-			// If a static page is set as the front page,
-			// $pagename will not be set. Retrieve it from the queried object
-			$post = $wp_query->get_queried_object();
-			$pagename = $post->post_name;
-		}
+    $slug = get_query_var('pagename');
+    if ( !$pagename && $id > 0 ) {
+      // If a static page is set as the front page,
+      // $pagename will not be set. Retrieve it from the queried object
+      $post = $wp_query->get_queried_object();
+      $pagename = $post->post_name;
+    }
 
-	} //elseif (is_category()) {
-		$cat = get_category( get_query_var( 'cat' ) );
-		$slug = $cat->slug;
+  } //elseif (is_category()) {
+    $cat = get_category( get_query_var( 'cat' ) );
+    $slug = $cat->slug;
 
-		//$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-		//$slug = $term->name;
-	//}
+    //$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+    //$slug = $term->name;
+  //}
 
-	return $slug;
+  return $slug;
 }
 
 
@@ -138,7 +138,7 @@ function tuu_get_the_slug() {
  * Echo the current page's slug.
  */
 function tuu_the_slug() {
-	echo tuu_get_the_slug();
+  echo tuu_get_the_slug();
 }
 
 
@@ -150,7 +150,7 @@ function tuu_the_slug() {
  *
  * Usage:
  *  add_filter( 'posts_where', 'tuu_filter_where_two_days' );
- *  	$query = new WP_Query( $query_string );
+ *    $query = new WP_Query( $query_string );
  *  remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
  *
  * @link http://codex.wordpress.org/Class_Reference/WP_Query#Time_Parameters
@@ -160,8 +160,8 @@ function tuu_the_slug() {
  * @return [type]         [description]
  */
 function tuu_filter_where_two_days( $where = '' ) {
-	$where .= " AND post_date > '" . date('Y-m-d', strtotime( '-2 days' )) . "'";
-	return $where;
+  $where .= " AND post_date > '" . date('Y-m-d', strtotime( '-2 days' )) . "'";
+  return $where;
 }
 
 
@@ -180,45 +180,45 @@ function tuu_filter_where_two_days( $where = '' ) {
  * @param  string  $template The path to the alert template
  */
 function tuu_alert($force = false, $template = 'templates/alert') {
-	global $post;
+  global $post;
 
-	$query_string = array(
-	                     'post_type' => 'alert',
-	                     'posts_per_page' => '1',
-	);
+  $query_string = array(
+                       'post_type' => 'alert',
+                       'posts_per_page' => '1',
+  );
 
-	add_filter( 'posts_where', 'tuu_filter_where_two_days' );
-		$query = new WP_Query($query_string);
-	remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
+  add_filter( 'posts_where', 'tuu_filter_where_two_days' );
+    $query = new WP_Query($query_string);
+  remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
 
-	if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
+  if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
 
-		$visibility = get_field('alert_visibility', $post->ID);
+    $visibility = get_field('alert_visibility', $post->ID);
 
-		$on_all = in_array('all', $visibility);
-		$on_home = (in_array('home', $visibility) && is_front_page());
+    $on_all = in_array('all', $visibility);
+    $on_home = (in_array('home', $visibility) && is_front_page());
 
-		if ($on_all) {
-			$display = true;
-		}
+    if ($on_all) {
+      $display = true;
+    }
 
-		if ($on_home) {
-			$display = true;
-		}
+    if ($on_home) {
+      $display = true;
+    }
 
-		if ($display || $force) { ?>
-			<div class="alert--alpha  alert  grid__item  one-whole">
-				<div class="alert--alpha__inner  alert__inner  pane--short">
-					<div class="alert--alpha__content  alert__content  pane--short__inner">
-						<?php the_content(); ?>
-					</div>
-				</div>
-			</div>
-		<?php }
+    if ($display || $force) { ?>
+      <div class="alert--alpha  alert  grid__item  one-whole">
+        <div class="alert--alpha__inner  alert__inner  pane--short">
+          <div class="alert--alpha__content  alert__content  pane--short__inner">
+            <?php the_content(); ?>
+          </div>
+        </div>
+      </div>
+    <?php }
 
-	endwhile; endif;
+  endwhile; endif;
 
-	wp_reset_query();
+  wp_reset_query();
 }
 
 
@@ -228,14 +228,14 @@ function tuu_alert($force = false, $template = 'templates/alert') {
  * Lists post categories.
  */
 function tuu_post_categories() {
-	$args = array(
-		'hierarchical'       => 0,
-		'title_li'           => '',
-		'show_option_none'   => '',
-	);
+  $args = array(
+    'hierarchical'       => 0,
+    'title_li'           => '',
+    'show_option_none'   => '',
+  );
 
-	//wp_list_categories( $args );
-	echo get_the_category_list();
+  //wp_list_categories( $args );
+  echo get_the_category_list();
 }
 
 
@@ -250,20 +250,20 @@ function tuu_post_categories() {
  * @return [type] [description]
  */
 function tuu_comments_number() {
-	$num_comments = get_comments_number(); // get_comments_number returns only a numeric value
+  $num_comments = get_comments_number(); // get_comments_number returns only a numeric value
 
-	if ( comments_open() ) {
-		if ( $num_comments == 0 ) {
-			$comments = __('No Comments', 'exai');
-		} elseif ( $num_comments > 1 ) {
-			$comments = $num_comments . __(' Comments', 'exai');
-		} else {
-			$comments = __('1 Comment', 'exai');
-		}
-		$write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
-	}
+  if ( comments_open() ) {
+    if ( $num_comments == 0 ) {
+      $comments = __('No Comments', 'exai');
+    } elseif ( $num_comments > 1 ) {
+      $comments = $num_comments . __(' Comments', 'exai');
+    } else {
+      $comments = __('1 Comment', 'exai');
+    }
+    $write_comments = '<a href="' . get_comments_link() .'">'. $comments.'</a>';
+  }
 
-	echo $write_comments;
+  echo $write_comments;
 }
 
 

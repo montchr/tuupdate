@@ -3,14 +3,14 @@
 \*------------------------------------*/
 /**
  *
- 	<section class="pane  pane--cut">
- 		<header class="pane__header--alpha  pane__header">
- 			<h1 class="pane__header--alpha__title  pane__header__title  h--main">Title</h1>
- 		</header>
- 		<div class="pane__content  pane--cut__content">
- 			Lorem ipsum dolor sit amet, consectetur adipisicing elit.
- 		</div>
- 	</section>
+  <section class="pane  pane--cut">
+    <header class="pane__header--alpha  pane__header">
+      <h1 class="pane__header--alpha__title  pane__header__title  h--main">Title</h1>
+    </header>
+    <div class="pane__content  pane--cut__content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+  </section>
  *
  */
 .pane {
@@ -20,69 +20,69 @@
 
 
 
-	/**
-	 * A header for a pane.
-	 *
-	 * Appears directly above a pane.
-	 *
-	 * May also be applied to page titles.
-	 */
-	.pane__header {}
+  /**
+   * A header for a pane.
+   *
+   * Appears directly above a pane.
+   *
+   * May also be applied to page titles.
+   */
+  .pane__header {}
 
-		.pane__header__title {
+    .pane__header__title {
 
-			&,
-			a {
-				font-weight: 400;
-			}
+      &,
+      a {
+        font-weight: 400;
+      }
 
-			a {
-				@include a-color(black, $color__alpha);
-			}
-
-
-		}
+      a {
+        @include a-color(black, $color__alpha);
+      }
 
 
-
-
-
-	/**
-	 * A header with a solid background and large text.
-	 *
-	 * Extends `.pane__header`
-	 */
-	.pane__header--alpha {
-		background-color: $color__alpha;
-		padding-left: $base-spacing-unit;
-	}
-
-		.pane__header--alpha__title {
-			letter-spacing: 0.08em;
-
-			@include media-query(portable) {
-				@include font-size($h3-size, false);
-				line-height: 2;
-			}
-		}
+    }
 
 
 
 
 
-	/**
-	 * A header with no background and slightly smaller text.
-	 *
-	 * Extends `.pane__header`
-	 */
-	.pane__header--beta {
-		padding-bottom: $half-spacing-unit;
-		padding-top: $half-spacing-unit;
-	}
+  /**
+   * A header with a solid background and large text.
+   *
+   * Extends `.pane__header`
+   */
+  .pane__header--alpha {
+    background-color: $color__alpha;
+    padding-left: $base-spacing-unit;
+  }
 
-		.pane__header--beta__title {
-			text-align: right;
-		}
+    .pane__header--alpha__title {
+      letter-spacing: 0.08em;
+
+      @include media-query(portable) {
+        @include font-size($h3-size, false);
+        line-height: 2;
+      }
+    }
+
+
+
+
+
+  /**
+   * A header with no background and slightly smaller text.
+   *
+   * Extends `.pane__header`
+   */
+  .pane__header--beta {
+    padding-bottom: $half-spacing-unit;
+    padding-top: $half-spacing-unit;
+  }
+
+    .pane__header--beta__title {
+      text-align: right;
+    }
 
 
 
@@ -95,11 +95,11 @@
  */
 .pane--cut {}
 
-	.pane--cut__header {}
+  .pane--cut__header {}
 
-	.pane--cut__content {
-		@include corner-cut();
-	}
+  .pane--cut__content {
+    @include corner-cut();
+  }
 
 
 
@@ -109,37 +109,37 @@
  *
  * Must have an inner element for vertically positioning content.
  *
- 	<header class="page-header  pane--short">
- 		<div class="page-header__inner  pane--short__inner">
- 			<h1 class="page-header__title  page-title  h--main">Yo!</h1>
- 		</div>
- 	</header>
+  <header class="page-header  pane--short">
+    <div class="page-header__inner  pane--short__inner">
+      <h1 class="page-header__title  page-title  h--main">Yo!</h1>
+    </div>
+  </header>
  *
  */
 .pane--short {
 
-	/**
-	 * Override this default color by calling:
-			@include corner-cut($color, $color-override: true);
-	 */
-	@include corner-cut($margin: $base-spacing-unit, $size: $base-spacing-unit);
-	padding-left: $base-spacing-unit;
-	padding-right: $base-spacing-unit;
+  /**
+   * Override this default color by calling:
+      @include corner-cut($color, $color-override: true);
+   */
+  @include corner-cut($margin: $base-spacing-unit, $size: $base-spacing-unit);
+  padding-left: $base-spacing-unit;
+  padding-right: $base-spacing-unit;
 }
 
-	/**
-	 * Position the content somewhere
-	 * near the center of the short pane.
-	 *
-	 * 1. Content must be on top of the corner cut pseudo-element.
-	 */
-	.pane--short__inner {
-		overflow: hidden;
-		position: relative;
-		top: $half-spacing-unit;
-		z-index: 99; /* [1] */
+  /**
+   * Position the content somewhere
+   * near the center of the short pane.
+   *
+   * 1. Content must be on top of the corner cut pseudo-element.
+   */
+  .pane--short__inner {
+    overflow: hidden;
+    position: relative;
+    top: $half-spacing-unit;
+    z-index: 99; /* [1] */
 
-		p {
-			margin-bottom: 0;
-		}
-	}
+    p {
+      margin-bottom: 0;
+    }
+  }

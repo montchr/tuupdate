@@ -1,24 +1,24 @@
 @font-face {
-	font-family: 'TUUpdate';
-	src:url('/assets/fonts/tuupdate/TUUpdate.eot');
-	src:url('/assets/fonts/tuupdate/TUUpdate.eot?#iefix') format('embedded-opentype'),
-		url('/assets/fonts/tuupdate/TUUpdate.woff') format('woff'),
-		url('/assets/fonts/tuupdate/TUUpdate.ttf') format('truetype'),
-		url('/assets/fonts/tuupdate/TUUpdate.svg#TUUpdate') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'TUUpdate';
+  src:url('/assets/fonts/tuupdate/TUUpdate.eot');
+  src:url('/assets/fonts/tuupdate/TUUpdate.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/tuupdate/TUUpdate.woff') format('woff'),
+    url('/assets/fonts/tuupdate/TUUpdate.ttf') format('truetype'),
+    url('/assets/fonts/tuupdate/TUUpdate.svg#TUUpdate') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'TUUpdate';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+  font-family: 'TUUpdate';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Use the following CSS code if you want to have a class per icon */
@@ -28,48 +28,48 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
 .icon-menu, .icon-arrow-down, .icon-plus-alt, .icon-minus-alt, .icon-facebook, .icon-twitter, .icon-vimeo, .icon-feed, .icon-thumbs-up, .icon-clock-dark, .icon-comment-dark {
-	@include font-size($base-font-size);
-	font-family: 'TUUpdate';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+  @include font-size($base-font-size);
+  font-family: 'TUUpdate';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 .icon-menu:before {
-	content: "\e001";
+  content: "\e001";
 }
 .icon-arrow-down:before {
-	content: "\e002";
+  content: "\e002";
 }
 .icon-plus-alt:before {
-	content: "\e003";
+  content: "\e003";
 }
 .icon-minus-alt:before {
-	content: "\e004";
+  content: "\e004";
 }
 .icon-facebook:before {
-	content: "\e005";
+  content: "\e005";
 }
 .icon-twitter:before {
-	content: "\e006";
+  content: "\e006";
 }
 .icon-vimeo:before {
-	content: "\e007";
+  content: "\e007";
 }
 .icon-feed:before {
-	content: "\e008";
+  content: "\e008";
 }
 .icon-thumbs-up:before {
-	content: "\e009";
+  content: "\e009";
 }
 .icon-clock-dark:before {
-	content: "\e00a";
+  content: "\e00a";
 }
 .icon-comment-dark:before {
-	content: "\e00b";
+  content: "\e00b";
 }
 
 
@@ -114,12 +114,12 @@ $icon-comment-dark: "\e00b";
 }
 
 @mixin icon-TUUpdate() {
-	font-family: 'TUUpdate';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+  font-family: 'TUUpdate';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }

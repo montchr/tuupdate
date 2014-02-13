@@ -8,12 +8,12 @@
  * ^^overrides exai
  */
 .widget {
-	margin-bottom: 0; // ^^overrides exai
+  margin-bottom: 0; // ^^overrides exai
 }
 
 .widgets {
-	padding-bottom: $base-spacing-unit;
-	padding-top: $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
+  padding-top: $base-spacing-unit;
 }
 
 
@@ -22,26 +22,26 @@
  */
 .widget_twitter {
 
-	h3 {
-		display: none; // there's no way to override this in widget settings! see below for another
-	}
+  h3 {
+    display: none; // there's no way to override this in widget settings! see below for another
+  }
 
-	ul {
-		margin-left: 0; // ^^overrides exai
-	}
+  ul {
+    margin-left: 0; // ^^overrides exai
+  }
 
-	.time-meta {
-		text-transform: uppercase;
+  .time-meta {
+    text-transform: uppercase;
 
-		a {
-			font-weight: 400;
-		}
-	}
+    a {
+      font-weight: 400;
+    }
+  }
 
-	// This should disappear via widget settings, but it doesn't.
-	.in-reply-to-meta {
-		display: none;
-	}
+  // This should disappear via widget settings, but it doesn't.
+  .in-reply-to-meta {
+    display: none;
+  }
 }
 
 
@@ -54,19 +54,19 @@
  * Deals with the devil.
  */
 #cff { // :(
-	p {
-		@include font-size(12px);
-	}
+  p {
+    @include font-size(12px);
+  }
 }
 
 .cff-item {
-	border-bottom: 0 !important; // motherfucker.
+  border-bottom: 0 !important; // motherfucker.
 }
 
 .cff-date {
-	color: black;
-	text-align: right;
-	text-transform: uppercase;
+  color: black;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 
@@ -81,40 +81,40 @@
 
 .ytchagallery {}
 
-	.ytctitle {
-		@include font-size($h1-size);
-		font-family: $font__stack--condensed--light;
-	}
+  .ytctitle {
+    @include font-size($h1-size);
+    font-family: $font__stack--condensed--light;
+  }
 
-	.ytctdescription {}
+  .ytctdescription {}
 
-	/**
-	 * While frighteningly specific, this forces gallery cells
-	 * to 100% of their parent on small screens. :)
-	 */
-	@include media-query(portable) {
-		.ytcplayer-wrapper {
-			margin-bottom: $base-spacing-unit * 5 !important;
-		}
+  /**
+   * While frighteningly specific, this forces gallery cells
+   * to 100% of their parent on small screens. :)
+   */
+  @include media-query(portable) {
+    .ytcplayer-wrapper {
+      margin-bottom: $base-spacing-unit * 5 !important;
+    }
 
-		.ytccf .ytc-columns3 li {
-			width: 100% !important;
-			padding-bottom: $base-spacing-unit * 4 !important;
-		}
+    .ytccf .ytc-columns3 li {
+      width: 100% !important;
+      padding-bottom: $base-spacing-unit * 4 !important;
+    }
 
-			.ytctdescription {
-				@include font-size($h4-size);
-			}
-	}
+      .ytctdescription {
+        @include font-size($h4-size);
+      }
+  }
 
-	@include media-query(desk) {
-		.ytc-row {
-			margin-bottom: $base-spacing-unit * 2;
-		}
+  @include media-query(desk) {
+    .ytc-row {
+      margin-bottom: $base-spacing-unit * 2;
+    }
 
-			.ytctitle {}
+      .ytctitle {}
 
-			.ytctdescription {
-				@include font-size(14px);
-			}
-	} // end media query desk
+      .ytctdescription {
+        @include font-size(14px);
+      }
+  } // end media query desk

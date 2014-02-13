@@ -3,61 +3,61 @@
 \*------------------------------------*/
 
 /*#footer*/.content-info {
-	background-color: $color__dark;
-	padding-top: $base-spacing-unit;
-	padding-bottom: $base-spacing-unit;
-	padding-right: $base-spacing-unit;
+  background-color: $color__dark;
+  padding-top: $base-spacing-unit;
+  padding-bottom: $base-spacing-unit;
+  padding-right: $base-spacing-unit;
 
-	a {
-		@extend .link--light;
-	}
+  a {
+    @extend .link--light;
+  }
 }
 
-	/**
-	 * No background on inner footer.
-	 *
-	 * ^^Overrides exai.css
-	 */
-	.footer__inner {
-		background-color: transparent;
-	}
+  /**
+   * No background on inner footer.
+   *
+   * ^^Overrides exai.css
+   */
+  .footer__inner {
+    background-color: transparent;
+  }
 
-		.footer__search {}
+    .footer__search {}
 
-		.footer__widgets {}
+    .footer__widgets {}
 
-		.footer__about {
-			@include font-size($milli-size);
-			text-align: right;
-		}
+    .footer__about {
+      @include font-size($milli-size);
+      text-align: right;
+    }
 
-			/**
-			 * Footer logo, floated to right.
-			 */
-			.footer__about__logo {
-				float: right;
-				margin: 0 $base-spacing-unit;
+      /**
+       * Footer logo, floated to right.
+       */
+      .footer__about__logo {
+        float: right;
+        margin: 0 $base-spacing-unit;
 
-				background-size: 100px;
-				height: 100px;
-				width: 100px;
-			}
+        background-size: 100px;
+        height: 100px;
+        width: 100px;
+      }
 
-			/**
-			 * Footer "About" links menu
-			 */
-			.footer__about__links {
-				display: inline-block;
-				margin-bottom: 0;
+      /**
+       * Footer "About" links menu
+       */
+      .footer__about__links {
+        display: inline-block;
+        margin-bottom: 0;
 
-				.divider {
-					display: inline-block;
-					padding: 0 $quarter-spacing-unit;
-				}
+        .divider {
+          display: inline-block;
+          padding: 0 $quarter-spacing-unit;
+        }
 
-				li:last-child {
-					.divider {
-						display: none;
-					}
-				}
-			}
+        li:last-child {
+          .divider {
+            display: none;
+          }
+        }
+      }

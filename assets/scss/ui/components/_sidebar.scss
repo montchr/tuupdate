@@ -4,9 +4,9 @@
 
 
 .sidebar {
-	a {
-		font-weight: 700;
-	}
+  a {
+    font-weight: 700;
+  }
 }
 
 
@@ -15,42 +15,42 @@
 
 .sidebar-pane {}
 
-	.sidebar-pane__header {
-		padding-right: $half-spacing-unit;
-	}
+  .sidebar-pane__header {
+    padding-right: $half-spacing-unit;
+  }
 
-		.sidebar-pane__header__title {}
+    .sidebar-pane__header__title {}
 
-	.sidebar-pane__content {
-		@include font-size($milli-size);
+  .sidebar-pane__content {
+    @include font-size($milli-size);
 
-		.btn {
-			@include font-size(14px, false);
-			font-weight: 400;
-			text-align: center;
-			max-width: 100%;
-		}
-	}
+    .btn {
+      @include font-size(14px, false);
+      font-weight: 400;
+      text-align: center;
+      max-width: 100%;
+    }
+  }
 
 
 
 @include media-query(palm) {
-	.sidebar-pane__content {
-		.btn {
-			width: 100%;
-		}
-	}
+  .sidebar-pane__content {
+    .btn {
+      width: 100%;
+    }
+  }
 }
 
 
 
 
 @include media-query(desk) {
-	.sidebar-pane__content {
-		.btn {
-			width: 100%;
-		}
-	}
+  .sidebar-pane__content {
+    .btn {
+      width: 100%;
+    }
+  }
 }
 
 
@@ -60,23 +60,23 @@
  */
 .sidebar-pane--watch {}
 
-	.sidebar-pane--watch__header {}
+  .sidebar-pane--watch__header {}
 
-		.sidebar-pane--watch__header__title {}
+    .sidebar-pane--watch__header__title {}
 
-	.sidebar-pane--watch__content {
-		@include font-size($base-font-size, false);
-		background-color: $color__dark;
-		color: white;
-		font-style: italic;
-		line-height: 1.5;
-		text-align: center;
+  .sidebar-pane--watch__content {
+    @include font-size($base-font-size, false);
+    background-color: $color__dark;
+    color: white;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
 
-		a {
-			@extend .link--light;
-			font-weight: 700;
-		}
-	}
+    a {
+      @extend .link--light;
+      font-weight: 700;
+    }
+  }
 
 
 
@@ -87,13 +87,13 @@
  */
 .sidebar-pane--weather {}
 
-	.sidebar-pane--weather__header {}
+  .sidebar-pane--weather__header {}
 
-		.sidebar-pane--weather__header__title {}
+    .sidebar-pane--weather__header__title {}
 
-	.sidebar-pane--weather__content {
-		background-color: white;
-	}
+  .sidebar-pane--weather__content {
+    background-color: white;
+  }
 
 
 
@@ -104,13 +104,13 @@
  */
 .sidebar-pane--sportsdesk {}
 
-	.sidebar-pane--sportsdesk__header {}
+  .sidebar-pane--sportsdesk__header {}
 
-		.sidebar-pane--sportsdesk__header__title {}
+    .sidebar-pane--sportsdesk__header__title {}
 
-	.sidebar-pane--sportsdesk__content {
-		background-color: white;
-	}
+  .sidebar-pane--sportsdesk__content {
+    background-color: white;
+  }
 
 
 
@@ -120,29 +120,29 @@
  */
 .sidebar-pane--social {}
 
-	.sidebar-pane--social__header {}
+  .sidebar-pane--social__header {}
 
-		.sidebar-pane--social__header__title {}
+    .sidebar-pane--social__header__title {}
 
-	.sidebar-pane--social__content {
-		background-color: $color__alpha;
-		color: white;
+  .sidebar-pane--social__content {
+    background-color: $color__alpha;
+    color: white;
 
-		a {
-			&,
-			&:visited {
-				color: black;
-			}
+    a {
+      &,
+      &:visited {
+        color: black;
+      }
 
-			&.btn,
-			&:hover,
-			&:active {
-				color: white;
-			}
-		}
+      &.btn,
+      &:hover,
+      &:active {
+        color: white;
+      }
+    }
 
-	}
+  }
 
-		.sidebar-pane--social__content--facebook {
-			border-bottom: 1px solid white;
-		}
+    .sidebar-pane--social__content--facebook {
+      border-bottom: 1px solid white;
+    }

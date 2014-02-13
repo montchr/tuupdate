@@ -11,9 +11,9 @@
   * Nav links are not bold.
   */
 .main-nav {
-	a {
-		font-weight: 400;
-	}
+  a {
+    font-weight: 400;
+  }
 }
 
 
@@ -22,21 +22,21 @@
  * Uppercase the nav items.
  */
 .main-nav__primary-navigation li {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /**
  * Customize the look of the menu link for small screens.
  */
 .menu-link {
-	@include font-size(16px);
-	background-color: black;
-	line-height: 1;
+  @include font-size(16px);
+  background-color: black;
+  line-height: 1;
 
-	&:hover,
-	&:active {
-		color: white;
-	}
+  &:hover,
+  &:active {
+    color: white;
+  }
 }
 
 
@@ -49,21 +49,21 @@
 .dropdown,
 .dropdown--submenu {
 
-	> a {
-		&:after,
-		&.active:after {
-			@include font-size(16px);
-			padding: $half-spacing-unit;
-		}
+  > a {
+    &:after,
+    &.active:after {
+      @include font-size(16px);
+      padding: $half-spacing-unit;
+    }
 
-		&:after {
-			@include icon($icon-plus-alt);
-		}
+    &:after {
+      @include icon($icon-plus-alt);
+    }
 
-		&.active:after {
-			@include icon($icon-minus-alt);
-		}
-	}
+    &.active:after {
+      @include icon($icon-minus-alt);
+    }
+  }
 }
 
 
@@ -74,7 +74,7 @@
  * Hide the social menu on small screens
  */
 .main-nav__social-menu {
-	display: none;
+  display: none;
 }
 
 
@@ -83,82 +83,82 @@
 
 @include media-query(desk) {
 
-	/**
-	 * Must be a higher z-index to counteract the strange effects of the corner cut.
-	 */
-	.dropdown__menu {
-		z-index: 9999999;
-	}
+  /**
+   * Must be a higher z-index to counteract the strange effects of the corner cut.
+   */
+  .dropdown__menu {
+    z-index: 9999999;
+  }
 
 
-	/**
-	 * 1. Float menus to the right
-	 * 2. Show social menu
-	 * 3. Prevent inline-block whitespace
-	 */
-	.main-nav__menus {
-		float: right; /* [1] */
-		font-size: 0; /* [3] */
-	}
+  /**
+   * 1. Float menus to the right
+   * 2. Show social menu
+   * 3. Prevent inline-block whitespace
+   */
+  .main-nav__menus {
+    float: right; /* [1] */
+    font-size: 0; /* [3] */
+  }
 
-		.main-nav__primary-navigation,
-		.main-nav__social-menu {
-			display: inline-block; /* [2] */
-			margin-bottom: 0;
-			vertical-align: middle;
-			font-size: $base-font-size; /* [3] */
-		}
-
-
-
-	/**
-	 * Change top-level dropdown icon to caret
-	 */
-	.dropdown {
-		> a {
-			padding-right: $base-spacing-unit * 1.5;
-
-			&:after,
-			&.active:after {
-				@include icon($icon-arrow-down);
-				@include font-size(16px);
-			}
-		}
-	} // end .dropdown
+    .main-nav__primary-navigation,
+    .main-nav__social-menu {
+      display: inline-block; /* [2] */
+      margin-bottom: 0;
+      vertical-align: middle;
+      font-size: $base-font-size; /* [3] */
+    }
 
 
 
-	/**
-	 * Height constraints.
-	 */
-	/*ul*/.level-1 {
-		> li {
-			a {
-				line-height: 2;
-			}
-		}
-	} // end .level-1
+  /**
+   * Change top-level dropdown icon to caret
+   */
+  .dropdown {
+    > a {
+      padding-right: $base-spacing-unit * 1.5;
 
-	/**
-	 * Social menu formatting.
-	 */
-	.main-nav__social-menu__item {
+      &:after,
+      &.active:after {
+        @include icon($icon-arrow-down);
+        @include font-size(16px);
+      }
+    }
+  } // end .dropdown
 
-		border-left: 1px solid white;
-		vertical-align: middle;
 
-		&:last-child {
-			border-right: 1px solid white;
-		}
 
-		a {
-			background-color: black;
-			padding: $half-spacing-unit $base-spacing-unit * 0.75;
-		}
+  /**
+   * Height constraints.
+   */
+  /*ul*/.level-1 {
+    > li {
+      a {
+        line-height: 2;
+      }
+    }
+  } // end .level-1
 
-		i {
-			display: inline-block;
-			vertical-align: middle;
-		}
-	}
+  /**
+   * Social menu formatting.
+   */
+  .main-nav__social-menu__item {
+
+    border-left: 1px solid white;
+    vertical-align: middle;
+
+    &:last-child {
+      border-right: 1px solid white;
+    }
+
+    a {
+      background-color: black;
+      padding: $half-spacing-unit $base-spacing-unit * 0.75;
+    }
+
+    i {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 } // end media query desk

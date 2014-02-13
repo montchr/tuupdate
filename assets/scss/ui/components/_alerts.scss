@@ -4,9 +4,9 @@
 
 .alert {}
 
-	.alert__inner {}
+  .alert__inner {}
 
-	.alert__content {}
+  .alert__content {}
 
 
 
@@ -18,20 +18,20 @@
  */
 .alert--alpha {}
 
-	.alert--alpha__inner {
-		@include corner-cut($color: $color__attn, $margin: $base-spacing-unit, $color-override: true);
-	}
+  .alert--alpha__inner {
+    @include corner-cut($color: $color__attn, $margin: $base-spacing-unit, $color-override: true);
+  }
 
-	.alert--alpha__content {
-		a {
-			&,
-			&:visited {
-				color: black;
-			}
+  .alert--alpha__content {
+    a {
+      &,
+      &:visited {
+        color: black;
+      }
 
-			&:hover,
-			&:active {
-				color: $color__alpha;
-			}
-		}
-	}
+      &:hover,
+      &:active {
+        color: $color__alpha;
+      }
+    }
+  }

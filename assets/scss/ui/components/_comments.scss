@@ -3,14 +3,14 @@
 \*------------------------------------*/
 
 .comment {
-	background-color: rgba(black, 0.25);
-	padding: $half-spacing-unit;
+  background-color: rgba(black, 0.25);
+  padding: $half-spacing-unit;
 
-	a {
-		@include a-color(black, white);
-	}
+  a {
+    @include a-color(black, white);
+  }
 }
 
-	.comment__heading {
-		margin-bottom: $quarter-spacing-unit;
-	}
+  .comment__heading {
+    margin-bottom: $quarter-spacing-unit;
+  }
