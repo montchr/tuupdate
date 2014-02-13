@@ -1,12 +1,15 @@
 # Require any additional compass plugins here.
 
+# Add import paths.
+add_import_path "./vendor"
+
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "css"
-sass_dir = "scss"
-images_dir = "img"
-javascripts_dir = "js"
-fonts_dir = "fonts"
+css_dir = "assets/css"
+sass_dir = "assets/scss"
+images_dir = "assets/img"
+javascripts_dir = "assets/js"
+fonts_dir = "assets/fonts"
 
 output_style = :compressed
 environment = :production

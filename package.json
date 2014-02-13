@@ -1,19 +1,19 @@
 {
-  "name": "roots",
-  "version": "6.5.2",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "http://roots.io",
+  "name": "templeupdate",
+  "version": "1.2.0",
+  "author": "Chris Montgomery <mont.chr@gmail.com>",
+  "homepage": "http://templeupdate.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/roots.git"
+    "url": "git@github.com:templesmc/tuupdate.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/roots/issues"
+    "url": "https://github.com/templesmc/tuupdate/issues"
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
+      "type": "WTFPL",
+      "url": "http://www.wtfpl.net/txt/copying/"
     }
   ],
   "engines": {

@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         },
         files: {
           'assets/css/main.min.css': [
-            'assets/sass/app.scss'
+            'assets/scss/app.scss'
           ]
         }
       }
@@ -32,18 +32,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'assets/js/scripts.min.js': [
-            'assets/js/plugins/bootstrap/transition.js',
-            'assets/js/plugins/bootstrap/alert.js',
-            'assets/js/plugins/bootstrap/button.js',
-            'assets/js/plugins/bootstrap/carousel.js',
-            'assets/js/plugins/bootstrap/collapse.js',
-            'assets/js/plugins/bootstrap/dropdown.js',
-            'assets/js/plugins/bootstrap/modal.js',
-            'assets/js/plugins/bootstrap/tooltip.js',
-            'assets/js/plugins/bootstrap/popover.js',
-            'assets/js/plugins/bootstrap/scrollspy.js',
-            'assets/js/plugins/bootstrap/tab.js',
-            'assets/js/plugins/bootstrap/affix.js',
+            'vendor/fitvids/jquery.fitvids.js',
+            'vendor/flexslider/jquery.flexslider.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    TEMPLE UPDATE -- STYLE.CSS
+\*------------------------------------*/
+
+/**
+ * Setup
+ *
+ * Files must be imported in this order.
+ *
+ * Exai defaults cannot be imported within
+ * the `exai/exai` partial because its
+ * values must be defined before importing
+ * inuit.css. Such is the nature of building
+ * a framework on top of a framework...
+ */
+@import "assets/scss/vars";
+@import "exai.css/defaults";
+
+@import "inuit.css/inuit";
+@import "csswizardry-grids/csswizardry-grids.scss";
+@import "exai.css/exai";
+
+
+
+
+
+/**
+ * UI
+ */
+@import "assets/scss/ui/base/icons";
+@import "assets/scss/ui/base/typography";
+@import "assets/scss/ui/base/mixins";
+@import "assets/scss/ui/base/main";
+
+
+@import "assets/scss/ui/objects/buttons";
+@import "assets/scss/ui/objects/cut";
+@import "assets/scss/ui/objects/link";
+@import "assets/scss/ui/objects/pane";
+
+
+@import "assets/scss/ui/components/header";
+@import "assets/scss/ui/components/slider";
+@import "assets/scss/ui/components/nav";
+@import "assets/scss/ui/components/alerts";
+@import "assets/scss/ui/components/page-header";
+@import "assets/scss/ui/components/forms";
+@import "assets/scss/ui/components/excerpt";
+
+@import "assets/scss/ui/pages/post";
+@import "assets/scss/ui/pages/page--home";
+
+@import "assets/scss/ui/components/comments";
+@import "assets/scss/ui/components/sidebar";
+@import "assets/scss/ui/components/widgets";
+@import "assets/scss/ui/components/footer";

@@ -10,6 +10,10 @@
 
   },
   "devDependencies": {
-
+    "fitvids": "~1.0.3",
+    "flexslider": "*",
+    "inuit.css": "5.0.0",
+    "csswizardry-grids": "2.2.0",
+    "exai.css": "git@github.com:montchr/exai.css.git"
   }
 }
