@@ -3,7 +3,9 @@
  * Clean up gallery_shortcode()
  *
  * Re-create the [gallery] shortcode and use Inuit.CSS' "matrix" object
+ * The number of columns must be a factor of 12.
  *
+ * @link http://getbootstrap.com/components/#thumbnails
  */
 function exai_gallery($attr) {
   $post = get_post();
@@ -46,6 +48,8 @@ function exai_gallery($attr) {
   ), $attr));
 
   $id = intval($id);
+  $columns = (12 % $columns == 0) ? $columns: 4;
+  $grid = sprintf('col-sm-%1$s col-lg-%1$s', 12/$columns);
 
   if ($order === 'RAND') {
     $orderby = 'none';
@@ -107,20 +111,47 @@ function exai_gallery($attr) {
 
   $i = 0;
   foreach ($attachments as $id => $attachment) {
-    $image = ('file' == $link) ? wp_get_attachment_link($id, $size, false, false) : wp_get_attachment_link($id, $size, true, false);
+    switch($link) {
+      case 'file':
+        $image = wp_get_attachment_link($id, $size, false, false);
+        break;
+      case 'none':
+        $image = wp_get_attachment_image($id, $size, false, array('class' => 'thumbnail img-thumbnail'));
+        break;
+      default:
+        $image = wp_get_attachment_link($id, $size, true, false);
+        break;
+    }
+    $output .= ($i % $columns == 0) ? '<div class="row gallery-row">': '';
+    $output .= '<div class="' . $grid .'">' . $image;
 
     $output .= '<li>' . $image;
     if (trim($attachment->post_excerpt)) {
       $output .= '<div class="gallery__caption  matrix__caption  caption  accessibility">' . wptexturize($attachment->post_excerpt) . '</div>';
     }
+
     $output .= '</li>';
+    $i++;
+    $output .= ($i % $columns == 0) ? '</div>' : '';
   }
 
   $output .= '</ul>';
+  $output .= '</div>';
 
   return $output;
 }
 if (current_theme_supports('exai-gallery')) {
   remove_shortcode('gallery');
   add_shortcode('gallery', 'exai_gallery');
+  add_filter('use_default_gallery_style', '__return_null');
 }
+
+/**
+ * Add class="thumbnail img-thumbnail" to attachment items
+ */
+function roots_attachment_link_class($html) {
+  $postid = get_the_ID();
+  $html = str_replace('<a', '<a class="thumbnail img-thumbnail"', $html);
+  return $html;
+}
+add_filter('wp_get_attachment_link', 'roots_attachment_link_class', 10, 1);
