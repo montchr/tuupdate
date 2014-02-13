@@ -11,30 +11,30 @@
  * A cut-pane page header with heavy text and solid background.
  */
 .page-header {
-	@include corner-cut($size: $base-spacing-unit, $margin-override: true, $margin: $base-spacing-unit);
+  @include corner-cut($size: $base-spacing-unit, $margin-override: true, $margin: $base-spacing-unit);
 }
-	/**
-	 * Line-height has to be this specific
-	 * to accomodate for that 900 weight!
-	 */
-	.page-header__title {
-		font-weight: 900;
-		line-height: 1.33333333333;
-	}
+  /**
+   * Line-height has to be this specific
+   * to accomodate for that 900 weight!
+   */
+  .page-header__title {
+    font-weight: 900;
+    line-height: 1.33333333333;
+  }
 
-	@include media-query(portable) {
-		.page-header__title {
-			@include font-size($h5-size, false);
-			line-height: 2.333333333;
-		}
-	}
+  @include media-query(portable) {
+    .page-header__title {
+      @include font-size($h5-size, false);
+      line-height: 2.333333333;
+    }
+  }
 
 
 
 
 
 .page-header--news {
-	@include corner-cut($color: $color__alpha, $color-override: true);
+  @include corner-cut($color: $color__alpha, $color-override: true);
 }
 
 
@@ -42,7 +42,7 @@
 
 
 .page-header--entertainment {
-	@include corner-cut($color: $color__cat--entertainment, $color-override: true);
+  @include corner-cut($color: $color__cat--entertainment, $color-override: true);
 }
 
 
@@ -50,9 +50,9 @@
 
 
 .page-header--sportsdesk {
-	@include corner-cut($color: $color__cat--sportsdesk, $color-override: true);
+  @include corner-cut($color: $color__cat--sportsdesk, $color-override: true);
 }
 
-	.page-header--sportsdesk__title {
-		color: white;
-	}
+  .page-header--sportsdesk__title {
+    color: white;
+  }

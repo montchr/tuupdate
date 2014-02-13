@@ -6,5 +6,5 @@
  * Light links for dark backgrounds.
  */
 .link--light {
-	@include a-color($color__alpha, white);
+  @include a-color($color__alpha, white);
 }

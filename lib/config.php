@@ -19,31 +19,31 @@ define('POST_EXCERPT_LENGTH', 40);
  * .main classes
  */
 function exai_main_class() {
-	if (exai_display_sidebar()) {
-		if (is_front_page()) {
-			$class = 'desk--two-thirds';
-		} else {
-			// Classes on pages with the sidebar
-			$class = 'desk--three-quarters';
-		}
+  if (exai_display_sidebar()) {
+    if (is_front_page()) {
+      $class = 'desk--two-thirds';
+    } else {
+      // Classes on pages with the sidebar
+      $class = 'desk--three-quarters';
+    }
 
-	} else {
-		// Classes on full width pages
-		$class = '';
-	}
+  } else {
+    // Classes on full width pages
+    $class = '';
+  }
 
-	return $class;
+  return $class;
 }
 
 /**
  * .sidebar classes
  */
 function exai_sidebar_class() {
-	if (is_front_page()) {
-		return 'desk--one-third';
-	} else {
-		return 'desk--one-quarter';
-	}
+  if (is_front_page()) {
+    return 'desk--one-third';
+  } else {
+    return 'desk--one-quarter';
+  }
 }
 
 /**
@@ -52,30 +52,30 @@ function exai_sidebar_class() {
  * See lib/sidebar.php for more details
  */
 function exai_display_sidebar() {
-	$sidebar_config = new Roots_Sidebar(
-		/**
-		 * Conditional tag checks (http://codex.wordpress.org/Conditional_Tags)
-		 * Any of these conditional tags that return true won't show the sidebar
-		 *
-		 * To use a function that accepts arguments, use the following format:
-		 *
-		 * array('function_name', array('arg1', 'arg2'))
-		 *
-		 * The second element must be an array even if there's only 1 argument.
-		 */
-		array(
-			'is_404'
-		),
-		/**
-		 * Page template checks (via is_page_template())
-		 * Any of these page templates that return true won't show the sidebar
-		 */
-		array(
-			'template-custom.php'
-		)
-	);
+  $sidebar_config = new Roots_Sidebar(
+    /**
+     * Conditional tag checks (http://codex.wordpress.org/Conditional_Tags)
+     * Any of these conditional tags that return true won't show the sidebar
+     *
+     * To use a function that accepts arguments, use the following format:
+     *
+     * array('function_name', array('arg1', 'arg2'))
+     *
+     * The second element must be an array even if there's only 1 argument.
+     */
+    array(
+      'is_404'
+    ),
+    /**
+     * Page template checks (via is_page_template())
+     * Any of these page templates that return true won't show the sidebar
+     */
+    array(
+      'template-custom.php'
+    )
+  );
 
-	return apply_filters('exai_display_sidebar', $sidebar_config->display);
+  return apply_filters('exai_display_sidebar', $sidebar_config->display);
 }
 
 /**

@@ -6,13 +6,13 @@
  */
 
 %cut--bottom--left {
-	@include corner-cut($corner: "bottom-left");
+  @include corner-cut($corner: "bottom-left");
 }
 
 %cut--bottom--right {
-	@include corner-cut($corner: "bottom-right");
+  @include corner-cut($corner: "bottom-right");
 }
 
 %cut--bottom--both {
-	@include corner-cut($corner: "bottom-both");
+  @include corner-cut($corner: "bottom-both");
 }

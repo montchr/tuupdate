@@ -3,63 +3,63 @@
 \*------------------------------------*/
 
 .dek {
-	@include font-size($h3-size);
-	font-family: $font__stack--condensed--light;
-	font-style: italic;
+  @include font-size($h3-size);
+  font-family: $font__stack--condensed--light;
+  font-style: italic;
 }
 
 .post {
-	margin-bottom: $base-spacing-unit * 2;
+  margin-bottom: $base-spacing-unit * 2;
 }
 
-	.post__header {}
+  .post__header {}
 
-		/*h1*/.post__header__title {}
+    /*h1*/.post__header__title {}
 
-		.post__header__meta {
-			@include font-size(14px);
-			border-top: 1px solid $color--gray--80;
-			border-bottom: 1px solid $color--gray--80;
-			margin-bottom: $base-spacing-unit * 2;
-			padding-top: $half-spacing-unit;
-			padding-bottom: $half-spacing-unit;
-		}
+    .post__header__meta {
+      @include font-size(14px);
+      border-top: 1px solid $color--gray--80;
+      border-bottom: 1px solid $color--gray--80;
+      margin-bottom: $base-spacing-unit * 2;
+      padding-top: $half-spacing-unit;
+      padding-bottom: $half-spacing-unit;
+    }
 
-			.post__header__meta__updated,
-			.post__header__meta__byline,
-			.post__header__meta__categories,
-			.post__header__meta__comments-number {
-				display: inline-block;
-				padding-left: $quarter-spacing-unit;
-				padding-right: $quarter-spacing-unit;
-				vertical-align: middle;
-			}
+      .post__header__meta__updated,
+      .post__header__meta__byline,
+      .post__header__meta__categories,
+      .post__header__meta__comments-number {
+        display: inline-block;
+        padding-left: $quarter-spacing-unit;
+        padding-right: $quarter-spacing-unit;
+        vertical-align: middle;
+      }
 
-			.post__header__meta__byline {}
+      .post__header__meta__byline {}
 
-			.post__header__meta__categories {
+      .post__header__meta__categories {
 
-				ul {
-					margin-bottom: 0;
+        ul {
+          margin-bottom: 0;
 
-					@include media-query(palm) {
-						@include nav($nav: false, $stacked: true);
-					}
+          @include media-query(palm) {
+            @include nav($nav: false, $stacked: true);
+          }
 
-					@include media-query(lap-and-up) {
-						@include nav($nav: true, $stacked: false );
-					}
+          @include media-query(lap-and-up) {
+            @include nav($nav: true, $stacked: false );
+          }
 
-					> li {
+          > li {
 
-						> a {
-							font-weight: 400;
-						}
-					}
-				}
-			}
+            > a {
+              font-weight: 400;
+            }
+          }
+        }
+      }
 
-			.post__header__meta__comments-number {}
+      .post__header__meta__comments-number {}
 
-	.post__content {}
+  .post__content {}
 

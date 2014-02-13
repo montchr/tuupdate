@@ -3,51 +3,51 @@
 \*------------------------------------*/
 
 .slider {
-	background-color: black;
-	margin: 0;
-	padding: 0;
-	position: relative;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  position: relative;
 
-	a {
-		@extend .link--light;
-	}
+  a {
+    @extend .link--light;
+  }
 }
 
-	.slides {
-		@extend .cf;
-		zoom: 1;
+  .slides {
+    @extend .cf;
+    zoom: 1;
 
-		> li {
-			display: none;
-			-webkit-backface-visibility: hidden;
-		}
+    > li {
+      display: none;
+      -webkit-backface-visibility: hidden;
+    }
 
-		img {
-			width: 100%;
-			display: block;
-		}
-	}
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
 
-		.slide {
+    .slide {
         }
 
-			.slide__img,
-			.slide__info {
-				@extend .lap--one-half;
-				@extend .desk--one-half;
+      .slide__img,
+      .slide__info {
+        @extend .lap--one-half;
+        @extend .desk--one-half;
 
-				display: inline-block;
-				vertical-align: middle;
-			}
+        display: inline-block;
+        vertical-align: middle;
+      }
 
-			.slide__img {}
+      .slide__img {}
 
-			.slide__info {
-				padding-left: $base-spacing-unit;
-				padding-right: $base-spacing-unit;
-			}
+      .slide__info {
+        padding-left: $base-spacing-unit;
+        padding-right: $base-spacing-unit;
+      }
 
-				.slide__info__title {
+        .slide__info__title {
                     margin-top: $base-spacing-unit;
 
                     @include media-query(lap) {
@@ -59,10 +59,10 @@
                     @include media-query(desk) {
                         margin-top: 0;
                     }
-				}
+        }
 
-				.slide__info__dek {
-					color: white;
+        .slide__info__dek {
+          color: white;
                     margin-top: $base-spacing-unit;
                     margin-bottom: $base-spacing-unit;
 
@@ -79,7 +79,7 @@
                         margin-top: 0;
                         margin-bottom: 0;
                     }
-				}
+        }
 
 
 
@@ -115,8 +115,8 @@
 /* FlexSlider Default Theme
 *********************************/
 .flex-viewport {
-	@include transition(all 1s ease);
-	max-height: 2000px;
+  @include transition(all 1s ease);
+  max-height: 2000px;
 }
 
 .loading .flex-viewport { max-height: 300px; }
@@ -130,44 +130,44 @@
 /* Control Nav */
 .flex-control-nav,
 .flex-control-paging {
-	padding: $half-spacing-unit;
-	position: absolute;
-	z-index: 999;
+  padding: $half-spacing-unit;
+  position: absolute;
+  z-index: 999;
     top: 0;
     width: 100%;
     text-align: center;
 
-	li {
-		display: inline-block;
-		*display: inline;
-		margin: 0 6px;
-		zoom: 1;
+  li {
+    display: inline-block;
+    *display: inline;
+    margin: 0 6px;
+    zoom: 1;
 
-		a {
-			width: 11px;
-			height: 11px;
-			display: block;
-			background-color: white;
-			cursor: pointer;
-			text-indent: -9999px;
+    a {
+      width: 11px;
+      height: 11px;
+      display: block;
+      background-color: white;
+      cursor: pointer;
+      text-indent: -9999px;
 
-			&:hover {
-				background-color: $color__dark;
-			}
+      &:hover {
+        background-color: $color__dark;
+      }
 
-			&.flex-active {
-				background-color: $color--gray--50;
-				cursor: default;
-			}
-		}
-	}
+      &.flex-active {
+        background-color: $color--gray--50;
+        cursor: default;
+      }
+    }
+  }
 }
 
 @include media-query(lap-and-up) {
-	.flex-control-nav,
-	.flex-control-paging {
+  .flex-control-nav,
+  .flex-control-paging {
         top: auto;
-		bottom: 0;
+    bottom: 0;
         text-align: left;
     }
 }
