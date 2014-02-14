@@ -57,8 +57,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: [
-          'assets/sass/*.scss',
-          'assets/sass/bootstrap/*.scss'
+          'assets/scss/**/*.scss'
         ],
         tasks: ['sass', 'version']
       },
@@ -72,7 +71,7 @@ module.exports = function(grunt) {
         // Browser live reloading
         // https://github.com/gruntjs/grunt-contrib-watch#live-reloading
         options: {
-          livereload: false
+          livereload: true
         },
         files: [
           'assets/css/main.min.css',
