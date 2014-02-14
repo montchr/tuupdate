@@ -18,57 +18,57 @@ $forecast = new ForecastIO($api_key);
  * @return string           The direction
  */
 function tuupdate_get_compass_direction($bearing) {
-    $tmp = round($bearing / 22.5);
-    switch($tmp) {
-        case 1:
-             $direction = "NNE";
-             break;
-        case 2:
-             $direction = "NE";
-             break;
-        case 3:
-             $direction = "ENE";
-             break;
-        case 4:
-             $direction = "E";
-             break;
-        case 5:
-             $direction = "ESE";
-             break;
-        case 6:
-             $direction = "SE";
-             break;
-        case 7:
-             $direction = "SSE";
-             break;
-        case 8:
-             $direction = "S";
-             break;
-        case 9:
-             $direction = "SSW";
-             break;
-        case 10:
-             $direction = "SW";
-             break;
-        case 11:
-             $direction = "WSW";
-             break;
-        case 12:
-             $direction = "W";
-             break;
-        case 13:
-             $direction = "WNW";
-             break;
-        case 14:
-             $direction = "NW";
-             break;
-        case 15:
-             $direction = "NNW";
-             break;
-        default:
-             $direction = "N";
-    }
-    return $direction;
+  $tmp = round($bearing / 22.5);
+  switch($tmp) {
+    case 1:
+      $direction = "NNE";
+      break;
+    case 2:
+      $direction = "NE";
+      break;
+    case 3:
+      $direction = "ENE";
+      break;
+    case 4:
+      $direction = "E";
+      break;
+    case 5:
+      $direction = "ESE";
+      break;
+    case 6:
+      $direction = "SE";
+      break;
+    case 7:
+      $direction = "SSE";
+      break;
+    case 8:
+      $direction = "S";
+      break;
+    case 9:
+      $direction = "SSW";
+      break;
+    case 10:
+      $direction = "SW";
+      break;
+    case 11:
+      $direction = "WSW";
+      break;
+    case 12:
+      $direction = "W";
+      break;
+    case 13:
+      $direction = "WNW";
+      break;
+    case 14:
+      $direction = "NW";
+      break;
+    case 15:
+      $direction = "NNW";
+      break;
+    default:
+      $direction = "N";
+  }
+  return $direction;
 }
 
 
@@ -87,92 +87,91 @@ function tuupdate_get_compass_direction($bearing) {
  * @return html                   The widget
  */
 function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_num = 3, $max_temp_height = 84) {
-    global $api_key, $latitude, $longitude, $forecast;
+  global $api_key, $latitude, $longitude, $forecast;
 
-    $output = '';
-    // Get conditions for next week, including today
-    $week = $forecast->getForecastWeek($latitude, $longitude);
-    // Get current conditions
-    $current = $forecast->getCurrentConditions($latitude, $longitude);
-    // Get hourly conditions
-    $hourly = $forecast->getForecastToday($latitude, $longitude);
+  $output = '';
+  // Get conditions for next week, including today
+  $week = $forecast->getForecastWeek($latitude, $longitude);
+  // Get current conditions
+  $current = $forecast->getCurrentConditions($latitude, $longitude);
+  // Get hourly conditions
+  $hourly = $forecast->getForecastToday($latitude, $longitude);
 
-    // Current conditions variables
-    $current_icon       = $current->getIcon();
-    $current_temp       = round($current->getTemperature());
-    $current_summary    = $current->getSummary();
-    $current_wind_speed = round($current->getWindSpeed());
-    $current_wind_dir   = tuupdate_get_compass_direction($current->getWindBearing());
+  // Current conditions variables
+  $current_icon       = $current->getIcon();
+  $current_temp       = round($current->getTemperature());
+  $current_summary    = $current->getSummary();
+  $current_wind_speed = round($current->getWindSpeed());
+  $current_wind_dir   = tuupdate_get_compass_direction($current->getWindBearing());
 
-    // Hourly conditions variables
-    $hour_now           = $hourly[0];
-    $hour_next          = $hourly[1];
-    $hour_now_temp      = round($hour_now->getTemperature());
-    $hour_next_temp     = round($hour_next->getTemperature());
-    // Temperature change direction
-    $temp_dir           = $hour_now_temp < $hour_next_temp ? 'rising' : 'falling';
+  // Hourly conditions variables
+  $hour_now           = $hourly[0];
+  $hour_next          = $hourly[1];
+  $hour_now_temp      = round($hour_now->getTemperature());
+  $hour_next_temp     = round($hour_next->getTemperature());
+  // Temperature change direction
+  $temp_dir           = $hour_now_temp < $hour_next_temp ? 'rising' : 'falling';
 
 
-    $output .= '
+  $output .= '
 <div class="' . $container_class .'  widget--weather  widget">
-    <div class="forecast">
-        <div class="forecast__currently">
-            <div class="top">
-                <i class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative  text-hide" title="' . $current_summary . '">' . $current_summary . '</i>
-                <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
-            </div>
-            <div class="summary">' . $current_summary . '</div>
-            <div class="wind">Wind: ' . $current_wind_speed . ' mph (' . $current_wind_dir . ')</div>
-        </div>
-        <div class="forecast__daily">';
+  <div class="forecast">
+    <div class="forecast__currently">
+      <div class="top">
+        <i class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative  text-hide" title="' . $current_summary . '">' . $current_summary . '</i>
+        <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
+      </div>
+      <div class="summary">' . $current_summary . '</div>
+      <div class="wind">Wind: ' . $current_wind_speed . ' mph (' . $current_wind_dir . ')</div>
+    </div>
+    <div class="forecast__daily">';
 
-        // Find weekly high and low temps, for scaling
-        $Infinity      = INF;
-        $high_temp     = -$Infinity;
-        $low_temp      = $Infinity;
+    // Find weekly high and low temps, for scaling
+    $Infinity      = INF;
+    $high_temp     = -$Infinity;
+    $low_temp      = $Infinity;
 
-        for ( $i = 0; $i < $daily_num; $i++ ) :
-            $day                  = $week[$i];
-            $day_high             = $day->getMaxTemperature();
-            $day_low              = $day->getMinTemperature();
+    for ( $i = 0; $i < $daily_num; $i++ ) :
+      $day                  = $week[$i];
+      $day_high             = $day->getMaxTemperature();
+      $day_low              = $day->getMinTemperature();
 
-            // This increases the temperature range until the end of the loop
-            if ($day_high > $high_temp) $high_temp = $day_high;
-            if ($day_low < $low_temp) $low_temp = $day_low;
-        endfor;
+      // This increases the temperature range until the end of the loop
+      if ($day_high > $high_temp) $high_temp = $day_high;
+      if ($day_low < $low_temp) $low_temp = $day_low;
+    endfor;
 
-        // Now create each day element
-        $temp_span     = $high_temp - $low_temp;
+    // Now create each day element
+    $temp_span     = $high_temp - $low_temp;
 
-        // Show next `$daily_num` days, including today
-        for ( $i = 0; $i < $daily_num; $i++ ) :
-            $day                  = $week[$i];
-            $day_name             = $i === 0 ? 'Today' : $day->getTime('D');
-            $day_icon             = $day->getIcon();
-            $day_summary          = $day->getSummary();
-            $day_high             = $day->getMaxTemperature();
-            $day_low              = $day->getMinTemperature();
-            $day_high_round       = round($day_high);
-            $day_low_round        = round($day_low);
+    // Show next `$daily_num` days, including today
+    for ( $i = 0; $i < $daily_num; $i++ ) :
+      $day                  = $week[$i];
+      $day_name             = $i === 0 ? 'Today' : $day->getTime('D');
+      $day_icon             = $day->getIcon();
+      $day_summary          = $day->getSummary();
+      $day_high             = $day->getMaxTemperature();
+      $day_low              = $day->getMinTemperature();
+      $day_high_round       = round($day_high);
+      $day_low_round        = round($day_low);
 
-            $temp_height          = $max_temp_height * ($day_high - $day_low) / $temp_span;
-            $temp_top             = $max_temp_height * ($high_temp - $day_high) / $temp_span;
+      $temp_height          = $max_temp_height * ($day_high - $day_low) / $temp_span;
+      $temp_top             = $max_temp_height * ($high_temp - $day_high) / $temp_span;
 
-            $output .= '
-            <div class="forecast__daily__day">
-                <div class="day-name">' . $day_name . '</div>
-                <i class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative  text-hide" title="' . $day_summary . '">' . $day_summary . '</i>
-                <div class="temp-bar" style="height: ' . $temp_height . 'px; top: ' . $temp_top . ';">
-                    <span class="temp-bar__hi">' . $day_high_round . 'º</span>
-                    <span class="temp-bar__lo">' . $day_low_round . 'º</span>
-                </div>
-            </div>';
-        endfor;
-        $output .= '
-        </div>
-    </div><!-- /.forecast -->
+      $output .= '
+<div class="forecast__daily__day">
+  <div class="day-name">' . $day_name . '</div>
+  <i class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative  text-hide" title="' . $day_summary . '">' . $day_summary . '</i>
+  <div class="temp-bar" style="height: ' . $temp_height . 'px; top: ' . $temp_top . ';">
+    <span class="temp-bar__hi">' . $day_high_round . 'º</span>
+    <span class="temp-bar__lo">' . $day_low_round . 'º</span>
+  </div>
+</div>';
+    endfor;
+    $output .= '
+    </div>
+  </div><!-- /.forecast -->
 </div><!-- /.' . $container_class . ' -->';
 
-    return $output;
-
+  return $output;
 }
