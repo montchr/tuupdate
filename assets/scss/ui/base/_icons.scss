@@ -175,16 +175,9 @@ $icon-comment-dark: "\e00b";
 
     .icon--weather--currently {
         display: block;
-        position: absolute;
-        top: -4px;
-        left: 50%;
+        float: right;
         width: 80px;
         height: 80px;
-
-        @media screen and (max-width: 480px) {
-            right: 0;
-            top: -8px;
-        }
     }
 
     .icon--weather--daily {

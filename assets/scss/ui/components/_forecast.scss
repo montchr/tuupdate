@@ -41,9 +41,7 @@
       .conditions {}
 
       .temp {
-        position: relative;
-        top: -5px;
-        margin-left: 0;
+        width: 50%;
         text-align: left;
       }
 
@@ -71,6 +69,7 @@
         @include font-size($h4-size);
         font-weight: bold;
         margin-top: 8px;
+        clear: both;
       }
 
       .wind {
