@@ -26,6 +26,20 @@ module.exports = function(grunt) {
             'assets/scss/app.scss'
           ]
         }
+      },
+      dev: {
+        options: {
+          style: 'expanded',
+          compass: true,
+          // Source maps are available, but require Sass 3.3.0 to be installed
+          // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
+          sourcemap: false
+        },
+        files: {
+          'assets/css/main.min.css': [
+            'assets/scss/app.scss'
+          ]
+        }
       }
     },
     uglify: {
@@ -43,6 +57,21 @@ module.exports = function(grunt) {
           // sourceMap: 'assets/js/scripts.min.js.map',
           // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
         }
+      },
+      dev: {
+        files: {
+          'assets/js/scripts.min.js': [
+            'vendor/fitvids/jquery.fitvids.js',
+            'vendor/flexslider/jquery.flexslider.js',
+            'vendor/skycons/skycons.js',
+            'assets/js/plugins/*.js',
+            'assets/js/_*.js'
+          ]
+        },
+        options: {
+          mangle: false,
+          beautify: true
+        }
       }
     },
     version: {
@@ -59,13 +88,13 @@ module.exports = function(grunt) {
         files: [
           'assets/scss/**/*.scss'
         ],
-        tasks: ['sass', 'version']
+        tasks: ['sass:dev', 'version']
       },
       js: {
         files: [
           '<%= jshint.all %>'
         ],
-        tasks: ['jshint', 'uglify', 'version']
+        tasks: ['jshint', 'uglify:dev', 'version']
       },
       livereload: {
         // Browser live reloading
