@@ -73,6 +73,50 @@ function tuupdate_get_compass_direction($bearing) {
 
 
 /**
+ * Gets the Forecast.io icon name.
+ *
+ * Translates the icon string from Forecast.io's
+ * API response to the corresponding name of a weather
+ * icon GIF stored on Forecast's AWS CDN.
+ *
+ * This method is stolen from DuckDuckGo.
+ *
+ * TL;DR Converts `-` to `_`. ಠ_ಠ
+ *
+ * @link  https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/share/spice/forecast/forecast.js
+ *
+ * @param  string $icon Response from apc_inc(key)
+ * @return string       Name of GIF
+ */
+function tuupdate_get_forecast_icon_name($icon = null) {
+  if ($icon === 'rain')
+    return 'rain';
+  elseif ($icon === 'snow')
+    return 'snow';
+  elseif ($icon === 'sleet')
+    return 'sleet';
+  elseif ($icon === 'hail')
+    return 'sleet';
+  elseif ($icon === 'wind')
+    return 'wind';
+  elseif ($icon === 'fog')
+    return 'fog';
+  elseif ($icon === 'cloudy')
+    return 'cloudy';
+  elseif ($icon === 'partly-cloudy-day')
+    return 'partly_cloudy_day';
+  elseif ($icon === 'partly-cloudy-night')
+    return 'partly_cloudy_night';
+  elseif ($icon === 'clear-day')
+    return 'clear_day';
+  elseif ($icon === 'clear-night')
+    return 'clear_night';
+  else
+    return 'cloudy';
+}
+
+
+/**
  * Forecast.io weather widget
  *
  * Generates a Forecast.io weather widget based
@@ -118,7 +162,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   <div class="forecast">
     <div class="forecast__currently">
       <div class="top">
-        <i class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative  text-hide" title="' . $current_summary . '">' . $current_summary . '</i>
+        <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($current_icon) . '.gif" class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative" title="' . $current_summary . '" data-icon="' . $current_icon . '" />
         <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
       </div>
       <div class="summary">' . $current_summary . '</div>
@@ -161,7 +205,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
       $output .= '
 <div class="forecast__daily__day">
   <div class="day-name">' . $day_name . '</div>
-  <i class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative  text-hide" title="' . $day_summary . '">' . $day_summary . '</i>
+  <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($day_icon) . '.gif" class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative" title="' . $day_summary . '" data-icon="' . $day_icon . '" />
   <div class="temp-bar" style="height: ' . $temp_height . 'px; top: ' . $temp_top . ';">
     <span class="temp-bar__hi">' . $day_high_round . 'º</span>
     <span class="temp-bar__lo">' . $day_low_round . 'º</span>
