@@ -6867,7 +6867,115 @@ input.form--search__input {
 }
 
 /*------------------------------------*\
-    $UI-FORECAST
+    $UI-WIDGETS
+\*------------------------------------*/
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * CONTENTS...................You’re reading it!
+ * GENERAL....................General widgets
+ * TWITTER WIDGET PRO.........Plugin-specific styles
+ * CUSTOM FACEBOOK FEED.......Plugin-specific styles
+ * YOUTUBE CHANNEL GALLERY....Plugin-specific styles
+ * FORECAST WIDGET............Forecast.io widget
+ */
+/*------------------------------------*\
+    $GENERAL
+\*------------------------------------*/
+.widget:last-of-type {
+  margin-bottom: 0;
+}
+
+.widgets {
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+
+/*------------------------------------*\
+    $TWITTER-WIDGET-PRO
+\*------------------------------------*/
+.widget_twitter h3 {
+  display: none;
+}
+.widget_twitter ul {
+  margin-left: 0;
+}
+.widget_twitter .time-meta {
+  text-transform: uppercase;
+}
+.widget_twitter .time-meta a {
+  font-weight: 400;
+}
+.widget_twitter .in-reply-to-meta {
+  display: none;
+}
+
+/*------------------------------------*\
+    $CUSTOM-FACEBOOK-FEED
+\*------------------------------------*/
+#cff p {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+.cff-item {
+  border-bottom: 0 !important;
+}
+
+.cff-date {
+  color: black;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/*------------------------------------*\
+    $YOUTUBE-CHANNEL-GALLERY
+\*------------------------------------*/
+/**
+ * For the Update Now and Update Ahora pages.
+ */
+.ytctitle {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+  font-family: "proxima-nova-condensed", "Lato", "Open Sans Condensed", "Source Sans Pro", "Helvetica Neue Condensed", "Arial Narrow", sans-serif;
+}
+
+/**
+ * While frighteningly specific, this forces gallery cells
+ * to 100% of their parent on small screens. :)
+ */
+@media only screen and (max-width: 1023px) {
+  .ytcplayer-wrapper {
+    margin-bottom: 120px !important;
+  }
+
+  .ytccf .ytc-columns3 li {
+    width: 100% !important;
+    padding-bottom: 96px !important;
+  }
+
+  .ytctdescription {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .ytc-row {
+    margin-bottom: 48px;
+  }
+
+  .ytctdescription {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.71429;
+  }
+}
+/*------------------------------------*\
+    $FORECAST-WIDGET
 \*------------------------------------*/
 /**
  * Styles for the Forecast.io weather widget.
@@ -6964,6 +7072,9 @@ input.form--search__input {
   width: 100%;
 }
 
+/**
+ * Dynamic temperature bar.
+ */
 .temp-bar {
   font-size: 12px;
   font-size: 0.75rem;
@@ -7029,108 +7140,11 @@ input.form--search__input {
     line-height: 2;
   }
 
+  /**
+   * Dynamic temperature bar.
+   */
   .temp-bar {
     width: 15px;
-  }
-}
-/*------------------------------------*\
-    $UI-WIDGETS
-\*------------------------------------*/
-/**
- * Bottom margin on widget group, not single widgets.
- *
- * ^^overrides exai
- */
-.widget:last-of-type {
-  margin-bottom: 0;
-}
-
-.widgets {
-  padding-bottom: 24px;
-  padding-top: 24px;
-}
-
-/**
- * TWITTER WIDGET PRO
- */
-.widget_twitter h3 {
-  display: none;
-}
-.widget_twitter ul {
-  margin-left: 0;
-}
-.widget_twitter .time-meta {
-  text-transform: uppercase;
-}
-.widget_twitter .time-meta a {
-  font-weight: 400;
-}
-.widget_twitter .in-reply-to-meta {
-  display: none;
-}
-
-/**
- * CUSTOM FACEBOOK FEED
- *
- * Deals with the devil.
- */
-#cff p {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 2;
-}
-
-.cff-item {
-  border-bottom: 0 !important;
-}
-
-.cff-date {
-  color: black;
-  text-align: right;
-  text-transform: uppercase;
-}
-
-/**
- * YOUTUBE CHANNEL GALLERY
- *
- * For the Update Now and Update Ahora pages.
- */
-.ytctitle {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.33333;
-  font-family: "proxima-nova-condensed", "Lato", "Open Sans Condensed", "Source Sans Pro", "Helvetica Neue Condensed", "Arial Narrow", sans-serif;
-}
-
-/**
- * While frighteningly specific, this forces gallery cells
- * to 100% of their parent on small screens. :)
- */
-@media only screen and (max-width: 1023px) {
-  .ytcplayer-wrapper {
-    margin-bottom: 120px !important;
-  }
-
-  .ytccf .ytc-columns3 li {
-    width: 100% !important;
-    padding-bottom: 96px !important;
-  }
-
-  .ytctdescription {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 1.2;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .ytc-row {
-    margin-bottom: 48px;
-  }
-
-  .ytctdescription {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.71429;
   }
 }
 /*------------------------------------*\
