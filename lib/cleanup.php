@@ -114,6 +114,11 @@ function exai_body_class($classes) {
     $classes[] = basename(get_permalink());
   }
 
+  // Add conditional sidebar class if sidebar is displayed
+  if (exai_display_sidebar()) {
+    $classes[] = 'has-sidebar';
+  }
+
   // Remove unnecessary classes
   $home_id_class = 'page-id-' . get_option('page_on_front');
   $remove_classes = array(
