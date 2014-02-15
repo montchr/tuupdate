@@ -173,16 +173,41 @@ $icon-comment-dark: "\e00b";
     margin-top: 2px;
 }
 
+  .icon--weather--currently {
+      display: block;
+      float: right;
+      width: 80px;
+      height: 80px;
+  }
+
+  .icon--weather--day {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-top: 2px;
+  }
+
+  /**
+   * For Skycons using HTML5 canvas.
+   */
+  .canvas {
     .icon--weather--currently {
-        display: block;
-        float: right;
-        width: 50%;
-        height: auto;
+      position: absolute;
+      top: -4px;
+      left: 27%;
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: 480px) {
+        right: 0;
+        top: -8px;
+      }
     }
 
-    .icon--weather--daily {
-      display: inline-block;
-      width: 26px;
-      height: 26px;
-      margin-top: 2px;
+    .icon--weather--day {
+      width: 100%;
+      height: auto;
+      position: relative;
+      z-index: 99;
     }
+  }

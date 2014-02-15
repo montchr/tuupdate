@@ -60,20 +60,34 @@ var Roots = {
        * Skycons, but only if the browser supports HTML5 `canvas`.
        */
       if (Modernizr.canvas) {
-        var $icons = $('.js-icon-weather');
+        var $icons = $('.js-icon-weather'),
+            skycons;
 
         skyconConstruct = function (i) {
           c = document.createElement('canvas');
-          c.className = 'js-skycon-' + i + '  skycon  ' + iconClasses;
+          c.className = 'js-skycon-' + i + '  js-skycon  ' + iconClasses;
+          c.title = iconSummary;
           return c;
         };
+
+        skycons = new Skycons({
+          // On Android, a nasty hack is needed
+          resizeClear:true
+        });
 
         for (var i = $icons.length - 1; i >= 0; i--) {
           var $icon = $icons[i],
               iconName = $icon.dataset.icon,
               iconSummary = $icon.title,
               iconParent = $icon.parentNode,
-              iconClasses = 'icon--weather--day  icon--weather  js-icon-weather  icon  informative  ';
+              iconClasses = 'icon--weather  js-icon-weather  icon  informative  ';
+
+              // Make sure Currently gets its class
+              if (i === 0) {
+                iconClasses += 'icon--weather--currently  ';
+              } else {
+                iconClasses += 'icon--weather--day  ';
+              }
 
           // If original `data-icon` attributes had dashes, they'll be camel-cased by the `dataset` method.
           // TODO: Needs a fallback for when it's not camel-cased!
@@ -81,10 +95,12 @@ var Roots = {
           // Add the icon-specific classes in the loop
           iconClasses += 'icon-' + skyconType + '  ';
           iconClasses += 'js-icon-' + skyconType;
-          // Build the new `<canvas>` element
-          skycon = skyconConstruct(i);
           // Replace the old `<img>`
-          iconParent.replaceChild(skycon, $icon);
+          iconParent.replaceChild(skyconConstruct(i), $icon);
+
+          skyconThis = $('.js-skycon-' + i)[0];
+          skycons.add(skyconThis, iconName);
+          skycons.play();
         }
       }
     }

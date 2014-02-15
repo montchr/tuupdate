@@ -48,6 +48,7 @@ module.exports = function(grunt) {
           'assets/js/scripts.min.js': [
             'vendor/fitvids/jquery.fitvids.js',
             'vendor/flexslider/jquery.flexslider.js',
+            'vendor/skycons/skycons.js',
             'assets/js/plugins/*.js',
             'assets/js/_*.js'
           ]
