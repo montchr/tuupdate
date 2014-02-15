@@ -140,8 +140,11 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   $week = $forecast->getForecastWeek($latitude, $longitude);
   // Get current conditions
   $current = $forecast->getCurrentConditions($latitude, $longitude);
-  // Get hourly conditions
-  $hourly = $forecast->getForecastToday($latitude, $longitude);
+  // Get hourly conditions for today
+  $hourly_today = $forecast->getForecastToday($latitude, $longitude);
+  // Get hourly conditions for tomorrow
+  // We only need the first hour.
+  $hourly_tomorrow = $forecast->getHistoricalConditions($latitude, $longitude, strtotime('tomorrow', time()));
 
   // Current conditions variables
   $current_icon       = $current->getIcon();
@@ -151,9 +154,15 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   $current_wind_speed = round($current->getWindSpeed());
   $current_wind_dir   = tuupdate_get_compass_direction($current->getWindBearing());
 
+  // Get the boundaries of the last hour of the current day
+  $hour23_end         = strtotime('tomorrow', time()) - 1;
+  $hour23_begin       = $hour23_end - 60 * 60;
   // Hourly conditions variables
-  $hour_now           = $hourly[0];
-  $hour_next          = $hourly[1];
+  $hour_now           = $hourly_today[0];
+  // There is no 'next hour' for the last hour of a given day,
+  // so if the current time is in that last hour, get the conditions
+  // for the first hour of tomorrow.
+  $hour_next          = (time() < $hour23_end && time() > $hour23_begin) ? $hourly_tomorrow[0] : $hourly_today[1];
   $hour_now_temp      = round($hour_now->getTemperature());
   $hour_next_temp     = round($hour_next->getTemperature());
   // Temperature change direction
