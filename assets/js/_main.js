@@ -52,6 +52,43 @@ var Roots = {
       // JavaScript to be fired on the home page
     }
   },
+  // Post/page with sidebar
+  has_sidebar: {
+    init: function() {
+      /**
+       * Replace static Forecast.io widget icons with animated
+       * Skycons, but only if the browser supports HTML5 `canvas`.
+       */
+      if (Modernizr.canvas) {
+        var $icons = $('.js-icon-weather');
+
+        skyconConstruct = function (i) {
+          c = document.createElement('canvas');
+          c.className = 'js-skycon-' + i + '  skycon  ' + iconClasses;
+          return c;
+        };
+
+        for (var i = $icons.length - 1; i >= 0; i--) {
+          var $icon = $icons[i],
+              iconName = $icon.dataset.icon,
+              iconSummary = $icon.title,
+              iconParent = $icon.parentNode,
+              iconClasses = 'icon--weather--day  icon--weather  js-icon-weather  icon  informative  ';
+
+          // If original `data-icon` attributes had dashes, they'll be camel-cased by the `dataset` method.
+          // TODO: Needs a fallback for when it's not camel-cased!
+          skyconType = iconName.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+          // Add the icon-specific classes in the loop
+          iconClasses += 'icon-' + skyconType + '  ';
+          iconClasses += 'js-icon-' + skyconType;
+          // Build the new `<canvas>` element
+          skycon = skyconConstruct(i);
+          // Replace the old `<img>`
+          iconParent.replaceChild(skycon, $icon);
+        }
+      }
+    }
+  },
   // About us page, note the change from about-us to about_us.
   about_us: {
     init: function() {

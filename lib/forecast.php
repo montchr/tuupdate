@@ -162,7 +162,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   <div class="forecast">
     <div class="forecast__currently">
       <div class="top">
-        <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($current_icon) . '.gif" class="icon--weather--currently  icon--weather  icon-' . $current_icon . '  icon  informative" title="' . $current_summary . '" data-icon="' . $current_icon . '" />
+        <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($current_icon) . '.gif" class="icon--weather--currently  icon--weather  js-icon-weather  icon-' . $current_icon . '  js-icon-' . $current_icon . '  icon  informative" title="' . $current_summary . '" data-icon="' . $current_icon . '" />
         <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
       </div>
       <div class="summary">' . $current_summary . '</div>
@@ -205,7 +205,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
       $output .= '
 <div class="forecast__daily__day">
   <div class="day-name">' . $day_name . '</div>
-  <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($day_icon) . '.gif" class="icon--weather--day  icon--weather  icon-' . $day_icon . '  icon  informative" title="' . $day_summary . '" data-icon="' . $day_icon . '" />
+  <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($day_icon) . '.gif" class="icon--weather--day  icon--weather  js-icon-weather  icon-' . $day_icon . '  js-icon-' . $day_icon . '  icon  informative" title="' . $day_summary . '" data-icon="' . $day_icon . '" />
   <div class="temp-bar" style="height: ' . $temp_height . 'px; top: ' . $temp_top . ';">
     <span class="temp-bar__hi">' . $day_high_round . 'º</span>
     <span class="temp-bar__lo">' . $day_low_round . 'º</span>
