@@ -129,8 +129,8 @@ module.exports = function(grunt) {
   // Register tasks
   grunt.registerTask('default', [
     'clean',
-    'sass',
-    'uglify',
+    'sass:dist',
+    'uglify:dist',
     'version'
   ]);
   grunt.registerTask('dev', [
