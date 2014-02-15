@@ -147,6 +147,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   $current_icon       = $current->getIcon();
   $current_temp       = round($current->getTemperature());
   $current_summary    = $current->getSummary();
+  $current_feels      = round($current->getApparentTemperature());
   $current_wind_speed = round($current->getWindSpeed());
   $current_wind_dir   = tuupdate_get_compass_direction($current->getWindBearing());
 
@@ -165,7 +166,11 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
     <div class="forecast__currently">
       <div class="top">
         <img src="http://forecastsite.s3.amazonaws.com/skycons/' . tuupdate_get_forecast_icon_name($current_icon) . '.gif" class="icon--weather--currently  icon--weather  js-icon-weather  icon-' . $current_icon . '  js-icon-' . $current_icon . '  icon  informative" title="' . $current_summary . '" data-icon="' . $current_icon . '" />
-        <div class="temp"><span class="temp__str">' . $current_temp . 'º</span><span class="temp__dir">and ' . $temp_dir . '</span></div>
+        <div class="temp">
+          <span class="temp__str">' . $current_temp . 'º</span>
+          <span class="temp__dir">and ' . $temp_dir . '</span>
+          <span class="temp__feel">Feels like ' . $current_feels . 'º</span>
+        </div>
       </div>
       <div class="summary">' . $current_summary . '</div>
       <div class="wind">Wind: ' . $current_wind_speed . ' mph (' . $current_wind_dir . ')</div>
