@@ -162,6 +162,7 @@
 
 
 .forecast-widget {
+  @extend .cf;
   width: 100%;
   font-weight: 300;
   max-width: 300px;
