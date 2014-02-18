@@ -146,21 +146,21 @@ function tuu_the_slug() {
 
 
 /**
- * Adds filter to a query getting posts for the past 2 days.
+ * Adds filter to a query getting posts for the past few days.
  *
  * Usage:
- *  add_filter( 'posts_where', 'tuu_filter_where_two_days' );
+ *  add_filter( 'posts_where', 'tuu_filter_where_days' );
  *    $query = new WP_Query( $query_string );
- *  remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
+ *  remove_filter( 'posts_where', 'tuu_filter_where_days' );
  *
  * @link http://codex.wordpress.org/Class_Reference/WP_Query#Time_Parameters
  *
- * @param  integer $days  Number of days in the past
- * @param  string  $where Additional query
- * @return [type]         [description]
+ * @param  integer $numdays  Number of days in the past. Default is 1.
+ * @param  string  $where    Additional query
+ * @return [type]            [description]
  */
-function tuu_filter_where_two_days( $where = '' ) {
-  $where .= " AND post_date > '" . date('Y-m-d', strtotime( '-2 days' )) . "'";
+function tuu_filter_where_days( $numdays = 1, $where = '' ) {
+  $where .= " AND post_date > '" . date('Y-m-d', strtotime( '-' . $numdays . ' days' )) . "'";
   return $where;
 }
 
@@ -177,9 +177,8 @@ function tuu_filter_where_two_days( $where = '' ) {
  * selected in the alert edit screen.
  *
  * @param  boolean $force    Force the display
- * @param  string  $template The path to the alert template
  */
-function tuu_alert($force = false, $template = 'templates/alert') {
+function tuu_alert($force = false) {
   global $post;
 
   $query_string = array(
@@ -187,9 +186,9 @@ function tuu_alert($force = false, $template = 'templates/alert') {
                        'posts_per_page' => '1',
   );
 
-  add_filter( 'posts_where', 'tuu_filter_where_two_days' );
+  add_filter( 'posts_where', 'tuu_filter_where_days' );
     $query = new WP_Query($query_string);
-  remove_filter( 'posts_where', 'tuu_filter_where_two_days' );
+  remove_filter( 'posts_where', 'tuu_filter_where_days' );
 
   if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
 
