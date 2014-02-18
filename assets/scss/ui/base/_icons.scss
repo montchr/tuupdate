@@ -176,8 +176,8 @@ $icon-comment-dark: "\e00b";
   .icon--weather--currently {
       display: block;
       float: right;
-      width: 80px;
-      height: 80px;
+      width: 50%;
+      height: auto;
   }
 
   .icon--weather--day {
@@ -193,9 +193,8 @@ $icon-comment-dark: "\e00b";
   .canvas {
     .icon--weather--currently {
       position: absolute;
-      top: -4px;
-      left: 27%;
-      width: 100%;
+      left: 40%;
+      width: 75%;
       height: auto;
 
       @media screen and (max-width: 480px) {
