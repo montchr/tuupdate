@@ -141,10 +141,7 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   // Get current conditions
   $current = $forecast->getCurrentConditions($latitude, $longitude);
   // Get hourly conditions for today
-  $hourly_today = $forecast->getForecastToday($latitude, $longitude);
-  // Get hourly conditions for tomorrow
-  // We only need the first hour.
-  $hourly_tomorrow = $forecast->getHistoricalConditions($latitude, $longitude, strtotime('tomorrow', time()));
+  $hourly = $forecast->getForecastToday($latitude, $longitude);
 
   // Current conditions variables
   $current_icon       = $current->getIcon();
@@ -158,13 +155,13 @@ function tuupdate_weather_widget($container_class = 'forecast-widget', $daily_nu
   $hour23_end         = strtotime('tomorrow', time()) - 1;
   $hour23_begin       = $hour23_end - 60 * 60;
   // Hourly conditions variables
-  $hour_now           = $hourly_today[0];
+  $hour_now           = $hourly[0];
   // There is no 'next hour' for the last hour of a given day,
-  // so if the current time is in that last hour, get the conditions
-  // for the first hour of tomorrow.
-  $hour_next          = (time() < $hour23_end && time() > $hour23_begin) ? $hourly_tomorrow[0] : $hourly_today[1];
+  // so if the current time is in that last hour, use a cheap hack
+  // to assume that the temperature at that time will be falling.
+  $hour_next          = (time() < $hour23_end && time() > $hour23_begin) ? false : $hourly[1];
   $hour_now_temp      = round($hour_now->getTemperature());
-  $hour_next_temp     = round($hour_next->getTemperature());
+  $hour_next_temp     = (($hour_next) ? round($hour_next->getTemperature()) : -99); // Set to -99 because when will it ever be that cold in Philly?
   // Temperature change direction
   $temp_dir           = $hour_now_temp < $hour_next_temp ? 'rising' : 'falling';
 
