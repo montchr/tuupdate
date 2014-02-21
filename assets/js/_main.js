@@ -67,6 +67,7 @@ var Roots = {
           c = document.createElement('canvas');
           c.className = 'js-skycon-' + i + '  js-skycon  ' + iconClasses;
           c.title = iconSummary;
+          c.width = 150;
           return c;
         };
 
