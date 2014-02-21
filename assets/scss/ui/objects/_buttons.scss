@@ -7,3 +7,11 @@
   background-color: $color__dark;
   font-weight: 600;
 }
+
+
+.btn--sidebar {
+  @include font-size($milli-size, false);
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
