@@ -3,6 +3,18 @@
 \*------------------------------------*/
 
 /**
+ * Clearfix mixin
+ */
+@mixin cf() {
+  &:after{
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+
+/**
  * Mixin for producing cut corners.
  *
  * Used by the pane object.
@@ -169,9 +181,9 @@
      * Demo: jsfiddle.net/inuitcss/Vnph4
      *
      */
+    @include cf;
     list-style:none;
     margin-left:0;
-    @extend .cf;
 
     > li{
 
