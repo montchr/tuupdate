@@ -9,8 +9,7 @@
     .home__recent-posts__header__title {}
 
   .home__recent-posts__content {
-    @include corner-cut();
-    @include font-size($page--home__recent-posts--font-size--portable);
+    @include corner-cut($margin: $base-spacing-unit * 2);
   }
 
 
@@ -18,6 +17,7 @@
     .home__recent-post {}
 
       .home__recent-post__header {
+        margin-bottom: $half-spacing-unit;
 
         time {
           text-transform: uppercase;
@@ -26,27 +26,16 @@
         .byline {
           @extend .accessibility;
         }
-
       } // end .home__recent-post__header
 
         .home__recent-post__header__title {
-          @include font-size($page--home__recent-posts--font-size--portable);
-          margin-bottom: 0;
-
+          margin-bottom: $half-spacing-unit / 2;
           a {
             @include a-color(black, $color__alpha)
           }
         }
 
       .home__recent-post__content {}
-
-
-@include media-query(desk) {
-  .home__recent-posts__content,
-  .home__recent-post__header__title {
-    @include font-size($page--home__recent-posts--font-size--desk);
-  }
-}
 
 
 

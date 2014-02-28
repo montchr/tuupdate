@@ -39,8 +39,8 @@ foreach ($categories as $category) :
         <article class="home__recent-post">
 
           <header class="home__recent-post__header">
+            <h1 class="home__recent-post__header__title  gamma"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
             <?php get_template_part( 'templates/entry-meta', 'minimal' ); ?>
-            <h1 class="home__recent-post__header__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
           </header>
 
           <div class="home__recent-post__content">
