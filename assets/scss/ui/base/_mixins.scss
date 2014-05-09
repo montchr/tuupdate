@@ -244,22 +244,22 @@
        </ul>
      *
      */
-      line-height:1;
-      /**
-       * Remove whitespace caused by `inline-block`.
-       */
-      letter-spacing:-0.31em;
-      word-spacing:-0.43em;
-      white-space:nowrap;
+    line-height:1;
+    /**
+     * Remove whitespace caused by `inline-block`.
+     */
+    letter-spacing:-0.31em;
+    word-spacing:-0.43em;
+    white-space:nowrap;
 
-      > li{
-          letter-spacing:normal;
-          word-spacing:normal;
+    > li{
+      letter-spacing:normal;
+      word-spacing:normal;
 
-          > a{
-              padding:$half-spacing-unit;
-          }
+      > a{
+        padding:$half-spacing-unit;
       }
+    }
   } // end block
 
   @if $fit {
@@ -279,13 +279,13 @@
       display:table;
       width:100%;
 
-      > li{
-          display:table-cell;
+    > li{
+      display:table-cell;
 
-          > a{
-              display:block;
-          }
+      > a{
+        display:block;
       }
+    }
   } // end fit
 
   @if $keywords {
@@ -296,17 +296,17 @@
      *
      */
 
-      > li{
+    > li{
 
-          &:after{
-              content:"\002C" "\00A0";
-          }
-
-          &:last-child:after{
-              display:none;
-          }
-	    }
+      &:after{
+        content:"\002C" "\00A0";
       }
+
+      &:last-child:after{
+        display:none;
+      }
+    }
+  }
 }
 
 
