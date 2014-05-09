@@ -84,6 +84,18 @@ module.exports = function(grunt) {
         jsHandle: 'roots_scripts'
       }
     },
+    bump: {
+      options: {
+        files: [
+          'style.css',
+          'package.json',
+          'bower.json'
+        ],
+        commit: false,
+        createTag: false,
+        push: false
+      }
+    },
     watch: {
       sass: {
         files: [
@@ -126,6 +138,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-wp-version');
+  grunt.loadNpmTasks('grunt-bump');
 
   // Register tasks
   grunt.registerTask('default', [

@@ -28,7 +28,7 @@
             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
           </h1>
           <div class="slide__info__dek">
-            <?php the_excerpt(); echo exai_excerpt_more(); ?>
+            <?php the_excerpt(); // echo exai_excerpt_more(); ?>
           </div>
         </div>
 

@@ -216,9 +216,9 @@ function exai_excerpt_more($more) {
 }
 // All previous excerpt filters should be removed
 // http://wordpress.org/support/topic/plugin-advanced-excerpt-v-411-inserting-p-and-br-tags-which-are-breaking-my-media-players
-remove_all_filters('the_excerpt');
-add_filter('excerpt_length', 'exai_excerpt_length');
-add_filter('excerpt_more', 'exai_excerpt_more');
+// remove_all_filters('the_excerpt');
+// add_filter('excerpt_length', 'exai_excerpt_length');
+// add_filter('excerpt_more', 'exai_excerpt_more');
 
 /**
  * Remove unnecessary self-closing tags
