@@ -192,7 +192,7 @@ function tuu_alert($force = false) {
 
   if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post();
 
-    $visibility = get_field('alert_visibility', $post->ID);
+    $visibility = (get_field('alert_visibility', $post->ID)) ? get_field('alert_visibility', $post->ID) : array();
 
     $on_all = in_array('all', $visibility);
     $on_home = (in_array('home', $visibility) && is_front_page());
