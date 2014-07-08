@@ -197,6 +197,8 @@ function tuu_alert($force = false) {
     $on_all = in_array('all', $visibility);
     $on_home = (in_array('home', $visibility) && is_front_page());
 
+    $display = '';
+
     if ($on_all) {
       $display = true;
     }
