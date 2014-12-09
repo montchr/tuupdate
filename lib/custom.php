@@ -93,41 +93,10 @@ function tuu_facebook_feed($shortcode = '', $lowercase = true, $flat = true) {
 /**
  * Get the current page's slug.
  *
- * @link http://www.tcbarrett.com/2011/09/wordpress-the_slug-get-post-slug-function/
- * @link http://stackoverflow.com/questions/4837006/how-to-get-the-current-page-name-in-wordpress
- * @link http://stackoverflow.com/questions/2805879/wordpress-taxonomy-title-output
- *
- * @return $slug string The page slug
+ * @return string The page slug
  */
 function tuu_get_the_slug() {
-
-  if (is_single()) {
-
-    $slug = basename(get_permalink());
-    do_action('before_slug', $slug);
-    $slug = apply_filters('slug_filter', $slug);
-    if( $echo ) echo $slug;
-    do_action('after_slug', $slug);
-
-  } elseif (is_page()) {
-
-    $slug = get_query_var('pagename');
-    if ( !$pagename && $id > 0 ) {
-      // If a static page is set as the front page,
-      // $pagename will not be set. Retrieve it from the queried object
-      $post = $wp_query->get_queried_object();
-      $pagename = $post->post_name;
-    }
-
-  } //elseif (is_category()) {
-    $cat = get_category( get_query_var( 'cat' ) );
-    $slug = $cat->slug;
-
-    //$term = get_term_by('slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-    //$slug = $term->name;
-  //}
-
-  return $slug;
+    return basename(get_permalink());
 }
 
 
